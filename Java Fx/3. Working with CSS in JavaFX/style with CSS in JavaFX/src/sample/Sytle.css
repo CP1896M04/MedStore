@@ -1,0 +1,19 @@
+#btn1{
+-fx-font-size:25px;
+-fx-background-color:blue;
+-fx-text-fill:red;
+-fx-padding:8 8 8 8;
+-fx-border-radius:20;
+-fx-font-weight:bold;
+}
+#mylabel{
+-fx-font-size:25px;
+-fx-background-color:black;
+-fx-text-fill:red;
+-fx-padding:8 8 8 8;
+-fx-border-radius:20;
+-fx-font-weight:bold;
+}
+.root{
+-fx-background-color:red;
+}
