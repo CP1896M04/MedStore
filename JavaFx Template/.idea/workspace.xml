@@ -78,8 +78,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -284,7 +285,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
