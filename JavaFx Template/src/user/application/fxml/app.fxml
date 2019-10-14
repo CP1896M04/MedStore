@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.application.fxml.App">
+   <children>
+      <TextField fx:id="txtUser" layoutX="93.0" layoutY="86.0" />
+      <TextField fx:id="txtPass" layoutX="93.0" layoutY="126.0" />
+      <Label fx:id="lbUser" layoutX="40.0" layoutY="90.0" text="User" />
+      <Label fx:id="lbPass" layoutX="40.0" layoutY="130.0" text="Password" />
+      <Button fx:id="btnAdd" layoutX="28.0" layoutY="176.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="btnRemove" layoutX="100.0" layoutY="175.0" mnemonicParsing="false" text="Remove" />
+      <Button fx:id="btnDel" layoutX="190.0" layoutY="175.0" mnemonicParsing="false" text="Deleted" />
+      <TableView layoutX="264.0" layoutY="51.0" prefHeight="274.0" prefWidth="308.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

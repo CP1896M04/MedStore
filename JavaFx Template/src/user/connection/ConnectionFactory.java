@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     public Connection getConnection(){
         try {
-            String dbURL = "jdbc:sqlserver://localhost;databaseName=Demo;user=sa;password=123456";
+            String dbURL = "jdbc:sqlserver://localhost;databaseName=Demo;user=thientinh99;password=thientinh";
             Connection conn = DriverManager.getConnection(dbURL);
             return conn;
         } catch (SQLException e){
