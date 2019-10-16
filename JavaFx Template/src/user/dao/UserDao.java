@@ -6,6 +6,7 @@ import user.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao implements DAO<User> {
@@ -41,39 +42,58 @@ public class UserDao implements DAO<User> {
     }
 
     @Override
-    public void remove(User o) {
-        String sql = "insert into user (username, password) values (? ,?)";
-        try{
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getUserName());
-            preparedStatement.setString(2, o.getPassWord());
-            preparedStatement.execute();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        /*public void remove(Cliente cliente) {
-		String sql = "delete from clientes where id = ?";
-		try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-			preparedStatement.setInt(1, cliente.getId());
+//    public void remove(User o) {
+//        String sql = "DELETE FROM users where username=?";
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+//            preparedStatement.setString(1, o.getUserName());
+//            preparedStatement.setString(2, o.getPassWord());
+//
+//            preparedStatement.execute();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+      public void remove(User o) {
+	String sql = "delete from users where username = ?";
+	try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+	    preparedStatement.setString(1, o.getUserName());
 
-			preparedStatement.execute();
-		} catch (SQLException e) {
+		preparedStatement.execute();
+	} catch (SQLException e) {
 			throw new RuntimeException(e);
-		}
-	}*/
-    }
+	    }
+	}
 
     @Override
     public void update(User o) {
-        String sql = "insert into user (username, password) values (? ,?)";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        String sql = "update users set username= ?, password = ? where username = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, o.getUserName());
             preparedStatement.setString(2, o.getPassWord());
+            preparedStatement.setString(3, o.getUserName());
             preparedStatement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        /*
+        boolean success = true;
+        UserDao userDao = new UserDao();
+        List<User> users = new ArrayList<User>();
+        users = userDao.getList();
+        if(users.isEmpty()){
+            success = false;
+        }  else {
+
+            String sql = "update users set username= ?, password = ? where username = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setString(1, o.getUserName());
+                preparedStatement.setString(2, o.getPassWord());
+                preparedStatement.setString(3, o.getUserName());
+                preparedStatement.execute();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+*/
         /*public void atualiza(Cliente cliente) {
 		String sql = "update clientes set nome = ?, idade = ? where id = ?";
 		try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -100,7 +120,6 @@ public class UserDao implements DAO<User> {
 			while (resultSet.next()) {
 				String nome = resultSet.getString("nome");
 				Integer idade = resultSet.getInt("idade");
-				Cliente cliente = new Cliente(nome, idade);
 				clientes.add(cliente);
 			}
 		} catch (SQLException e) {
