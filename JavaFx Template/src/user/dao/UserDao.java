@@ -5,6 +5,7 @@ import user.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +110,23 @@ public class UserDao implements DAO<User> {
 
     @Override
     public List<User> getList() {
-        return null;
+//            List<User> users = new ArrayList<>();
+//
+//            String sql = "select username,password from users";
+//            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+//                ResultSet resultSet = preparedStatement.executeQuery();
+//
+//                while (resultSet.next()) {
+//                    String username = resultSet.getString("username");
+//                    String password = resultSet.getString("password");
+//                    //
+//                }
+//            } catch (SQLException e) {
+//                throw new RuntimeException(e);
+//            }
+
+
+            return null;
         /*public List<Cliente> getLista() {
 		List<Cliente> clientes = new ArrayList<>();
 
