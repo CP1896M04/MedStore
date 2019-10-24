@@ -1,6 +1,5 @@
 package user.application.controller;
 
-import com.sun.org.apache.xpath.internal.operations.String;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
