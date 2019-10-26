@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/afterburner_fx_1_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/AppPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/AppView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/right/RightPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/right/RightView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/right/right.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/inventory/inventory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/sale/SalePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/sale/SaleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/sale/sale.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pattern/connection/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/demo/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/demo/Master.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/demo/MasterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/demo/Second.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/demo/Secondcontroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/fxml/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/user/connection/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/demo/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/demo/Master.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/demo/MasterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/demo/Second.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/demo/Secondcontroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/fxml/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connection/ConnectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +138,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.hello" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ScreensFramework" />

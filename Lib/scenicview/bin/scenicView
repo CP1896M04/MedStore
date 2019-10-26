@@ -1,0 +1,3 @@
+#!/bin/sh
+DIR=${0%/*}
+(cd $DIR && ./java  -m org.scenicview.scenicview/org.scenicview.ScenicView  $@)
