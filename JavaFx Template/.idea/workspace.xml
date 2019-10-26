@@ -2,77 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../2. Application/.idea/libraries/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/.idea/libraries/log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/2. Application.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/src/.idea/user.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/fxml/Main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2. Application/src/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/artifacts/Application_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__net_sourceforge_jtds_jtds_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_base_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_controls_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_fxml_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_media_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_media_mac_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/Maven__org_openjfx_javafx_media_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/libraries/sqljdbc42.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/.idea/libraries/sqljdbc42.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/.idea/libraries/afterburner_fx_1_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/app/AppPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/app/AppView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/sale/SaleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/application/sale/SaleDesigner.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/lib/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2. Application/src/pattern/connection/ConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2. Application/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2. Application/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/Application.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/dependency-reduced-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/artifacts/Application_jar/Application_jar.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/META-INF/Application.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/conexao/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/dao/ClienteDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/model/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/testes/TestaDelete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/testes/TestaInsert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/testes/TestaSelect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/cruid/testes/TestaUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/database/ConectionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/database/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/database/CustomerDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/application/app.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/application/design.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/connection/ConnectionFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/dao/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/Application/main/java/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/conexao/ConnectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/dao/ClienteDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/dao/DAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/model/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/testes/TestaDelete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/testes/TestaInsert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/testes/TestaSelect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/cruid/testes/TestaUpdate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/database/ConectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/database/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/database/CustomerDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/application/app.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/application/design.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/connection/ConnectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/dao/DAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/dao/UserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2. Application/src/main/java/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/2. Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/demo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/demo/Master.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/demo/MasterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/demo/Second.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/demo/Secondcontroller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/application/fxml/Main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/dao/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/out/production/2. Application/user/connection/ConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/demo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/demo/Master.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/demo/MasterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/demo/Second.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/demo/Secondcontroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/application/fxml/Main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/connection/ConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. Application/src/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. Application/src/pattern/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

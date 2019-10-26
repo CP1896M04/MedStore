@@ -6,14 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
-
 import java.io.IOException;
-
 public class Main extends Application {
+    /*
     static{
         DOMConfigurator.configure("src/log4j.xml");
     }
+    */
     final static Logger logger = Logger.getLogger( application.Main.class);
     public static void main(String[] args) {
         launch(args);
