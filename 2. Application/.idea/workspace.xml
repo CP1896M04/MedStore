@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
-      <change afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/pointofsale.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/leftMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/icon/Settings-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/icon/inventory-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/icon/product-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/icon/sale-icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/icon/statistic-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_9_0_9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/AppPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/AppPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/SalePresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/SaleView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/sale.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/AppPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/AppPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/SalePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSalePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/SaleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSaleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/sale.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/leftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/leftMenu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +32,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/../Lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/vendor/icon" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lib/jfoenix-9.0.9.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />

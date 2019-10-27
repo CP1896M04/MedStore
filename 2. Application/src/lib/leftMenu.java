@@ -14,6 +14,9 @@ public class leftMenu {
     private static  leftMenu instance = new  leftMenu();
     private leftMenu(){}
     public static leftMenu getInstance(){
+        if (instance==null){
+            instance = new leftMenu();
+        }
         return  instance;
     }
     public void getLeftMenu(TreeView treeView) {

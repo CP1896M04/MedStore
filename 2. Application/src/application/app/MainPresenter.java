@@ -28,13 +28,14 @@ public class MainPresenter implements Initializable {
     public void selectItems(MouseEvent event){
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         String nodeName = item.getValue();
+        /*
        switch (nodeName){
            case "Point of Sale":
                container.getChildren().clear();
                PointOfSaleView pointOfSaleView = new PointOfSaleView();
                container.getChildren().add(pointOfSaleView.getView());
                break;
-       }
+       }*/
 
     }
 }
