@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="">
+    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
+      <change afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/app/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/pointofsale.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/leftMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/icon/Settings-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/icon/inventory-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/icon/product-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/icon/sale-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/icon/statistic-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/AppPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/AppPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/SalePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/SaleView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/sale.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/AppPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/AppPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/SalePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSalePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/SaleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSaleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/sale.fxml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -27,21 +49,24 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/../Lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lib/afterburner.fx-1.6.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/vendor/icon" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\MedStore\2. Application\src\application\sale\poinofsale" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
       <recent name="D:\JAVA\MedStore\2. Application" />
       <recent name="D:\JAVA\MedStore\2. Application\src\resource" />
       <recent name="D:\JAVA\MedStore\2. Application\src" />
-      <recent name="D:\JAVA\MedStore\2. Application\out\production\2. Application\META-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -56,13 +81,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.app.App" />
       <module name="2. Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="application.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="2. Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,6 +175,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.hello" />
         <item itemvalue="Application.Main" />
@@ -169,5 +208,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ok giao dien" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ok giao dien" />
   </component>
 </project>

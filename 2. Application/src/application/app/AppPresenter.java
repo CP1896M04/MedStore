@@ -1,8 +1,7 @@
 package application.app;
 
-import application.app.right.RightView;
 import application.inventory.InventoryView;
-import application.sale.SaleView;
+import application.sale.poinofsale.PointOfSaleView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,8 +34,8 @@ public class AppPresenter implements Initializable {
     @FXML
     void btn1Click(ActionEvent event) {
         right.getChildren().clear();
-        SaleView saleView = new SaleView();
-        right.getChildren().add(saleView.getView());
+        PointOfSaleView pointOfSaleView = new PointOfSaleView();
+        right.getChildren().add(pointOfSaleView.getView());
     }
 
     @FXML

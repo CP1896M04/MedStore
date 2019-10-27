@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.MainPresenter">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="629.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Sale">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Point of Sale" />
+                  <MenuItem mnemonicParsing="false" text="Sale Report" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Product">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Category Manage" />
+                  <MenuItem mnemonicParsing="false" text="Product Manage" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Inventory">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Product Import" />
+                  <MenuItem mnemonicParsing="false" text="Stock Report" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Statistics">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Revenue report" />
+                  <MenuItem mnemonicParsing="false" text="Profit report" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Users Manage" />
+                  <MenuItem mnemonicParsing="false" text="User Config" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <HBox prefHeight="381.0" prefWidth="119.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="treeView" onContextMenuRequested="#selectItems" onMouseClicked="#selectItems" prefHeight="358.0" prefWidth="138.0" />
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox fx:id="container" style="-fx-background-color: pink;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

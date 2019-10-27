@@ -13,12 +13,15 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        AppView view = new AppView();
+        MainView view = new MainView();
         Scene scene = new Scene(view.getView());
         primaryStage.setTitle("App");
         //final String uri = getClass().getResource("app.css").toExternalForm();
        // scene.getStylesheets().add(uri);
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
+        primaryStage.setFullScreen(true);
+        primaryStage.setResizable(true);
         primaryStage.show();
     }
 }

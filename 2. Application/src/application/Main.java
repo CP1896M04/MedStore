@@ -1,5 +1,6 @@
 package application;
 
+import application.app.MainView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,16 +20,14 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        try {
-            Parent root= FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
-            logger.debug("This is debug : ");
-            Scene scene= new Scene(root);
-            //scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public void start(Stage primaryStage)  throws IOException {
+        MainView view = new MainView();
+        Scene scene = new Scene(view.getView());
+        primaryStage.setTitle("App");
+        //final String uri = getClass().getResource("app.css").toExternalForm();
+        // scene.getStylesheets().add(uri);
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(true);
+        primaryStage.show();
     }
 }
