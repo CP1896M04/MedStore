@@ -2,14 +2,21 @@ package application.app;
 
 import application.sale.poinofsale.PointOfSaleView;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lib.leftMenu;
 
 import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,14 +35,22 @@ public class MainPresenter implements Initializable {
     public void selectItems(MouseEvent event){
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         String nodeName = item.getValue();
-        /*
        switch (nodeName){
-           case "Point of Sale":
-               container.getChildren().clear();
-               PointOfSaleView pointOfSaleView = new PointOfSaleView();
-               container.getChildren().add(pointOfSaleView.getView());
+           case "Add Product":
+               loadWindow("/application/product/addnewproduct/addnewproduct.fxml","Add new product");
                break;
-       }*/
-
+       }
     }
+    void loadWindow(String loc, String title){
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource(loc));
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle(title);
+            stage.setScene((new Scene(parent)));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

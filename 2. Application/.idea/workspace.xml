@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_9_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/StageAddProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/leftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/leftMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3. Database/SQL-Pharmacy.sql" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +44,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\MedStore\2. Application\src\application\sale\poinofsale" />
       <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
       <recent name="D:\JAVA\MedStore\2. Application" />
       <recent name="D:\JAVA\MedStore\2. Application\src\resource" />
       <recent name="D:\JAVA\MedStore\2. Application\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
     </key>
   </component>
   <component name="RunDashboard">
