@@ -4,18 +4,16 @@ import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import javax.swing.*;
-
-public class leftMenu {
+public class LeftMenu {
     Image saleIcon  = new Image(getClass().getResourceAsStream("/vendor/icon/sale-icons.png"));
     Image productIcon  = new Image(getClass().getResourceAsStream("/vendor/icon/product-icon.png"));
     Image inventoryIcon  = new Image(getClass().getResourceAsStream("/vendor/icon/inventory-icon.png"));
     Image statisticIcon  = new Image(getClass().getResourceAsStream("/vendor/icon/statistic-icon.png"));
-    private static  leftMenu instance = new  leftMenu();
-    private leftMenu(){}
-    public static leftMenu getInstance(){
+    private static LeftMenu instance = new LeftMenu();
+    private LeftMenu(){}
+    public static LeftMenu getInstance(){
         if (instance==null){
-            instance = new leftMenu();
+            instance = new LeftMenu();
         }
         return  instance;
     }
@@ -30,7 +28,8 @@ public class leftMenu {
         //Product Node
         TreeItem<String> nodeProduct = new TreeItem<>("Product", new ImageView(productIcon));
         TreeItem<String> nodeAddProduct = new TreeItem<>("Add Product");
-        nodeProduct.getChildren().add(nodeAddProduct);
+        TreeItem<String> nodeAddCategory = new TreeItem<>("Add Category");
+        nodeProduct.getChildren().addAll(nodeAddProduct,nodeAddCategory);
         TreeItem<String> nodeInventory = new TreeItem<>("Inventory", new ImageView(inventoryIcon));
         TreeItem<String> nodeStatistic= new TreeItem<>("Inventory", new ImageView(statisticIcon));
         root.getChildren().addAll(nodeSale,nodeProduct,nodeInventory,nodeStatistic);
