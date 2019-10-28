@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien" />
+    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
+      <change afterPath="$PROJECT_DIR$/src/lib/window/addCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/window/addNewProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/StageAddProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/StageAddProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/leftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LeftMenu.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/../Lib" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
