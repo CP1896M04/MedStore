@@ -41,7 +41,10 @@ public class MainPresenter implements Initializable {
                stage.show();
                break;
            case "Add Category":
-               loadWindow("/application/product/addcategory/addcategory.fxml","Add new product");
+               Parent parent1 = FXMLLoader.load(getClass().getResource("/application/product/addcategory/addcategory.fxml"));
+               Stage stage1 = addNewProduct.getInstance();
+               stage1.setScene((new Scene(parent1)));
+               stage1.show();
                break;
        }
     }
