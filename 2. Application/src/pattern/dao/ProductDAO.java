@@ -50,6 +50,7 @@ public class ProductDAO implements DAO<Product>{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
 
     @Override
     public void update(Product o) {
