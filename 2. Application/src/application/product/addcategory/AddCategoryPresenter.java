@@ -15,6 +15,10 @@ import javafx.scene.input.MouseEvent;
 import pattern.dao.CatDAO;
 import pattern.model.Category;
 
+import javax.swing.*;
+
+import static java.lang.Integer.parseInt;
+
 public class AddCategoryPresenter implements Initializable {
     CatDAO catDAO= new CatDAO();
       @FXML
@@ -69,7 +73,9 @@ public class AddCategoryPresenter implements Initializable {
             public void handle(MouseEvent event) {
 //                System.out.println("hello");
                 Category category=tableview.getSelectionModel().getSelectedItem();
-                txtCatId.setText(category.setCatID());
+                txtCatId.setText(category.getCatID().toString());
+                txtCatName.setText(category.getCatName());
+                txtDesc.setText(category.getDesc());
             }
         });
     }
@@ -83,15 +89,37 @@ public class AddCategoryPresenter implements Initializable {
     }
 @FXML
     public void  btnAdd(ActionEvent e){
-    Category category = new Category(0, txtCatName.getText(),txtDesc.getText());
-    catDAO.add(category);
-    System.out.println("Da them"+ category.getCatName());
+
+                    if(txtCatName.getText().trim().isEmpty() && txtDesc.getText().trim().isEmpty()){
+                        System.out.println("error catname");
+                        System.out.println("error desc");
+                    }else if(txtCatName.getText().trim().isEmpty()){
+                        System.out.println("error catname");
+                    }else if(txtDesc.getText().trim().isEmpty()){
+                        System.out.println("desc");
+                    }else {
+                        Category category = new Category(0, txtCatName.getText(),txtDesc.getText());
+                        catDAO.add(category);
+                        System.out.println("Da them"+ category.getCatName());
+                    }
+
+
 
 }
+
+
 @FXML
     public void  btnDelete(ActionEvent event){
     catDAO.remove(txtCatId.getText());
-    System.out.println("Da them"+txtCatId.getText() );
+    System.out.println("Da xoa"+txtCatId.getText() );
 
+}
+@FXML
+    public void btnUpdate(ActionEvent event){
+
+   Category category= new Category( parseInt(txtCatId.getText()),txtCatName.getText(),txtDesc.getText());
+
+    catDAO.update(category);
+    System.out.println("Da update"+ category.getCatName());
 }
 }

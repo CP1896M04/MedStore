@@ -13,8 +13,8 @@
       <Label fx:id="lbCatName" layoutX="27.0" layoutY="116.0" prefHeight="29.0" prefWidth="98.0" text="CategoryName" />
       <Label fx:id="lbDesc" layoutX="27.0" layoutY="170.0" prefHeight="29.0" prefWidth="87.0" text="Desc" />
       <Button fx:id="btnAdd" layoutX="50.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnAdd" text="Add" />
-      <Button fx:id="btnUpdate" layoutX="134.0" layoutY="229.0" mnemonicParsing="false" text="Update" />
-      <Button fx:id="btnDelete" layoutX="231.0" layoutY="229.0" mnemonicParsing="false" text="Delete" />
+      <Button fx:id="btnUpdate" layoutX="134.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
+      <Button fx:id="btnDelete" layoutX="231.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnDelete" text="Delete" />
       <TableView fx:id="tableview" layoutX="304.0" layoutY="31.0" prefHeight="345.0" prefWidth="283.0">
         <columns>
           <TableColumn fx:id="columnCatId" prefWidth="82.0" text="CategoryID" />
