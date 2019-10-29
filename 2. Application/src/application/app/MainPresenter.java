@@ -12,6 +12,7 @@ import javafx.stage.StageStyle;
 import lib.LeftMenu;
 
 import javafx.scene.input.MouseEvent;
+import lib.window.addNewProduct;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,15 +30,21 @@ public class MainPresenter implements Initializable {
             LeftMenu instance = LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
     }
-    public void selectItems(MouseEvent event){
+    public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         String nodeName = item.getValue();
        switch (nodeName){
            case "Add Product":
-               loadWindow("/application/product/addnewproduct/addnewproduct.fxml","Add new product");
+               Parent parent = FXMLLoader.load(getClass().getResource("/application/product/addnewproduct/addnewproduct.fxml"));
+               Stage stage = addNewProduct.getInstance();
+               stage.setScene((new Scene(parent)));
+               stage.show();
                break;
            case "Add Category":
-               loadWindow("/application/product/addcategory/addcategory.fxml","Add new product");
+               Parent parent1 = FXMLLoader.load(getClass().getResource("/application/product/addcategory/addcategory.fxml"));
+               Stage stage1 = addNewProduct.getInstance();
+               stage1.setScene((new Scene(parent1)));
+               stage1.show();
                break;
        }
     }

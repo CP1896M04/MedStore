@@ -21,6 +21,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage)  throws IOException {
+        logger.info("Load main form");
         MainView view = new MainView();
         Scene scene = new Scene(view.getView());
         primaryStage.setTitle("App");

@@ -37,7 +37,7 @@ public class Product {
         return CatID;
     }
 
-    public Integer getSupplierID() {
+    public String getSupplierID() {
         return SupplierID;
     }
 
@@ -57,15 +57,15 @@ public class Product {
         return PManufacturer;
     }
 
-    public Float getUPrice() {
+    public String getUPrice() {
         return UPrice;
     }
 
-    public Float getUSP() {
+    public String getUSP() {
         return USP;
     }
 
-    public Integer getReOrLevel() {
+    public String getReOrLevel() {
         return ReOrLevel;
     }
 
@@ -73,7 +73,7 @@ public class Product {
         return HTU;
     }
 
-    public Integer getDefaultInDose() {
+    public String getDefaultInDose() {
         return DefaultInDose;
     }
 
