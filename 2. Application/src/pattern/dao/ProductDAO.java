@@ -3,6 +3,7 @@ package pattern.dao;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Product;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -15,25 +16,32 @@ public class ProductDAO implements DAO<Product>{
         this.connection = connection;
     }
 
-    public ProductDAO{
+//    public ProductDAO{
+//        ConnectionFactory connectionFactory = new ConnectionFactory();
+//        connection =connectionFactory.getConnection();
+//    }
+
+    public ProductDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        connection = connectionFactory.getConnection();
+        connection =connectionFactory.getConnection();
     }
     @Override
     public void add(Product o) {
         String sql = "INSERT INTO [dbo].[Product] ([CatID],[UnitID],[SupplierID],[PName],[PDescr],[PComposition],[PManufacturer],[Uprice],[USP],[ReOrLevel],[HTU],[DefaultInDose]) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
-            PreparedStatement preparedStatement = new  connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getSupplierID());
+//            PreparedStatement preparedStatement = new connection.prepareStatement(sql);
+            PreparedStatement preparedStatement= connection.prepareStatement(sql);
+
+            preparedStatement.setInt(1, o.getSupplierID());
             preparedStatement.setString(2, o.getPName());
             preparedStatement.setString(3, o.getPDescr());
             preparedStatement.setString(4, o.getPComposition());
             preparedStatement.setString(5, o.getPManufacturer());
-            preparedStatement.setString(6, o.getUPrice());
-            preparedStatement.setString(7, o.getUSP());
-            preparedStatement.setString(8, o.getReOrLevel());
+            preparedStatement.setFloat(6, o.getUPrice());
+            preparedStatement.setFloat(7, o.getUSP());
+            preparedStatement.setInt(8, o.getReOrLevel());
             preparedStatement.setString(9, o.getHTU());
-            preparedStatement.setString(10, o.getDefaultInDose());
+            preparedStatement.setInt(10, o.getDefaultInDose());
             preparedStatement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -44,7 +52,7 @@ public class ProductDAO implements DAO<Product>{
     public void remove(String ProductID) throws SQLException {
         String sql = "DELETE FROM [dbo].[Product] WHERE ProductID = ?";
         try {
-            PreparedStatement preparedStatement = new connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, String.valueOf(Integer.parseInt(ProductID)));
             preparedStatement.execute();
         } catch (SQLException e) {
