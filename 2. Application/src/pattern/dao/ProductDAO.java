@@ -16,12 +16,16 @@ public class ProductDAO implements DAO<Product>{
         this.connection = connection;
     }
 
+<<<<<<< HEAD
 //    public ProductDAO{
 //        ConnectionFactory connectionFactory = new ConnectionFactory();
 //        connection =connectionFactory.getConnection();
 //    }
 
     public ProductDAO() {
+=======
+    public ProductDAO(){
+>>>>>>> 75a980fa80a7916050893f85f0e3c95bd5232309
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connection =connectionFactory.getConnection();
     }
@@ -29,10 +33,15 @@ public class ProductDAO implements DAO<Product>{
     public void add(Product o) {
         String sql = "INSERT INTO [dbo].[Product] ([CatID],[UnitID],[SupplierID],[PName],[PDescr],[PComposition],[PManufacturer],[Uprice],[USP],[ReOrLevel],[HTU],[DefaultInDose]) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
+<<<<<<< HEAD
 //            PreparedStatement preparedStatement = new connection.prepareStatement(sql);
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
 
             preparedStatement.setInt(1, o.getSupplierID());
+=======
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, o.getSupplierID());
+>>>>>>> 75a980fa80a7916050893f85f0e3c95bd5232309
             preparedStatement.setString(2, o.getPName());
             preparedStatement.setString(3, o.getPDescr());
             preparedStatement.setString(4, o.getPComposition());
@@ -56,9 +65,7 @@ public class ProductDAO implements DAO<Product>{
             preparedStatement.setString(1, String.valueOf(Integer.parseInt(ProductID)));
             preparedStatement.execute();
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
