@@ -23,7 +23,7 @@
       <Label fx:id="lbHTU" layoutX="24.0" layoutY="301.0" text="HTU" />
       <Label fx:id="lbSupplierId" layoutX="277.0" layoutY="109.0" text="SupplierID" />
       <Label fx:id="lbPDescr" layoutX="279.0" layoutY="155.0" prefHeight="17.0" prefWidth="43.0" text="PDescr" />
-      <Label fx:id="lbPDescr" layoutX="277.0" layoutY="192.0" text="PManufacturer" />
+      <Label fx:id="lbPManufacturer" layoutX="277.0" layoutY="192.0" text="PManufacturer" />
       <Label fx:id="lbReOrLevel" layoutX="277.0" layoutY="226.0" text="ReOrLevel" />
       <Label fx:id="lbDefaultInDose" layoutX="277.0" layoutY="264.0" text="DefaultInDose" />
       <TextField fx:id="txtPComposition" layoutX="99.0" layoutY="188.0" />
