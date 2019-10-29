@@ -96,7 +96,7 @@ public class AddCategoryPresenter implements Initializable {
                     }else if(txtCatName.getText().trim().isEmpty()){
                         System.out.println("error catname");
                     }else if(txtDesc.getText().trim().isEmpty()){
-                        System.out.println("desc");
+                        System.out.println("error desc");
                     }else {
                         Category category = new Category(0, txtCatName.getText(),txtDesc.getText());
                         catDAO.add(category);
