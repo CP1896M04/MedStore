@@ -22,8 +22,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage)  throws IOException {
         logger.info("Load main form");
-        MainView view = new MainView();
-        Scene scene = new Scene(view.getView());
+        Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
+        Scene scene = new Scene(parent);
         primaryStage.setTitle("App");
         //final String uri = getClass().getResource("app.css").toExternalForm();
         // scene.getStylesheets().add(uri);

@@ -29,7 +29,8 @@ public class LeftMenu {
         TreeItem<String> nodeProduct = new TreeItem<>("Product", new ImageView(productIcon));
         TreeItem<String> nodeAddProduct = new TreeItem<>("Add Product");
         TreeItem<String> nodeAddCategory = new TreeItem<>("Add Category");
-        nodeProduct.getChildren().addAll(nodeAddProduct,nodeAddCategory);
+        TreeItem<String> nodeSupplier= new TreeItem<>("Supplier Manage");
+        nodeProduct.getChildren().addAll(nodeAddProduct,nodeAddCategory,nodeSupplier);
         TreeItem<String> nodeInventory = new TreeItem<>("Inventory", new ImageView(inventoryIcon));
         TreeItem<String> nodeStatistic= new TreeItem<>("Inventory", new ImageView(statisticIcon));
         root.getChildren().addAll(nodeSale,nodeProduct,nodeInventory,nodeStatistic);
