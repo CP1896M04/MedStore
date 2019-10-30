@@ -7,7 +7,7 @@ public class Config {
     private static Properties defaultProps = new Properties();
     static {
         try {
-            FileInputStream in = new FileInputStream("./config.properties");
+            FileInputStream in = new FileInputStream("C:/config.properties");
             defaultProps.load(in);
             in.close();
         } catch (Exception e) {

@@ -14,6 +14,7 @@ import javafx.stage.StageStyle;
 import javafx.scene.input.MouseEvent;
 import lib.LeftMenu;
 import lib.window.addNewProduct;
+import lib.window.supplierManage;
 
 
 import java.io.IOException;
@@ -29,13 +30,13 @@ public class MainPresenter implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-            LeftMenu instance = LeftMenu.getInstance();
+        lib.LeftMenu instance = lib.LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
     }
     public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         String nodeName = item.getValue();
-       switch (nodeName){
+       switch (nodeName) {
            case "Add Product":
                Parent parent = FXMLLoader.load(getClass().getResource("/application/product/addnewproduct/addnewproduct.fxml"));
                Stage stage = addNewProduct.getInstance();
@@ -47,6 +48,12 @@ public class MainPresenter implements Initializable {
                Stage stage1 = addNewProduct.getInstance();
                stage1.setScene((new Scene(parent1)));
                stage1.show();
+               break;
+           case "Supplier Manage":
+               Parent supplierManageParent = FXMLLoader.load(getClass().getResource("/application/product/addsupplier/suppliermanager.fxml"));
+               Stage supplierManageStage = supplierManage.getInstance();
+               supplierManageStage.setScene((new Scene(supplierManageParent)));
+               supplierManageStage.show();
                break;
        }
     }

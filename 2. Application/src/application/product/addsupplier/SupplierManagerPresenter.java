@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import org.apache.log4j.Logger;
 import pattern.dao.SupplierDao;
 import pattern.model.Supplier;
 
@@ -21,6 +22,7 @@ import java.util.ResourceBundle;
 import static java.lang.Integer.parseInt;
 
 public class SupplierManagerPresenter implements Initializable {
+    final static Logger logger = Logger.getLogger( application.Main.class);
     @FXML
     private Button btnAdd;
 
@@ -31,7 +33,7 @@ public class SupplierManagerPresenter implements Initializable {
     private Button btnRemove;
 
     @FXML
-    private TableView<?> tableview;
+    private TableView<Supplier> tableview;
 
     @FXML
     private TableColumn<Supplier, Integer> columnSupplierId;
@@ -103,14 +105,16 @@ SupplierDao supplierDao= new SupplierDao();
 
     @FXML
     void btnAdd(ActionEvent event) {
+        logger.info("vo");
         Supplier supplier= new Supplier(0,txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
         supplierDao.add(supplier);
+        System.out.println(supplier.toString());
         System.out.println("Da them"+ supplier.getComName());
     }
 
     @FXML
     void btnRemove(ActionEvent event) throws  SQLException {
-supplierDao.remove(txtSupplierId.getText());
+    supplierDao.remove(txtSupplierId.getText());
         System.out.println("Da xoa"+txtSupplierId.getText());
     }
 
@@ -122,21 +126,21 @@ Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.get
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initColumn();
-//        List<Supplier> suppliers = new ArrayList<>();
-//        suppliers=supplierDao.getList();
-//        tableview.getItems().setAll(suppliers);
-//        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent event) {
-//              Supplier supplier= (Supplier) tableview.getSelectionModel().getSelectedItem();
-//              txtSupplierId.setText(supplier.getSupplierID().toString());
-//              txtComCode.setText(supplier.getComCode());
-//              txtComName.setText(supplier.getComName());
-//              txtAddress.setText(supplier.getAddress());
-//              txtPhone.setText(supplier.getPhone());
-//              txtTax.setText(supplier.getTax());
-//            }
-//        });
+        List<Supplier> suppliers = new ArrayList<Supplier>();
+        suppliers=supplierDao.getList();
+        tableview.getItems().setAll(suppliers);
+        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+              Supplier supplier= (Supplier) tableview.getSelectionModel().getSelectedItem();
+              txtSupplierId.setText(supplier.getSupplierID().toString());
+              txtComCode.setText(supplier.getComCode());
+              txtComName.setText(supplier.getComName());
+              txtAddress.setText(supplier.getAddress());
+              txtPhone.setText(supplier.getPhone());
+              txtTax.setText(supplier.getTax());
+            }
+        });
 
     }
     public void initColumn(){

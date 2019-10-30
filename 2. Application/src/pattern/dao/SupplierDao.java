@@ -12,13 +12,13 @@ import java.util.List;
 
 public class SupplierDao implements DAO<Supplier>{
     private Connection connection;
-public void SupplierDao(){
+public SupplierDao(){
     ConnectionFactory connectionFactory = new ConnectionFactory();
     connection =connectionFactory.getConnection();
 }
     @Override
     public void add(Supplier o) {
-        String sql = "insert into Supplier (ComCode,ComName,Address,Phone,Email,Tax) values (?,?,?,?,?,?)";
+        String sql = "insert into Supplier(ComCode,ComName,Address,Phone,Email,Tax) values (?,?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, o.getComCode());
@@ -27,8 +27,6 @@ public void SupplierDao(){
             preparedStatement.setString(4, o.getPhone());
             preparedStatement.setString(5, o.getEmail());
             preparedStatement.setString(6, o.getTax());
-
-
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -80,13 +78,13 @@ public void SupplierDao(){
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int supplierID= resultSet.getInt("columnSupplierId");
-                String comCode = resultSet.getString("columnComCode");
-                String comName = resultSet.getString("columnComName");
-                String address = resultSet.getString("columnAddress");
-                String phone= resultSet.getString("columnPhone");
-                String email = resultSet.getString("columnEmail");
-                String tax = resultSet.getString("columnTax");
+                int supplierID= resultSet.getInt("SupplierId");
+                String comCode = resultSet.getString("ComCode");
+                String comName = resultSet.getString("ComName");
+                String address = resultSet.getString("Address");
+                String phone= resultSet.getString("Phone");
+                String email = resultSet.getString("Email");
+                String tax = resultSet.getString("Tax");
                Supplier supplier= new Supplier(supplierID,comCode,comName,address,phone,email,tax);
                 suppliers.add(supplier);
             }
