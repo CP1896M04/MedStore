@@ -10,14 +10,10 @@ public class Category {
         CatName = catName;
         Desc = desc;
     }
-
-
-
     public Integer getCatID() {
 
         return CatID;
     }
-
     public void setCatID(Integer catID) {
         CatID = catID;
     }
