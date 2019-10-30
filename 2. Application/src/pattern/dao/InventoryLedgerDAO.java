@@ -42,7 +42,7 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
 
     @Override
     public void remove(String id) throws SQLException {
-
+        String sql = "DELETE FROM [dbo].[Category] WHERE CatID = ?";
     }
 
     @Override
