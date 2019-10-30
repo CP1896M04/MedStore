@@ -101,9 +101,9 @@ public class AddNewProductPresenter implements Initializable {
     ProductDAO productDAO= new ProductDAO();
     @FXML
     void btnAdd(ActionEvent event) {
-     Product product= new Product(0,0,0,txtPName.getText(),txtPDescr.getText(),txtPComposition.getText(),txtPManufacturer.getText(),0f,0f,0,txtHTU.getText(),0);
-        productDAO.add(product);
-        System.out.println("Da them"+ product.getPName());
+     //Product product= new Product(0,0,0,txtPName.getText(),txtPDescr.getText(),txtPComposition.getText(),txtPManufacturer.getText(),0f,0f,0,txtHTU.getText(),0);
+       // productDAO.add(product);
+       // System.out.println("Da them"+ product.getPName());
     }
 
     @FXML
