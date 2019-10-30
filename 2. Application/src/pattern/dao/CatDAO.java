@@ -67,11 +67,15 @@ public class CatDAO implements DAO<Category> {
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
+
+
                 int catID= resultSet.getInt("CatID");
                 String catName = resultSet.getString("CatName");
                 String desc = resultSet.getString("Desc");
                 Category category= new Category(catID,catName,desc);
                 categories.add(category);
+
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

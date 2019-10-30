@@ -19,7 +19,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    @Overrideb
+    @Override
     public void start(Stage primaryStage)  throws IOException {
         logger.info("Load main form");
         Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));

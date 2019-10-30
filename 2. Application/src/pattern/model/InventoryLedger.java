@@ -1,19 +1,22 @@
 package pattern.model;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class InventoryLedger {
-    private Integer LegerID ;
-    private String LegerCode ;
-    private Integer ProductID ;
-    private Integer QuantityTransacted ;
-    private Float InventoryPurchaseCost ;
-    private Timestamp DateTime ;
+    private Integer LegerID;
+    private String LegerCode;
+    private Integer ProductID;
+    private String TransactionType;
+    private Integer QuantityTransacted;
+    private Float InventoryPurchaseCost;
+    private Timestamp DateTime;
 
-    public InventoryLedger(Integer legerID, String legerCode, Integer productID, Integer quantityTransacted, Float inventoryPurchaseCost, Timestamp dateTime) {
+    public InventoryLedger(Integer legerID, String legerCode, Integer productID, String transactionType, Integer quantityTransacted, Float inventoryPurchaseCost, Timestamp dateTime) {
         LegerID = legerID;
         LegerCode = legerCode;
         ProductID = productID;
+        TransactionType = transactionType;
         QuantityTransacted = quantityTransacted;
         InventoryPurchaseCost = inventoryPurchaseCost;
         DateTime = dateTime;
@@ -43,6 +46,14 @@ public class InventoryLedger {
         ProductID = productID;
     }
 
+    public String getTransactionType() {
+        return TransactionType;
+    }
+
+    public void setTransactionType(String transactionType) {
+        TransactionType = transactionType;
+    }
+
     public Integer getQuantityTransacted() {
         return QuantityTransacted;
     }
@@ -65,5 +76,8 @@ public class InventoryLedger {
 
     public void setDateTime(Timestamp dateTime) {
         DateTime = dateTime;
+    }
+
+    public InventoryLedger(int legerID, String legerCode, Integer productID, String transactionType, Integer quantityTransacted, Float inventoryPurchaseCost, Date datetime) {
     }
 }
