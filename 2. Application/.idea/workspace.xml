@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien" />
+    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
+      <change afterPath="$PROJECT_DIR$/src/pattern/dao/InventoryLedgerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/1A.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/2A.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/2B.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/6.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/8.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/9.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Backup of 1A.wbk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Backup of 2A.wbk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Database.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/Settings-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/inventory-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/product-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/sale-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/statistic-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/right/RightPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/right/RightView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/right/right.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Category.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
