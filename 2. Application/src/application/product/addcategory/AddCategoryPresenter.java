@@ -67,6 +67,7 @@ public class AddCategoryPresenter implements Initializable {
         initColumn();
         List<Category> categories = new ArrayList<>();
         categories=catDAO.getList();
+
         tableview.getItems().setAll(categories);
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override

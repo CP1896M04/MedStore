@@ -9,10 +9,12 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import lib.LeftMenu;
+
 
 import javafx.scene.input.MouseEvent;
+import lib.LeftMenu;
 import lib.window.addNewProduct;
+
 
 import java.io.IOException;
 import java.net.URL;

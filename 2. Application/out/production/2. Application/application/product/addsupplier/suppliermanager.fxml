@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="427.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.product.addsupplier.SupplierManagerPresenter">
+   <children>
+      <Button fx:id="btnAdd" layoutX="17.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnAdd" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="110.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
+      <Button fx:id="btnRemove" layoutX="207.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
+      <TableView fx:id="tableview" layoutX="286.0" layoutY="2.0" prefHeight="418.0" prefWidth="489.0">
+        <columns>
+          <TableColumn fx:id="columnSupplierId" prefWidth="66.0" text="SupplierId" />
+          <TableColumn fx:id="columnComCode" prefWidth="74.0" text="ComCode" />
+            <TableColumn fx:id="columnComName" prefWidth="73.0" text="ComName" />
+            <TableColumn fx:id="columnAddress" prefWidth="76.0" text="Address" />
+            <TableColumn fx:id="columnPhone" prefWidth="57.0" text="Phone" />
+            <TableColumn fx:id="columnEmail" prefWidth="75.0" text=" Email" />
+            <TableColumn fx:id="columnTax" prefWidth="67.0" text="Tax" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbSupplierId" layoutX="31.0" layoutY="28.0" prefHeight="17.0" prefWidth="65.0" text="SupplierId" />
+      <Label fx:id="lbComCode" layoutX="29.0" layoutY="79.0" text="ComCode" />
+      <Label fx:id="lbComName" layoutX="29.0" layoutY="128.0" text="ComName" />
+      <Label fx:id="lbAddress" layoutX="29.0" layoutY="171.0" text="Address" />
+      <Label fx:id="lbPhone" layoutX="29.0" layoutY="209.0" text="Phone" />
+      <Label fx:id="lbEmail" layoutX="29.0" layoutY="252.0" text=" Email" />
+      <Label fx:id="lbTax" layoutX="29.0" layoutY="291.0" text="Tax" />
+      <TextField fx:id="txtSupplierId" layoutX="110.0" layoutY="24.0" />
+      <TextField fx:id="txtComCode" layoutX="110.0" layoutY="75.0" />
+      <TextField fx:id="txtComName" layoutX="110.0" layoutY="124.0" />
+      <TextField fx:id="txtAddress" layoutX="110.0" layoutY="167.0" />
+      <TextField fx:id="txtPhone" layoutX="110.0" layoutY="205.0" />
+      <TextField fx:id="txtEmail" layoutX="110.0" layoutY="248.0" />
+      <TextField fx:id="txtTax" layoutX="110.0" layoutY="287.0" />
+   </children>
+</AnchorPane>

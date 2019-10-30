@@ -74,4 +74,8 @@ public class Supplier {
     public void setTax(String tax) {
         Tax = tax;
     }
+    public String toString() {
+        return String.format("SupplierID"+SupplierID+"ComCode"+ComCode+"ComName"+ComName+"Address"+Address+"Email"+Email+"Phone"+Phone+"Tax"+Tax);
+
+    }
 }
