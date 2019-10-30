@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/AppPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/AppView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/app.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/right/RightPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/right/RightPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/right/RightView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/right/RightView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/window/addNewProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addNewProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/connection/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/connection/ConnectionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/AppPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/AppView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/app.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LeftMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
