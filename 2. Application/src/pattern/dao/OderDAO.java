@@ -2,6 +2,7 @@ package pattern.dao;
 
 import pattern.connection.ConnectionFactory;
 import pattern.model.Category;
+import pattern.model.Order;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,19 +11,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CatDAO implements DAO<Category> {
+public class OderDAO implements DAO<Order> {
     private Connection connection;
-    public  CatDAO() {
+    public  OderDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connection =connectionFactory.getConnection();
     }
     @Override
-    public void add(Category o) {
-        String sql = "insert into Category (CatName, [Desc]) values (?,?)";
+    public void add(Order o) {
+        String sql = "insert into Order ([DateKey],[StaffID]) values (?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getCatName());
-            preparedStatement.setString(2, o.getDesc());
+            preparedStatement.setInt(1, o.getDateKey());
+            preparedStatement.setInt(2, o.getStaffID());
 
             preparedStatement.execute();
         } catch (  SQLException e ) {
@@ -32,10 +33,10 @@ public class CatDAO implements DAO<Category> {
     }
 
     @Override
-    public void remove(String catID) {
-        String sql = "DELETE FROM [dbo].[Category] WHERE CatID = ?";
+    public void remove(String orderID) throws SQLException {
+        String sql = "DELETE FROM [dbo].[Order] WHERE OrderID = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, Integer.parseInt(catID));
+            preparedStatement.setInt(1, Integer.parseInt(orderID));
             preparedStatement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -43,16 +44,16 @@ public class CatDAO implements DAO<Category> {
     }
 
     @Override
-    public void update(Category o) {
-        String sql = "UPDATE [dbo].[Category]" +
-                "   SET [CatName] = ? " +
-                "      ,[Desc] = ?" +
-                " WHERE [CatId]=?";
+    public void update(Order o) {
+        String sql = "UPDATE [dbo].[Order]" +
+                "   SET [DateKey] = ?" +
+                "      ,[StaffID] = ?" +
+                " WHERE OrderID = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getCatName());
-            preparedStatement.setString(2, o.getDesc());
-            preparedStatement.setInt(3, o.getCatID());
+            preparedStatement.setInt(1, o.getDateKey());
+            preparedStatement.setInt(2, o.getStaffID());
+
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -61,25 +62,22 @@ public class CatDAO implements DAO<Category> {
     }
 
     @Override
-    public List<Category> getList() {
-        List<Category> categories = new ArrayList<>();
-        String sql = "select * from Category";
+    public List<Order> getList() {
+        List<Order> orders = new ArrayList<>();
+        String sql = "select * from Order";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-
-
-                int catID= resultSet.getInt("CatID");
-                String catName = resultSet.getString("CatName");
-                String desc = resultSet.getString("Desc");
-                Category category= new Category(catID,catName,desc);
-                categories.add(category);
-
-
+                int orderID = resultSet.getInt("OrderID");
+                int DateKey = resultSet.getInt("DateKey");
+                int staffID = resultSet.getInt("StaffID");
+                Order order = new Order(orderID,DateKey,staffID);
+                orders.add(order);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return categories;
+        return orders;
+
     }
 }

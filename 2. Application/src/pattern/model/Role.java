@@ -11,6 +11,9 @@ public class Role {
         Descr = descr;
     }
 
+    public Role(String roleName, String descr) {
+    }
+
     public Integer getRoleID() {
         return RoleID;
     }

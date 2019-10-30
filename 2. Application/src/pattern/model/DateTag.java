@@ -31,6 +31,9 @@ public class DateTag {
         CalendarSemester = calendarSemester;
     }
 
+    public DateTag(int dateKey, Date fullDateAlternateKey, int dayNumberOfWeek, int dayNumberOfMonth, int dayNumberOfYear, int weekNumberOfYear, String englishMonthName, int calendarQuarter, int calendarYear, int calendarSemester) {
+    }
+
     public Integer getDateKey() {
         return DateKey;
     }
