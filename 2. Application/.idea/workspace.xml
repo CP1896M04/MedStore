@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
-      <change afterPath="$PROJECT_DIR$/src/pattern/dao/InventoryLedgerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/1A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/2A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/2B.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/4.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/5.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/6.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/8.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/9.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Backup of 1A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Backup of 2A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Database.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/Settings-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/inventory-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/product-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/sale-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Image/Icon/statistic-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/right/RightPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/right/RightView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/right/right.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Category.java" afterDir="false" />
+    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addsuplier/addSuplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryLedgerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryLedgerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryLedger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryLedger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Supplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Supplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Product.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

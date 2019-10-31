@@ -10,24 +10,10 @@ public class Staff {
    private String LName ;
    private Date DOB ;
    private String Address ;
-   private Character SEX ;
+   private String SEX ;
    private String PhoneNo ;
    private String Username ;
-   private Integer Password ;
-
-    public Staff(Integer staffID, String staffCode, Integer roleID, String FName, String LName, Date DOB, String address, Character SEX, String phoneNo, String username, Integer password) {
-        StaffID = staffID;
-        StaffCode = staffCode;
-        RoleID = roleID;
-        this.FName = FName;
-        this.LName = LName;
-        this.DOB = DOB;
-        Address = address;
-        this.SEX = SEX;
-        PhoneNo = phoneNo;
-        Username = username;
-        Password = password;
-    }
+   private String Password ;
 
     public Integer getStaffID() {
         return StaffID;
@@ -85,11 +71,11 @@ public class Staff {
         Address = address;
     }
 
-    public Character getSEX() {
+    public String getSEX() {
         return SEX;
     }
 
-    public void setSEX(Character SEX) {
+    public void setSEX(String SEX) {
         this.SEX = SEX;
     }
 
@@ -109,11 +95,29 @@ public class Staff {
         Username = username;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return Password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public Staff(Integer staffID, String staffCode, Integer roleID, String FName, String LName, Date DOB, String address, String SEX, String phoneNo, String username, String password) {
+        StaffID = staffID;
+        StaffCode = staffCode;
+        RoleID = roleID;
+        this.FName = FName;
+        this.LName = LName;
+        this.DOB = DOB;
+        Address = address;
+        this.SEX = SEX;
+        PhoneNo = phoneNo;
+        Username = username;
         Password = password;
     }
 }
+
+
+
+
