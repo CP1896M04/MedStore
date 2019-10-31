@@ -12,7 +12,6 @@ import javafx.stage.StageStyle;
 
 
 import javafx.scene.input.MouseEvent;
-import lib.LeftMenu;
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
@@ -56,8 +55,8 @@ public class MainPresenter implements Initializable {
                supplierManageStage.setScene((new Scene(supplierManageParent)));
                supplierManageStage.show();
                break;
-           case "Add New Unit":
-               Parent unitParent = FXMLLoader.load(getClass().getResource("/application/product/addsupplier/suppliermanager.fxml"));
+           case "Add Unit":
+               Parent unitParent = FXMLLoader.load(getClass().getResource("/application/product/addUnit/addUnit.fxml"));
                Stage unitStage = addUnit.getInstance();
               unitStage.setScene((new Scene(unitParent)));
               unitStage.show();

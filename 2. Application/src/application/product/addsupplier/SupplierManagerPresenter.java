@@ -108,7 +108,7 @@ public class SupplierManagerPresenter implements Initializable {
 
     @FXML
     private TextField txtTax;
-SupplierDao supplierDao= new SupplierDao();
+    SupplierDao supplierDao= new SupplierDao();
     private Connection connection;
     public SupplierManagerPresenter() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
@@ -176,21 +176,6 @@ Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.get
     columnPhone.setCellValueFactory(new PropertyValueFactory<>("Phone"));
     columnTax.setCellValueFactory(new PropertyValueFactory<>("Tax"));
     }
-//
-//    private PreparedStatement pst = null;
-//    private ResultSet rs = null;
-//    private void loadDataFromDatabase() {
-//
-//        try {
-//           pst = connection.prepareStatement("select * from Supplier");
-//            rs = pst.executeQuery();
-//            while (rs.next()) {
-//                data.add(new Supplier(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)));
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(SupplierManagerPresenter.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        tableview.setItems(data);
-//    }
+
 
 }

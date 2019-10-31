@@ -8,7 +8,7 @@ public class addUnit extends Stage {
         if(instance == null){
             instance = new addUnit();
         }
-        instance.setTitle("Add New Unit");
+        instance.setTitle("Add Unit");
         return instance;
     }
 }

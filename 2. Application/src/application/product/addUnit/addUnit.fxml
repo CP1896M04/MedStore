@@ -7,19 +7,19 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="475.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.product.addUnit.Unit">
+<AnchorPane prefHeight="475.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.product.addUnit.addUnit">
    <children>
       <Label fx:id="lbUnitID" layoutX="21.0" layoutY="31.0" text="UnitID" />
       <Label fx:id="lbUname" layoutX="19.0" layoutY="75.0" text="Uname" />
       <Label fx:id="lbUInStock" layoutX="18.0" layoutY="116.0" text="UInStock" />
-      <Label layoutX="18.0" layoutY="160.0" text="UInStockName" />
+      <Label fx:id="lbUInStockName" layoutX="18.0" layoutY="160.0" text="UInStockName" />
       <Label fx:id="lbUInOrder" layoutX="18.0" layoutY="204.0" text="UInOrder" />
       <Label fx:id="lbUInOrderName" layoutX="17.0" layoutY="252.0" text="UInOrderName" />
       <Label fx:id="lbDesc" layoutX="18.0" layoutY="298.0" text="Desc" />
       <TextField fx:id="txtUnitID" layoutX="99.0" layoutY="27.0" />
       <TextField fx:id="txtUname" layoutX="99.0" layoutY="71.0" />
       <TextField fx:id="txtUInStock" layoutX="99.0" layoutY="112.0" />
-      <TextField layoutX="99.0" layoutY="156.0" />
+      <TextField fx:id="txtUInStockName" layoutX="99.0" layoutY="156.0" />
       <TextField fx:id="txtUInOrder" layoutX="99.0" layoutY="200.0" />
       <TextField fx:id="txtUInOrderName" layoutX="99.0" layoutY="248.0" />
       <TextField fx:id="txtDesc" layoutX="99.0" layoutY="294.0" />

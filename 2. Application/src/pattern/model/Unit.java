@@ -7,16 +7,16 @@ public class Unit {
     private  String UInStockName ;
     private  Integer UInOrder ;
     private  String UInOrderName ;
-    private String Descr ;
+    private String Desc ;
 
-    public Unit(Integer unitID, String uname, Integer UInStock, String UInStockName, Integer UInOrder, String UInOrderName, String descr) {
+    public Unit(Integer unitID, String uname, Integer UInStock, String UInStockName, Integer UInOrder, String UInOrderName, String desc) {
         UnitID = unitID;
         Uname = uname;
         this.UInStock = UInStock;
         this.UInStockName = UInStockName;
         this.UInOrder = UInOrder;
         this.UInOrderName = UInOrderName;
-        Descr = descr;
+        Desc = desc;
     }
 
     public Integer getUnitID() {
@@ -67,11 +67,15 @@ public class Unit {
         this.UInOrderName = UInOrderName;
     }
 
-    public String getDescr() {
-        return Descr;
+    public String getDesc() {
+        return Desc;
     }
 
-    public void setDescr(String descr) {
-        Descr = descr;
+    public void setDesc(String desc) {
+        Desc = desc;
     }
+    public String toString() {
+        return String.format("UnitID "+UnitID +"Uname"+Uname+"UInStock"+UInStock+" UInStockName"+ UInStockName+"UInOrder"+UInOrder+"UInOrderName"+UInOrderName+"Desc"+Desc);
+    }
+
 }
