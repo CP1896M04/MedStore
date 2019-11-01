@@ -1,5 +1,6 @@
 package application.product.addsupplier;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -7,22 +8,31 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import org.apache.log4j.Logger;
+
+
+
+import pattern.connection.ConnectionFactory;
 import pattern.dao.SupplierDao;
 import pattern.model.Supplier;
 
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 import static java.lang.Integer.parseInt;
 
 public class SupplierManagerPresenter implements Initializable {
-    final static Logger logger = Logger.getLogger( application.Main.class);
+
     @FXML
     private Button btnAdd;
 
@@ -55,6 +65,7 @@ public class SupplierManagerPresenter implements Initializable {
 
     @FXML
     private TableColumn<Supplier, String> columnTax;
+    private ObservableList<Supplier> data;
 
     @FXML
     private Label lbSupplierId;
@@ -97,38 +108,45 @@ public class SupplierManagerPresenter implements Initializable {
 
     @FXML
     private TextField txtTax;
-SupplierDao supplierDao= new SupplierDao();
-
+    SupplierDao supplierDao= new SupplierDao();
+    private Connection connection;
     public SupplierManagerPresenter() {
-
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        connection =connectionFactory.getConnection();
     }
 
     @FXML
     void btnAdd(ActionEvent event) {
-        logger.info("vo");
+
         Supplier supplier= new Supplier(0,txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
         supplierDao.add(supplier);
         System.out.println(supplier.toString());
         System.out.println("Da them"+ supplier.getComName());
+        loadTableview();
+
     }
 
     @FXML
     void btnRemove(ActionEvent event) throws  SQLException {
     supplierDao.remove(txtSupplierId.getText());
         System.out.println("Da xoa"+txtSupplierId.getText());
+        loadTableview();
+
     }
 
     @FXML
     void btnUpdate(ActionEvent event) {
 Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
     supplierDao.update(supplier);
+    loadTableview();
+        System.out.println("Da up date"+txtSupplierId.getText());
+
+
 }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initColumn();
-        List<Supplier> suppliers = new ArrayList<Supplier>();
-        suppliers=supplierDao.getList();
-        tableview.getItems().setAll(suppliers);
+        loadTableview();
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -142,6 +160,12 @@ Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.get
             }
         });
 
+
+    }
+    public void loadTableview(){
+        List<Supplier> suppliers = new ArrayList<>();
+        suppliers=supplierDao.getList();
+        tableview.getItems().setAll(suppliers);
     }
     public void initColumn(){
     columnSupplierId.setCellValueFactory(new PropertyValueFactory<>("SupplierID"));
@@ -152,4 +176,6 @@ Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.get
     columnPhone.setCellValueFactory(new PropertyValueFactory<>("Phone"));
     columnTax.setCellValueFactory(new PropertyValueFactory<>("Tax"));
     }
+
+
 }
