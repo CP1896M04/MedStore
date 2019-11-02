@@ -114,6 +114,7 @@ public class ProductDAO implements DAO<Product>{
                 int defaultInDose = resultSet.getInt("DefaultInDose");
                 Product product = new Product(productID,catID,unitID ,supplierID,pName,pDescr,pComposition,pManufacturer,uprice,usp,reOrLevel,htu,defaultInDose);
                 products.add(product);
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

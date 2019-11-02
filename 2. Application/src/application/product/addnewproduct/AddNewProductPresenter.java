@@ -1,16 +1,25 @@
 package application.product.addnewproduct;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import pattern.dao.ProductDAO;
+import pattern.model.Category;
 import pattern.model.Product;
+import pattern.model.Supplier;
+import pattern.model.Unit;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class AddNewProductPresenter implements Initializable {
@@ -39,9 +48,6 @@ public class AddNewProductPresenter implements Initializable {
     private TextField txtProductId;
 
     @FXML
-    private TextField txtUnitID;
-
-    @FXML
     private TextField txtPName;
 
     @FXML
@@ -63,6 +69,9 @@ public class AddNewProductPresenter implements Initializable {
     private Label lbPDescr;
 
     @FXML
+    private Label lbPManufacturer;
+
+    @FXML
     private Label lbReOrLevel;
 
     @FXML
@@ -81,9 +90,6 @@ public class AddNewProductPresenter implements Initializable {
     private TextField txtHTU;
 
     @FXML
-    private TextField txtSupplierID;
-
-    @FXML
     private TextField txtPDescr;
 
     @FXML
@@ -96,28 +102,44 @@ public class AddNewProductPresenter implements Initializable {
     private TextField txtDefaultInDose;
 
     @FXML
-    private TextField txtCatId;
+    private ComboBox<Product> comboboxCatID;
 
-    ProductDAO productDAO= new ProductDAO();
+    @FXML
+    private ComboBox<Product> comboboxSupplierID;
+
+    @FXML
+    private ComboBox<Product> comboboxUnitID;
+ProductDAO productDAO= new ProductDAO();
     @FXML
     void btnAdd(ActionEvent event) {
-     //Product product= new Product(0,0,0,txtPName.getText(),txtPDescr.getText(),txtPComposition.getText(),txtPManufacturer.getText(),0f,0f,0,txtHTU.getText(),0);
-       // productDAO.add(product);
-       // System.out.println("Da them"+ product.getPName());
+
     }
 
     @FXML
-    void btnRemove(ActionEvent event) throws SQLException {
-        productDAO.remove(txtProductId.getText());
-        System.out.println("Da xoa"+txtCatId.getText() );
+    void btnRemove(ActionEvent event) {
+
+    }
+
+
+
+    @FXML
+    void comboboxSupplierID(ActionEvent event) {
+    
+    }
+
+    @FXML
+    void comboboxUnitID(ActionEvent event) {
+
     }
 
     @FXML
     void tbnUpdate(ActionEvent event) {
 
     }
+
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }
