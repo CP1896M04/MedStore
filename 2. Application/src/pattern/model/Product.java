@@ -31,6 +31,8 @@ public class Product {
         DefaultInDose = defaultInDose;
     }
 
+    public Product() {
+    }
 
     public Integer getProductID() {
         return ProductID;

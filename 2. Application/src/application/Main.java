@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lib.LibraryAssistant;
 import org.apache.log4j.Logger;
 import java.io.IOException;
 public class Main extends Application {
@@ -30,5 +31,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();
+
     }
 }

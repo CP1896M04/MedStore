@@ -2,25 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/user/manager/UserManagerPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/user/manager/usermanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/1A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2B.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/4.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/5.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/6.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/8.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/9.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 1A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2B.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 3.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 5.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Database.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/user/manager/UserManagerPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/user/manager/usermanager.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/DFD/Pharmacy Store.bpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaFx Template/out/production/Java Fx Template/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addUnit/addUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addUnit/addUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/SupplierDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/SupplierDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/UnitDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/UnitDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/window/addCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/window/addCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +74,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">

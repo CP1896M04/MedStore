@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="615.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.product.addnewproduct.AddNewProductPresenter">
+<AnchorPane prefHeight="615.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.product.addnewproduct.AddNewProductPresenter">
    <children>
-      <Button fx:id="btnAdd" layoutX="65.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnAdd" text="Add" />
+      <Button fx:id="btnAdd" layoutX="65.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnAddClick" text="Add" />
       <Button fx:id="btnUpdate" layoutX="151.0" layoutY="562.0" mnemonicParsing="false" onAction="#tbnUpdate" prefHeight="17.0" prefWidth="55.0" text="Update" />
       <Button fx:id="btnRemove" layoutX="269.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
       <Label fx:id="lbProducId" layoutX="28.0" layoutY="43.0" prefHeight="25.0" prefWidth="59.0" text="ProductID" />
@@ -35,9 +35,9 @@
       <TextField fx:id="txtPManufacturer" layoutX="96.0" layoutY="439.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="txtReOrLevel" layoutX="99.0" layoutY="374.0" prefHeight="25.0" prefWidth="52.0" promptText="1" />
       <TextField fx:id="txtDefaultInDose" layoutX="98.0" layoutY="405.0" prefHeight="25.0" prefWidth="52.0" promptText="2" />
-      <ComboBox fx:id="comboboxCatID" layoutX="97.0" layoutY="126.0" onAction="#comboboxCatID" prefHeight="25.0" prefWidth="208.0" />
-      <ComboBox fx:id="comboboxSupplierID" layoutX="97.0" layoutY="168.0" onAction="#comboboxSupplierID" prefHeight="25.0" prefWidth="208.0" />
-      <ComboBox fx:id="comboboxUnitID" layoutX="97.0" layoutY="214.0" onAction="#comboboxUnitID" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxCatID" layoutX="97.0" layoutY="126.0" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxSupplierID" editable="true" layoutX="97.0" layoutY="168.0" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxUnitID" layoutX="97.0" layoutY="214.0" prefHeight="25.0" prefWidth="208.0" />
       <Text layoutX="167.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

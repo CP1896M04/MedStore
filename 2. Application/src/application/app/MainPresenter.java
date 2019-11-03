@@ -1,11 +1,15 @@
 package application.app;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TreeItem;
+import javafx.scene.control.*;
+import javafx.scene.input.ContextMenuEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -23,15 +27,22 @@ import java.util.ResourceBundle;
 
 public class MainPresenter implements Initializable {
     @FXML
+    private AnchorPane statusBar;
+
+    @FXML
+    private MenuBar menu;
+
+    @FXML
     private javafx.scene.control.TreeView<String> treeView ;
 
     @FXML
     private VBox container;
 
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
         lib.LeftMenu instance = lib.LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
+        Button button = new Button("Add");
+        statusBar.getChildren().addAll(button);
     }
     public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
