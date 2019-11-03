@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/user/manager/UserManagerPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/user/manager/usermanager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/1A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2A.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2B.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/4.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/5.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/6.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/8.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/9.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 1A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2A.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2B.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 3.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 5.wbk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Database.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/window/addCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/window/addCategory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
