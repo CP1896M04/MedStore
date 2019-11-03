@@ -140,6 +140,6 @@ public class Product {
     @Override
     public String toString(){
 
-        return this.getPName();
+        return this.getPName()+"-"+ this.getPComposition();
     }
 }

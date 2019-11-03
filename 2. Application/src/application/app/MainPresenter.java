@@ -14,6 +14,7 @@ import javafx.stage.StageStyle;
 
 
 import javafx.scene.input.MouseEvent;
+import lib.control.ComboBoxAutoComplete;
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
@@ -25,6 +26,7 @@ import pattern.model.Product;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -41,18 +43,29 @@ public class MainPresenter implements Initializable {
     @FXML
     private VBox container;
 
+
     @FXML
-    private CustomTextField txtProductName;
+    private TextField txtProductName;
+
+
+    @FXML
+    private ComboBox<Product> cbProductName;
+
 
     public void initialize(URL location, ResourceBundle resources) {
         lib.LeftMenu instance = lib.LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
         Button button = new Button("Add");
         statusBar.getChildren().addAll(button);
+        loadData();
     }
     public void loadData(){
         ProductDAO productDAO = new ProductDAO();
-        List<Product> strings = productDAO.getList();
+        List<Product> persons = productDAO.getList();
+        cbProductName.setTooltip(new Tooltip());
+        cbProductName.getItems().addAll(persons);
+        new ComboBoxAutoComplete<Product>(cbProductName);
+
 
     }
     public void selectItems(MouseEvent event) throws Exception {

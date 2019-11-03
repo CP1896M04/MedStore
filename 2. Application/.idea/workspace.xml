@@ -2,29 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/inventory/inventoryReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/control/AutoCompleteTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/control/ComboBoxAutoComplete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pattern/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-core-11.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-1.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-11.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-11.3.4.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
