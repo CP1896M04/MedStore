@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane prefHeight="491.0" prefWidth="1223.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.inventory.InventoryDetails">
+   <children>
+      <Label layoutX="25.0" layoutY="27.0" text="DetailsID" />
+      <TextFlow accessibleText="1" layoutX="149.0" layoutY="25.0">
+         <children>
+            <TextFlow accessibleRoleDescription="1">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="150.0" text="1" />
+               </children>
+            </TextFlow>
+         </children>
+      </TextFlow>
+      <Label layoutX="25.0" layoutY="66.0" text="DetailsCode" />
+      <TextFlow layoutX="149.0" layoutY="64.0">
+         <children>
+            <TextField prefHeight="26.0" prefWidth="150.0" text="1" />
+         </children>
+      </TextFlow>
+      <Label layoutX="25.0" layoutY="109.0" text="ProductID" />
+      <TextField layoutX="149.0" layoutY="107.0" prefHeight="26.0" prefWidth="150.0" text="2" />
+      <Label layoutX="25.0" layoutY="150.0" text="PurchasePrice" />
+      <TextField layoutX="147.0" layoutY="148.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="25.0" layoutY="190.0" text="TentativeSalesPrice" />
+      <TextField layoutX="148.0" layoutY="188.0" prefHeight="26.0" prefWidth="150.0" />
+      <TableView layoutX="311.0" layoutY="25.0" prefHeight="395.0" prefWidth="914.0">
+        <columns>
+          <TableColumn prefWidth="59.20001220703125" text="DetailsID" />
+          <TableColumn prefWidth="91.20001220703125" text="DetailsCode" />
+            <TableColumn prefWidth="75.0" text="ProductID" />
+            <TableColumn prefWidth="95.199951171875" text="PurchasePrice" />
+            <TableColumn prefWidth="117.60003662109375" text="TentativeSalesPrice" />
+            <TableColumn prefWidth="102.4000244140625" text="QuantityBought" />
+            <TableColumn minWidth="0.0" prefWidth="111.2000732421875" text="QuantityAvailable" />
+            <TableColumn minWidth="0.0" prefWidth="60.800048828125" text="Batchid" />
+            <TableColumn minWidth="0.0" prefWidth="121.5999755859375" text="ManufacturedDate" />
+            <TableColumn minWidth="1.5999755859375" prefWidth="72.7999267578125" text="ExpiryDate" />
+        </columns>
+      </TableView>
+      <Label layoutX="25.0" layoutY="230.0" text="QuantityBought" />
+      <TextField layoutX="147.0" layoutY="228.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="25.0" layoutY="273.0" text="QuantityAvailable" />
+      <TextField layoutX="147.0" layoutY="271.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="25.0" layoutY="314.0" text="Batchid" />
+      <TextField layoutX="147.0" layoutY="312.0" prefHeight="26.0" prefWidth="150.0" text="DHGPR" />
+      <Label layoutX="25.0" layoutY="356.0" text="ManufacturedDate" />
+      <TextField layoutX="147.0" layoutY="354.0" prefHeight="26.0" prefWidth="150.0" text="dd/mm/yy" />
+      <Label layoutX="25.0" layoutY="399.0" text="ExpiryDate" />
+      <TextField layoutX="147.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" text="dd/mm/yy" />
+      <Button layoutX="24.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Add" />
+      <Button layoutX="124.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Update" />
+      <Button layoutX="224.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Delete" />
+   </children>
+</AnchorPane>
