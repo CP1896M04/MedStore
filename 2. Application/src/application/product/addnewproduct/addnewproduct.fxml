@@ -35,9 +35,9 @@
       <TextField fx:id="txtPManufacturer" layoutX="96.0" layoutY="439.0" prefHeight="25.0" prefWidth="202.0" />
       <TextField fx:id="txtReOrLevel" layoutX="99.0" layoutY="374.0" prefHeight="25.0" prefWidth="52.0" promptText="1" />
       <TextField fx:id="txtDefaultInDose" layoutX="98.0" layoutY="405.0" prefHeight="25.0" prefWidth="52.0" promptText="2" />
-      <ComboBox layoutX="97.0" layoutY="126.0" prefHeight="25.0" prefWidth="208.0" />
-      <ComboBox layoutX="97.0" layoutY="168.0" prefHeight="25.0" prefWidth="208.0" />
-      <ComboBox layoutX="97.0" layoutY="214.0" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxCatID" layoutX="97.0" layoutY="126.0" onAction="#comboboxCatID" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxSupplierID" layoutX="97.0" layoutY="168.0" onAction="#comboboxSupplierID" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxUnitID" layoutX="97.0" layoutY="214.0" onAction="#comboboxUnitID" prefHeight="25.0" prefWidth="208.0" />
       <Text layoutX="167.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

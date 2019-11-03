@@ -37,4 +37,7 @@ public class Role {
     public void setDescr(String descr) {
         Descr = descr;
     }
+    public String toString() {
+        return String.format("RoleID"+RoleID+"RoleName"+RoleName+"Descr"+Descr);
+    }
 }

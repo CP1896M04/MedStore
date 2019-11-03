@@ -55,6 +55,7 @@ public class RoleDAO implements DAO<Role> {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, o.getRoleName());
             preparedStatement.setString(2, o.getDescr());
+            preparedStatement.setInt(3, o.getRoleID());
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -75,7 +76,7 @@ public class RoleDAO implements DAO<Role> {
                 int RoleID= resultSet.getInt("RoleID");
                 String RoleName = resultSet.getString("RoleName");
                 String Descr = resultSet.getString("Descr");
-                Role role= new Role(RoleName,Descr);
+                Role role= new Role(RoleID,RoleName,Descr);
                 roles.add(role);
             }
         } catch (SQLException e) {
