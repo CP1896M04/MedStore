@@ -1,5 +1,7 @@
 package pattern.dao;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Supplier;
 
@@ -72,8 +74,8 @@ public SupplierDao(){
     }
 
     @Override
-    public List<Supplier> getList() {
-    List<Supplier> suppliers= new ArrayList<>();
+    public ObservableList<Supplier> getList() {
+        ObservableList<Supplier> suppliers = FXCollections.observableArrayList();
         String sql = "select * from Supplier";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();

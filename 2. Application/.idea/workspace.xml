@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Product.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +46,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
