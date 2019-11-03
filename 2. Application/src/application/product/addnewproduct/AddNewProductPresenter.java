@@ -121,8 +121,15 @@ public class AddNewProductPresenter implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
     }
+
+    /**
+     *
+     * @param
+     * @return none
+     * */
     //Load data
     public void loadData() {
+
         //Load data to Combobox Supplier
         SupplierDao supplierDao = new SupplierDao();
         ObservableList<Supplier> suppliers = supplierDao.getList();
@@ -208,25 +215,5 @@ public class AddNewProductPresenter implements Initializable {
         }catch (Exception e){
             System.out.println("Can't update");
         }
-    }
-
-    @FXML
-    void btnRemove(ActionEvent event) {
-
-    }
-
-    @FXML
-    void comboboxSupplierID(ActionEvent event) {
-
-    }
-
-    @FXML
-    void comboboxUnitID(ActionEvent event) {
-
-    }
-
-    @FXML
-    void tbnUpdate(ActionEvent event) {
-
     }
 }

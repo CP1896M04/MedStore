@@ -1,14 +1,12 @@
 package application.app;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import com.gluonhq.charm.glisten.control.AutoCompleteTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -19,10 +17,15 @@ import javafx.scene.input.MouseEvent;
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
+import org.controlsfx.control.textfield.CustomTextField;
+import pattern.dao.ProductDAO;
+import pattern.model.Product;
 
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainPresenter implements Initializable {
@@ -38,11 +41,19 @@ public class MainPresenter implements Initializable {
     @FXML
     private VBox container;
 
+    @FXML
+    private CustomTextField txtProductName;
+
     public void initialize(URL location, ResourceBundle resources) {
         lib.LeftMenu instance = lib.LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
         Button button = new Button("Add");
         statusBar.getChildren().addAll(button);
+    }
+    public void loadData(){
+        ProductDAO productDAO = new ProductDAO();
+        List<Product> strings = productDAO.getList();
+
     }
     public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();

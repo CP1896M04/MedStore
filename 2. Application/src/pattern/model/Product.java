@@ -137,4 +137,9 @@ public class Product {
     public void setDefaultInDose(Integer defaultInDose) {
         DefaultInDose = defaultInDose;
     }
+    @Override
+    public String toString(){
+
+        return this.getPName();
+    }
 }
