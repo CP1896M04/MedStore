@@ -31,6 +31,8 @@ public class Product {
         DefaultInDose = defaultInDose;
     }
 
+    public Product() {
+    }
 
     public Integer getProductID() {
         return ProductID;
@@ -134,5 +136,10 @@ public class Product {
 
     public void setDefaultInDose(Integer defaultInDose) {
         DefaultInDose = defaultInDose;
+    }
+    @Override
+    public String toString(){
+
+        return this.getPName()+"-"+ this.getPComposition();
     }
 }

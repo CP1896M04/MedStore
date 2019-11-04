@@ -9,7 +9,7 @@ public class addCategory extends Stage {
         if(instance == null){
             instance = new  addCategory();
         }
-        instance.setTitle("Add New Product");
+        instance.setTitle("Add New Category");
         return instance;
     }
 }

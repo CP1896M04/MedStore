@@ -1,6 +1,9 @@
 package pattern.dao;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pattern.connection.ConnectionFactory;
+import pattern.model.Category;
 import pattern.model.InventoryLedger;
 import pattern.model.Unit;
 
@@ -89,8 +92,8 @@ public class UnitDAO implements DAO<Unit> {
     }
 
     @Override
-    public List<Unit> getList() {
-        List<Unit> units = new ArrayList<>();
+    public ObservableList<Unit> getList() {
+        ObservableList<Unit> units  = FXCollections.observableArrayList();
         String sql = "SELECT [UnitID]\n" +
                 "      ,[Uname]\n" +
                 "      ,[UInStock]\n" +
