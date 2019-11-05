@@ -2,27 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryDetails.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryDetailsPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/afterburner_fx_1_6_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/inventory/addInventoryDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/inventory.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/pointofsale.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/inventory/inventory.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSalePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSaleView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/pointofsale.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryDetailsPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/inventory/addInventoryDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryDetailsPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/InventoryDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/InventoryDetails.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,18 +20,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="209" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="2. Application" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
