@@ -1,4 +1,4 @@
-package application.product.addRole;
+package application.user.addRole;
     import javafx.event.ActionEvent;
     import javafx.event.EventHandler;
     import javafx.fxml.FXML;

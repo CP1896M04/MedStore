@@ -1,11 +1,10 @@
-package application.product.addStaff;
+package application.user.addStaff;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
-import java.sql.Date;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -111,8 +110,6 @@ public class addStaff implements Initializable {
     //Load data
     public void loadData() {
 
-        //Load data to Combobox Supplier
-
         RoleDAO roleDAO = new RoleDAO();
         ObservableList<Role> roles = roleDAO.getList();
         comboboxRoleID.setItems(roles);
@@ -124,9 +121,9 @@ public class addStaff implements Initializable {
             }
 
             @Override
-            public Role fromString(String string) {
+            public Role fromString(String s) {
                 return comboboxRoleID.getItems().stream().filter(ap ->
-                        ap.getRoleName().equals(string)).findFirst().orElse(null);
+                        ap.getRoleName().equals(s)).findFirst().orElse(null);
             }
         });
 
