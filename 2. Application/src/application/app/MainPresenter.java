@@ -1,25 +1,43 @@
 package application.app;
 
+<<<<<<< HEAD
+=======
 import com.gluonhq.charm.glisten.control.AutoCompleteTextField;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+<<<<<<< HEAD
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TreeItem;
+import javafx.scene.input.MouseEvent;
+=======
 import javafx.scene.control.*;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+<<<<<<< HEAD
+=======
 
 
 import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
+<<<<<<< HEAD
 import lib.window.*;
+=======
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
+import lib.window.addNewProduct;
+import lib.window.addUnit;
+import lib.window.supplierManage;
+>>>>>>> 7cc38d6821ccc84fc90e5356dc2f3358a5dc8308
 import org.controlsfx.control.textfield.CustomTextField;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -108,6 +126,7 @@ public class MainPresenter implements Initializable {
                break;
        }
     }
+
     void loadWindow(String loc, String title){
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(loc));
