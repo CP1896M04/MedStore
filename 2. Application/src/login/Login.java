@@ -20,7 +20,7 @@ public class Login implements Initializable {
     @FXML
     private URL location;
 
-    @FXML
+
 
     @FXML
     private Button btnSignup;
@@ -40,14 +40,14 @@ public class Login implements Initializable {
     void btnLogin(ActionEvent event) {
 
         if (txtUsername.getText().trim().isEmpty() && txtPassword.getText().trim().isEmpty()) {
-            System.out.println("error catname");
-            System.out.println("error desc");
+            System.out.println("error Username");
+            System.out.println("error Password");
         } else if (txtUsername.getText().trim().isEmpty()) {
-            System.out.println("error catname");
+            System.out.println("error Username");
         } else if (txtPassword.getText().trim().isEmpty()) {
-            System.out.println("error desc");
+            System.out.println("error Password");
         }
-        /
+
     }
 
     @FXML
