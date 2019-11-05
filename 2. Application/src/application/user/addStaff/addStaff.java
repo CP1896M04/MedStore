@@ -5,9 +5,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
+<<<<<<< HEAD:2. Application/src/application/user/addStaff/addStaff.java
+=======
+import java.sql.Date;
+import java.sql.SQLException;
+import java.time.Instant;
+>>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c:2. Application/src/application/product/addStaff/addStaff.java
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -18,6 +25,7 @@ import pattern.dao.RoleDAO;
 import pattern.dao.StaffDAO;
 import pattern.model.Role;
 import pattern.model.Staff;
+
 
 import static java.lang.Integer.parseInt;
 
@@ -103,10 +111,9 @@ public class addStaff implements Initializable {
     }
 
     /**
-     *
      * @param
      * @return none
-     * */
+     */
     //Load data
     public void loadData() {
 
@@ -128,40 +135,61 @@ public class addStaff implements Initializable {
         });
 
     }
-    StaffDAO staffDAO= new StaffDAO();
+
+    StaffDAO staffDAO = new StaffDAO();
+
     @FXML
     void btnAdd(ActionEvent event) {
-      Staff staff= new Staff();
-      try{
-          staff.setStaffID(0);
-          staff.setStaffCode(txtStaffCode.getText());
-          staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
-          staff.setFName(txtFName.getText());
-          staff.setLName(txtLName.getText());
-//          staff.setDOB(Date.valueOf(txtDOB.getText()));
-          staff.setAddress(txtAddress.getText());
-          staff.setSEX(txtSEX.getText());
-          staff.setPhoneNo(txtPhoneNo.getText());
-          staff.setUsername(txtUsername.getText());
-          staff.setPassword(txtPassword.getText());
-          System.out.println("Da them "+txtStaffCode.getText());
-      }catch ( Exception e ){
-         e.printStackTrace();
-      }
-
+        Staff staff = new Staff();
+        try {
+            staff.setStaffID(0);
+            staff.setStaffCode(txtStaffCode.getText());
+            staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
+            staff.setFName(txtFName.getText());
+            staff.setLName(txtLName.getText());
+            staff.setDOB((Date.valueOf(txtDOB.getText())));
+            ;
+            staff.setAddress(txtAddress.getText());
+            staff.setSEX(txtSEX.getText());
+            staff.setPhoneNo(txtPhoneNo.getText());
+            staff.setUsername(txtUsername.getText());
+            staff.setPassword(txtPassword.getText());
+            staffDAO.add(staff);
+            System.out.println("Da them" + txtStaffCode.getText());
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
 
 
     }
 
     @FXML
-    void btnRemove(ActionEvent event) {
-
+    void btnRemove(ActionEvent event) throws SQLException {
+        Staff staff = new Staff();
+        staffDAO.remove(txtStaffID.getText());
+        System.out.println("Da xoa" + txtStaffCode.getText());
     }
 
     @FXML
     void btnUpdate(ActionEvent event) {
-
-
+        Staff staff = new Staff();
+        try {
+            staff.setStaffID(parseInt(txtStaffID.getText()));
+            staff.setStaffCode(txtStaffCode.getText());
+            staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
+            staff.setFName(txtFName.getText());
+            staff.setLName(txtLName.getText());
+            staff.setDOB((Date.valueOf(txtDOB.getText())));
+            staff.setAddress(txtAddress.getText());
+            staff.setSEX(txtSEX.getText());
+            staff.setPhoneNo(txtPhoneNo.getText());
+            staff.setUsername(txtUsername.getText());
+            staff.setPassword(txtPassword.getText());
+            staffDAO.update(staff);
+            System.out.println("Da Update" + txtStaffCode.getText());
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        }
     }
 
 }

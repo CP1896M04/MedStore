@@ -1,25 +1,41 @@
 package application.app;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-
-import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
+<<<<<<< HEAD
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
+=======
+<<<<<<< HEAD
+import lib.window.*;
+=======
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
+import lib.window.addNewProduct;
+import lib.window.addUnit;
+import lib.window.supplierManage;
+<<<<<<< HEAD
+=======
+>>>>>>> 7cc38d6821ccc84fc90e5356dc2f3358a5dc8308
+import org.controlsfx.control.textfield.CustomTextField;
+>>>>>>> 36cbe08ed830f18718cc9a1e5e8698d68d387338
+>>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -93,19 +109,34 @@ public class MainPresenter implements Initializable {
                unitStage.show();
                break;
            case "Add Role":
+<<<<<<< HEAD
                Parent RoleParent = FXMLLoader.load(getClass().getResource("/application/user/addRole/addRole.fxml"));
                Stage RoleStage = addUnit.getInstance();
+=======
+               Parent RoleParent = FXMLLoader.load(getClass().getResource("/application/product/addRole/addRole.fxml"));
+               Stage RoleStage = addRole.getInstance();
+>>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c
                RoleStage.setScene((new Scene(RoleParent)));
                RoleStage.show();
                break;
            case "Add Staff":
+<<<<<<< HEAD
                Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/user/addStaff/addStaff.fxml"));
+=======
+<<<<<<< HEAD
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/inventory/addInventoryDetails.fxml"));
+>>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c
                Stage StaffStage = addUnit.getInstance();
+=======
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
+               Stage StaffStage = addStaff.getInstance();
+>>>>>>> 36cbe08ed830f18718cc9a1e5e8698d68d387338
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
                break;
        }
     }
+
     void loadWindow(String loc, String title){
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(loc));
