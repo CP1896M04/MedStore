@@ -3,6 +3,7 @@ package pattern.model;
 public class Product {
     private Integer ProductID;
     private Integer CatID;
+    private Integer UnitID;
     private Integer SupplierID;
     private String PName;
     private String PDescr;
@@ -14,9 +15,10 @@ public class Product {
     private String HTU;
     private Integer DefaultInDose;
 
-    public Product(Integer productID, Integer catID, Integer supplierID, String PName, String PDescr, String PComposition, String PManufacturer, Float UPrice, Float USP, Integer reOrLevel, String HTU, Integer defaultInDose) {
+    public Product(Integer productID, Integer catID, Integer unitID, Integer supplierID, String PName, String PDescr, String PComposition, String PManufacturer, Float UPrice, Float USP, Integer reOrLevel, String HTU, Integer defaultInDose) {
         ProductID = productID;
         CatID = catID;
+        UnitID = unitID;
         SupplierID = supplierID;
         this.PName = PName;
         this.PDescr = PDescr;
@@ -29,7 +31,8 @@ public class Product {
         DefaultInDose = defaultInDose;
     }
 
-
+    public Product() {
+    }
 
     public Integer getProductID() {
         return ProductID;
@@ -45,6 +48,14 @@ public class Product {
 
     public void setCatID(Integer catID) {
         CatID = catID;
+    }
+
+    public Integer getUnitID() {
+        return UnitID;
+    }
+
+    public void setUnitID(Integer unitID) {
+        UnitID = unitID;
     }
 
     public Integer getSupplierID() {
@@ -126,5 +137,9 @@ public class Product {
     public void setDefaultInDose(Integer defaultInDose) {
         DefaultInDose = defaultInDose;
     }
-}
+    @Override
+    public String toString(){
 
+        return this.getPName()+"-"+ this.getPComposition();
+    }
+}

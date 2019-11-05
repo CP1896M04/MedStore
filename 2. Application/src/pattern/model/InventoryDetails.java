@@ -43,7 +43,7 @@ public class InventoryDetails {
         DetailsCode = detailsCode;
     }
 
-    public Integer getProductID() {
+    public int getProductID() {
         return ProductID;
     }
 
@@ -67,7 +67,7 @@ public class InventoryDetails {
         TentativeSalesPrice = tentativeSalesPrice;
     }
 
-    public Integer getQuantityBought() {
+    public int getQuantityBought() {
         return QuantityBought;
     }
 
@@ -75,7 +75,7 @@ public class InventoryDetails {
         QuantityBought = quantityBought;
     }
 
-    public Integer getQuantityAvailable() {
+    public int getQuantityAvailable() {
         return QuantityAvailable;
     }
 

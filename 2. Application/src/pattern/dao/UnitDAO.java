@@ -1,6 +1,9 @@
 package pattern.dao;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pattern.connection.ConnectionFactory;
+import pattern.model.Category;
 import pattern.model.InventoryLedger;
 import pattern.model.Unit;
 
@@ -33,8 +36,13 @@ public class UnitDAO implements DAO<Unit> {
                 "           ,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, o.getUnitID());
 
+            preparedStatement.setString(1, o.getUname());
+            preparedStatement.setInt(2, o.getUInOrder());
+            preparedStatement.setString(3, o.getUInStockName());
+            preparedStatement.setInt(4, o.getUInOrder());
+            preparedStatement.setString(5, o.getUInOrderName());
+            preparedStatement.setString(6, o.getDesc());
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -74,7 +82,7 @@ public class UnitDAO implements DAO<Unit> {
             preparedStatement.setString(3,o.getUInStockName() );
             preparedStatement.setInt(4,o.getUInOrder());
             preparedStatement.setString(5,o.getUInOrderName());
-            preparedStatement.setString(6,o.getDescr());
+            preparedStatement.setString(6,o.getDesc());
             preparedStatement.setInt(7,o.getUnitID());
             preparedStatement.execute();
         } catch (  SQLException e ) {
@@ -84,8 +92,8 @@ public class UnitDAO implements DAO<Unit> {
     }
 
     @Override
-    public List<Unit> getList() {
-        List<Unit> units = new ArrayList<>();
+    public ObservableList<Unit> getList() {
+        ObservableList<Unit> units  = FXCollections.observableArrayList();
         String sql = "SELECT [UnitID]\n" +
                 "      ,[Uname]\n" +
                 "      ,[UInStock]\n" +

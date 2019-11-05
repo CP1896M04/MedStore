@@ -2,14 +2,177 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d40558-2ab6-44f8-8af2-c3ad186dfa75" name="Default Changelist" comment="Ok giao dien">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of VNPharna - Project Documnet Join v.2.0.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/VNPharna - Project Documnet Join v.2.0.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/1A-Problem Definition Document.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/2A-SRS.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/3-Project Plan.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/4-GUI Standards Documnent.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/5-Interface Design Document.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/6-Table Design.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/7-Process Design Documnet.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/8-Coding Standard Document.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/9-Task sheet.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 1A-Problem Definition Document.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 1A.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 2A.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 3.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 4-GUI Standards Documnent.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 6-Table Design.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 7-Process Design Documnet.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Backup of 8.wbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1.Document/Public/V2.0/Cover.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryDetails.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryDetailsPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/inventoryReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addRole/addRole$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addRole/addRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addRole/addRole.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addUnit/addUnit$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addUnit/addUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addUnit/addUnit.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/user/manager/UserManagerPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/application/user/manager/usermanager.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/AutoCompleteTextField$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/AutoCompleteTextField$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/AutoCompleteTextField$3$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/AutoCompleteTextField$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/AutoCompleteTextField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/control/ComboBoxAutoComplete.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addStaff.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryDetailsDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ODetailDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/OderDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryDetails.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/inventory/InventoryDetailsPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/inventory/inventoryReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addRole/addRole.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addRole/addRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addUnit/addUnit.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/product/addUnit/addUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/user/manager/UserManagerPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/user/manager/usermanager.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/control/AutoCompleteTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/control/ComboBoxAutoComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/window/addRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/window/addStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/window/addUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pattern/dao/InventoryDetailsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pattern/dao/ODetailDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pattern/dao/OderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/DFD/Pharmacy Level 0.bpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/DFD/Pharmacy Store.bpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/ERModel.erdplus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/Link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/Main/Main View.vpd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/Main/Main View.vpd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3. Database/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaFx Template/out/production/Java Fx Template/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib/charm-glisten-6.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib/commons-lang3-3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib/controlsfx-11.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib/controlsfx-11.0.0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lib/controlsfx-8.40.15/controlsfx-8.40.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reference/DFD Guide/81047415-Huong-Dan-Su-Dung-Power-Designer.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reference/DFD Guide/Chp06.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reference/Mo-hinh-DFD.ppt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/1A.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/1A.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2A.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/2A.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/2B.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/2B.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/3.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/4.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/4.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/5.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/5.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/6.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/6.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/8.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/8.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/9.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/9.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 1A.wbk" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of 1A.wbk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2A.wbk" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of 2A.wbk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 2B.wbk" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of 2B.wbk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 3.wbk" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of 3.wbk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Backup of 5.wbk" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Backup of 5.wbk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1.Document/Public/Database.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../1.Document/Public/V1.0/Database.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/afterburner_fx_1_6_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2. Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/MainPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/inventory.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/AddNewProductPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addsupplier/SupplierManagerPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/pointofsale.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/leftMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/window/addCategory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/CatDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryLedger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryLedger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/RoleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/RoleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/SupplierDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/SupplierDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/UnitDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/UnitDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Unit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryPresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/inventory/InventoryView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/inventory/inventory.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/AddNewProductPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addnewproduct/addnewproduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addsupplier/SupplierManagerPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addsupplier/SupplierManagerPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSalePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/PointOfSaleView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/sale/poinofsale/pointofsale.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LeftMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/window/addCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/window/addCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/CatDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/RoleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/RoleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/SupplierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/UnitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/InventoryDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/InventoryDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFx Template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-core-11.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-11.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lib/ikonli-javafx-11.3.4.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +187,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -40,7 +203,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/../Lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 1.1/JavaFX Scene Builder 1.1.exe" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
