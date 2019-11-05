@@ -15,9 +15,7 @@ import javafx.stage.StageStyle;
 
 import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
-import lib.window.addNewProduct;
-import lib.window.addUnit;
-import lib.window.supplierManage;
+import lib.window.*;
 import org.controlsfx.control.textfield.CustomTextField;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
@@ -98,13 +96,13 @@ public class MainPresenter implements Initializable {
                break;
            case "Add Role":
                Parent RoleParent = FXMLLoader.load(getClass().getResource("/application/product/addRole/addRole.fxml"));
-               Stage RoleStage = addUnit.getInstance();
+               Stage RoleStage = addRole.getInstance();
                RoleStage.setScene((new Scene(RoleParent)));
                RoleStage.show();
                break;
            case "Add Staff":
                Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
-               Stage StaffStage = addUnit.getInstance();
+               Stage StaffStage = addStaff.getInstance();
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
                break;
