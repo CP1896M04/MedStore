@@ -44,7 +44,7 @@ public class StaffDAO implements DAO<Staff> {
             preparedStatement.setInt(2, o.getRoleID());
             preparedStatement.setString(3, o.getFName());
             preparedStatement.setString(4, o.getLName());
-            preparedStatement.setDate(5, (Date) o.getDOB());
+            preparedStatement.setDate(5,(Date)o.getDOB());
             preparedStatement.setString(6, o.getAddress());
             preparedStatement.setString(7, o.getSEX());
             preparedStatement.setString(8, o.getPhoneNo());
@@ -125,7 +125,7 @@ public class StaffDAO implements DAO<Staff> {
             while (resultSet.next()) {
                 int StaffID= resultSet.getInt("StaffID");
                 String StaffCode = resultSet.getString("StaffCode");
-                Integer RoleID = resultSet.getInt("RoleID");
+                int RoleID = resultSet.getInt("RoleID");
                 String FName = resultSet.getString("FName");
                 String LName = resultSet.getString("LName");
                 Date DOB = resultSet.getDate("DOB");
