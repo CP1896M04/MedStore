@@ -68,7 +68,10 @@ public class RoleDAO implements DAO<Role> {
     @Override
     public ObservableList<Role> getList() {
        ObservableList<Role> roles = FXCollections.observableArrayList();
-        String sql = "SELECT * FROM [dbo].[Role]";
+        String sql = "SELECT [RoleID]\n" +
+                "      ,[RoleName]\n" +
+                "      ,[Descr]\n" +
+                "  FROM [dbo].[Role]";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {

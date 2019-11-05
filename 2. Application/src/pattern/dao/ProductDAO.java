@@ -1,14 +1,15 @@
 package pattern.dao;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import pattern.connection.ConnectionFactory;
+import pattern.model.Category;
 import pattern.model.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDAO implements DAO<Product>{
     private Connection connection;
@@ -91,9 +92,9 @@ public class ProductDAO implements DAO<Product>{
     }
 
     @Override
-    public ObservableList<Product> getList() {
+    public List<Product> getList() {
 
-        ObservableList<Product> products = FXCollections.observableArrayList();
+        List<Product> products = new ArrayList<>();
         String sql = "select * from Product";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();

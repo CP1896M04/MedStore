@@ -1,19 +1,21 @@
 package application.app;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TreeItem;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
-import lib.window.addNewProduct;
-import lib.window.addUnit;
-import lib.window.supplierManage;
 import lib.window.*;
 import lib.window.addNewProduct;
 import lib.window.addUnit;
@@ -24,6 +26,8 @@ import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -100,8 +104,8 @@ public class MainPresenter implements Initializable {
                RoleStage.show();
                break;
            case "Add Staff":
-               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/user/addStaff/addStaff.fxml"));
-               Stage StaffStage = addUnit.getInstance();
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
+               Stage StaffStage = addStaff.getInstance();
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
                break;
