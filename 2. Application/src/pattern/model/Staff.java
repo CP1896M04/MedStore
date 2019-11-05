@@ -15,6 +15,11 @@ public class Staff {
    private String Username ;
    private String Password ;
 
+    public Staff() {
+
+    }
+
+
     public Integer getStaffID() {
         return StaffID;
     }

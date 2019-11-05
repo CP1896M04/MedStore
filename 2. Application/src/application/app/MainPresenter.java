@@ -1,24 +1,45 @@
 package application.app;
 
+<<<<<<< HEAD
+=======
+import com.gluonhq.charm.glisten.control.AutoCompleteTextField;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+<<<<<<< HEAD
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TreeItem;
 import javafx.scene.input.MouseEvent;
+=======
+import javafx.scene.control.*;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+<<<<<<< HEAD
+=======
+
+
+import javafx.scene.input.MouseEvent;
+import lib.control.ComboBoxAutoComplete;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
+import org.controlsfx.control.textfield.CustomTextField;
+import pattern.dao.ProductDAO;
+import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainPresenter implements Initializable {
@@ -34,11 +55,30 @@ public class MainPresenter implements Initializable {
     @FXML
     private VBox container;
 
+
+    @FXML
+    private TextField txtProductName;
+
+
+    @FXML
+    private ComboBox<Product> cbProductName;
+
+
     public void initialize(URL location, ResourceBundle resources) {
         lib.LeftMenu instance = lib.LeftMenu.getInstance();
             instance.getLeftMenu(treeView);
         Button button = new Button("Add");
         statusBar.getChildren().addAll(button);
+        loadData();
+    }
+    public void loadData(){
+        ProductDAO productDAO = new ProductDAO();
+        List<Product> persons = productDAO.getList();
+        cbProductName.setTooltip(new Tooltip());
+        cbProductName.getItems().addAll(persons);
+        new ComboBoxAutoComplete<Product>(cbProductName);
+
+
     }
     public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
@@ -71,8 +111,14 @@ public class MainPresenter implements Initializable {
            case "Add Role":
                Parent RoleParent = FXMLLoader.load(getClass().getResource("/application/product/addRole/addRole.fxml"));
                Stage RoleStage = addUnit.getInstance();
-              RoleStage.setScene((new Scene(RoleParent)));
-              RoleStage.show();
+               RoleStage.setScene((new Scene(RoleParent)));
+               RoleStage.show();
+               break;
+           case "Add Staff":
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
+               Stage StaffStage = addUnit.getInstance();
+               StaffStage.setScene((new Scene(StaffParent)));
+               StaffStage.show();
                break;
        }
     }
