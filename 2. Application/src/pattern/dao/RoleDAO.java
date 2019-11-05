@@ -1,5 +1,7 @@
 package pattern.dao;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import pattern.connection.ConnectionFactory;
 import pattern.model.InventoryLedger;
 import pattern.model.Role;
@@ -64,8 +66,8 @@ public class RoleDAO implements DAO<Role> {
     }
 
     @Override
-    public List<Role> getList() {
-        List<Role> roles = new ArrayList<>();
+    public ObservableList<Role> getList() {
+       ObservableList<Role> roles = FXCollections.observableArrayList();
         String sql = "SELECT [RoleID]\n" +
                 "      ,[RoleName]\n" +
                 "      ,[Descr]\n" +

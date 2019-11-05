@@ -103,7 +103,7 @@ public class MainPresenter implements Initializable {
                RoleStage.show();
                break;
            case "Add Staff":
-               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addRole/addRole.fxml"));
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
                Stage StaffStage = addUnit.getInstance();
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
