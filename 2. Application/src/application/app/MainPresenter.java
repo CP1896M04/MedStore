@@ -1,27 +1,39 @@
 package application.app;
 
+<<<<<<< HEAD
+=======
 import com.gluonhq.charm.glisten.control.AutoCompleteTextField;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+<<<<<<< HEAD
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TreeItem;
+import javafx.scene.input.MouseEvent;
+=======
 import javafx.scene.control.*;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+<<<<<<< HEAD
+=======
 
 
 import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
+>>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
 import org.controlsfx.control.textfield.CustomTextField;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -103,13 +115,14 @@ public class MainPresenter implements Initializable {
                RoleStage.show();
                break;
            case "Add Staff":
-               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addRole/addRole.fxml"));
+               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
                Stage StaffStage = addUnit.getInstance();
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
                break;
        }
     }
+
     void loadWindow(String loc, String title){
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(loc));

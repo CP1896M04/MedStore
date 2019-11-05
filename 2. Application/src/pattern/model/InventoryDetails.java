@@ -27,6 +27,10 @@ public class InventoryDetails {
         ExpiryDate = expiryDate;
     }
 
+    public InventoryDetails() {
+
+    }
+
     public Integer getDetailsID() {
         return DetailsID;
     }
