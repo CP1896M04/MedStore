@@ -5,12 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
-<<<<<<< HEAD:2. Application/src/application/user/addStaff/addStaff.java
-=======
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.Instant;
->>>>>>> 1d84c99fb04a478a31d7c20677ddec712f20171c:2. Application/src/application/product/addStaff/addStaff.java
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;

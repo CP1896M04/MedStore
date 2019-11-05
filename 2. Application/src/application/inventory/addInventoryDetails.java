@@ -170,7 +170,6 @@ public class addInventoryDetails implements Initializable {
         ObservableList<Product> products = productDAO.getList();
         comboboxProductID.setItems(products);
         comboboxProductID.getSelectionModel().select(1);
-        comboboxProductID.
 //        comboboxProductID.setConverter(new StringConverter<Product>() {
 //            @Override
 //            public String toString(Product product) {
