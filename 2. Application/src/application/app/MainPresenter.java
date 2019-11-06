@@ -1,38 +1,33 @@
 package application.app;
 
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TreeItem;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
-<<<<<<< HEAD
-import lib.window.addNewProduct;
-import lib.window.addUnit;
-import lib.window.supplierManage;
-=======
-<<<<<<< HEAD
 import lib.window.*;
-=======
->>>>>>> 4a5a0c17bac368229741dbaf62a3359e4db33e96
 import lib.window.addNewProduct;
 import lib.window.addUnit;
 import lib.window.supplierManage;
->>>>>>> 7cc38d6821ccc84fc90e5356dc2f3358a5dc8308
 import org.controlsfx.control.textfield.CustomTextField;
->>>>>>> 36cbe08ed830f18718cc9a1e5e8698d68d387338
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -109,13 +104,8 @@ public class MainPresenter implements Initializable {
                RoleStage.show();
                break;
            case "Add Staff":
-<<<<<<< HEAD
-               Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/inventory/addInventoryDetails.fxml"));
-               Stage StaffStage = addUnit.getInstance();
-=======
                Parent StaffParent = FXMLLoader.load(getClass().getResource("/application/product/addStaff/addStaff.fxml"));
                Stage StaffStage = addStaff.getInstance();
->>>>>>> 36cbe08ed830f18718cc9a1e5e8698d68d387338
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
                break;
