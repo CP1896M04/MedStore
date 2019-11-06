@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.util.StringConverter;
 import pattern.dao.InventoryDetailsDAO;
 import pattern.dao.ProductDAO;
 import pattern.model.InventoryDetails;
@@ -170,19 +171,18 @@ public class addInventoryDetails implements Initializable {
         ObservableList<Product> products = productDAO.getList();
         comboboxProductID.setItems(products);
         comboboxProductID.getSelectionModel().select(1);
-        comboboxProductID.
-//        comboboxProductID.setConverter(new StringConverter<Product>() {
-//            @Override
-//            public String toString(Product product) {
-//                return product.getPName();
-//            }
-//
-//            @Override
-//            public Product fromString(String s) {
-//                return comboboxProductID.getItems().stream().filter(ap ->
-//                        ap.getPName().equals(s)).findFirst().orElse(null);
-//            }
-//        });
+        comboboxProductID.setConverter(new StringConverter<Product>() {
+            @Override
+            public String toString(Product product) {
+                return product.getPName();
+            }
+
+            @Override
+            public Product fromString(String s) {
+                return comboboxProductID.getItems().stream().filter(ap ->
+                        ap.getPName().equals(s)).findFirst().orElse(null);
+            }
+        });
 
 
     }
