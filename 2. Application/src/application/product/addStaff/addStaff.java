@@ -103,7 +103,7 @@ public class addStaff implements Initializable {
      RoleDAO roleDAO = new RoleDAO();
         ObservableList<Role> roles = roleDAO.getList();
         comboboxRoleID.setItems(roles);
-        comboboxRoleID.getSelectionModel().select(1);
+        comboboxRoleID.getSelectionModel().select(0);
         comboboxRoleID.setConverter(new StringConverter<Role>() {
             @Override
             public String toString(Role role) {

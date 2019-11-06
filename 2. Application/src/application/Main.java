@@ -1,13 +1,12 @@
 package application;
 
-import application.app.MainView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import lib.LibraryAssistant;
 import org.apache.log4j.Logger;
+
 import java.io.IOException;
 public class Main extends Application {
     /*
@@ -23,7 +22,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage)  throws IOException {
         logger.info("Load main form");
-        Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
+        //Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
+       Parent parent = FXMLLoader.load(getClass().getResource("/application/user/login/login.fxml"));
         Scene scene = new Scene(parent);
         primaryStage.setTitle("App");
         //final String uri = getClass().getResource("app.css").toExternalForm();
