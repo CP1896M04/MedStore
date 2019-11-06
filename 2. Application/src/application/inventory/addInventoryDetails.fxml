@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -9,14 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="491.0" prefWidth="1223.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.inventory.addInventoryDetails">
+<AnchorPane prefHeight="491.0" prefWidth="1223.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.inventory.addInventoryDetails">
    <children>
       <Label fx:id="lbDetailsID" layoutX="25.0" layoutY="27.0" text="DetailsID" />
       <TextFlow accessibleText="1" layoutX="149.0" layoutY="25.0">
          <children>
             <TextFlow accessibleRoleDescription="1">
                <children>
-                  <TextField fx:id="txtDetailID" prefHeight="26.0" prefWidth="150.0" text="1" />
+                  <TextField fx:id="txtDetailID" prefHeight="26.0" prefWidth="150.0" />
                </children>
             </TextFlow>
          </children>
@@ -29,9 +30,9 @@
       </TextFlow>
       <Label fx:id="lbProductID" layoutX="25.0" layoutY="109.0" text="ProductID" />
       <Label fx:id="lbPurchasePrice" layoutX="25.0" layoutY="150.0" text="PurchasePrice" />
-      <TextField fx:id="txtPurchaseprice" layoutX="147.0" layoutY="148.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="txtPurchaseprice" layoutX="147.0" layoutY="148.0" prefHeight="26.0" prefWidth="150.0" text="1" />
       <Label fx:id="lbTentativeSalesPrice" layoutX="25.0" layoutY="190.0" text="TentativeSalesPrice" />
-      <TextField fx:id="txtTentativeSalesPrice" layoutX="148.0" layoutY="188.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="txtTentativeSalesPrice" layoutX="148.0" layoutY="188.0" prefHeight="26.0" prefWidth="150.0" text="3.5" />
       <TableView fx:id="tableview" layoutX="311.0" layoutY="25.0" prefHeight="395.0" prefWidth="914.0">
         <columns>
           <TableColumn fx:id="columnDetailsID" prefWidth="59.20001220703125" text="DetailsID" />
@@ -47,18 +48,18 @@
         </columns>
       </TableView>
       <Label fx:id="lbQuantityBought" layoutX="25.0" layoutY="230.0" text="QuantityBought" />
-      <TextField fx:id="txtQuantityBought" layoutX="147.0" layoutY="228.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="txtQuantityBought" layoutX="147.0" layoutY="228.0" prefHeight="26.0" prefWidth="150.0" text="4.5" />
       <Label fx:id="ldQuantityAvailable" layoutX="25.0" layoutY="273.0" text="QuantityAvailable" />
-      <TextField fx:id="txtQuantityAvailable" layoutX="147.0" layoutY="271.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="txtQuantityAvailable" layoutX="147.0" layoutY="271.0" prefHeight="26.0" prefWidth="150.0" text="3.78" />
       <Label fx:id="lbBatchid" layoutX="25.0" layoutY="314.0" text="Batchid" />
       <TextField fx:id="txtBatchid" layoutX="147.0" layoutY="312.0" prefHeight="26.0" prefWidth="150.0" text="DHGPR" />
       <Label fx:id="lbManufacturedDate" layoutX="25.0" layoutY="356.0" text="ManufacturedDate" />
-      <TextField fx:id="txtManufacturedDate" layoutX="147.0" layoutY="354.0" prefHeight="26.0" prefWidth="150.0" text="dd/mm/yy" />
       <Label fx:id="lbExpiryDate" layoutX="25.0" layoutY="399.0" text="ExpiryDate" />
-      <TextField fx:id="txtExpiryDate" layoutX="147.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" text="dd/mm/yy" />
       <Button fx:id="bntAdd" layoutX="24.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntAdd" prefHeight="26.0" prefWidth="85.0" text="Add" />
       <Button fx:id="bntUpdate" layoutX="124.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntUpdate" prefHeight="26.0" prefWidth="85.0" text="Update" />
       <Button fx:id="bntDelete" layoutX="224.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntDelete" prefHeight="26.0" prefWidth="85.0" text="Delete" />
       <ComboBox fx:id="comboboxProductID" layoutX="149.0" layoutY="105.0" prefWidth="150.0" />
+      <DatePicker fx:id="dataPickerManufacturedDate" layoutX="143.0" layoutY="352.0" prefHeight="25.0" prefWidth="158.0" promptText="17/21/2019" />
+      <DatePicker fx:id="dataPickerExpiryDate" layoutX="144.0" layoutY="395.0" prefHeight="25.0" prefWidth="158.0" promptText="01/01/2001" />
    </children>
 </AnchorPane>

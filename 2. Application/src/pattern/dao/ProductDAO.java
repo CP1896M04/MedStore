@@ -92,7 +92,6 @@ public class ProductDAO implements DAO<Product>{
 
     @Override
     public ObservableList<Product> getList() {
-
         ObservableList<Product> products = FXCollections.observableArrayList();
         String sql = "select * from Product";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -113,7 +112,6 @@ public class ProductDAO implements DAO<Product>{
                 int defaultInDose = resultSet.getInt("DefaultInDose");
                 Product product = new Product(productID,catID,unitID ,supplierID,pName,pDescr,pComposition,pManufacturer,uprice,usp,reOrLevel,htu,defaultInDose);
                 products.add(product);
-
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

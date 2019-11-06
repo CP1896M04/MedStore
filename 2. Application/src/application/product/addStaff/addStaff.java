@@ -2,24 +2,19 @@ package application.product.addStaff;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
-
-import java.net.URL;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.time.Instant;
-import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
-import javafx.scene.chart.PieChart;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
 import javafx.util.StringConverter;
 import pattern.dao.RoleDAO;
 import pattern.dao.StaffDAO;
 import pattern.model.Role;
 import pattern.model.Staff;
 
+import java.net.URL;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
 
@@ -104,16 +99,8 @@ public class addStaff implements Initializable {
         loadData();
     }
 
-    /**
-     * @param
-     * @return none
-     */
-    //Load data
     public void loadData() {
-
-        //Load data to Combobox Supplier
-
-        RoleDAO roleDAO = new RoleDAO();
+     RoleDAO roleDAO = new RoleDAO();
         ObservableList<Role> roles = roleDAO.getList();
         comboboxRoleID.setItems(roles);
         comboboxRoleID.getSelectionModel().select(1);
@@ -122,7 +109,6 @@ public class addStaff implements Initializable {
             public String toString(Role role) {
                 return role.getRoleName();
             }
-
             @Override
             public Role fromString(String string) {
                 return comboboxRoleID.getItems().stream().filter(ap ->

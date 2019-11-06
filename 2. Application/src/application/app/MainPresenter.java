@@ -5,29 +5,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.TreeItem;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.scene.input.MouseEvent;
 import lib.control.ComboBoxAutoComplete;
 import lib.window.*;
-import lib.window.addNewProduct;
-import lib.window.addUnit;
-import lib.window.supplierManage;
-import org.controlsfx.control.textfield.CustomTextField;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -81,7 +71,7 @@ public class MainPresenter implements Initializable {
                break;
            case "Add Category":
                Parent parent1 = FXMLLoader.load(getClass().getResource("/application/product/addcategory/addcategory.fxml"));
-               Stage stage1 = addNewProduct.getInstance();
+               Stage stage1 = addCategory.getInstance();
                stage1.setScene((new Scene(parent1)));
                stage1.show();
                break;
@@ -108,6 +98,12 @@ public class MainPresenter implements Initializable {
                Stage StaffStage = addStaff.getInstance();
                StaffStage.setScene((new Scene(StaffParent)));
                StaffStage.show();
+               break;
+           case "InventoryDetails":
+               Parent InventoryDetailsParent = FXMLLoader.load(getClass().getResource("/application/inventory/addInventoryDetails.fxml"));
+               Stage InventoryDetailsStage = InventoryDetails.getInstance();
+               InventoryDetailsStage.setScene((new Scene(InventoryDetailsParent)));
+               InventoryDetailsStage.show();
                break;
        }
     }

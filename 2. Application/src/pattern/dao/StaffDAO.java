@@ -1,7 +1,6 @@
 package pattern.dao;
 
 import pattern.connection.ConnectionFactory;
-import pattern.model.InventoryLedger;
 import pattern.model.Staff;
 
 import java.sql.*;
@@ -104,6 +103,7 @@ public class StaffDAO implements DAO<Staff> {
             throw new RuntimeException(e);
         }
     }
+
 
     @Override
     public List<Staff> getList() {

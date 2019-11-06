@@ -4,7 +4,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -241,7 +240,7 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.update(product);
-            System.out.println("Da updade"+txtPName.getText());
+            System.out.println("Da updade"+txtPName.getText()   );
 
         }catch (Exception e){
             System.out.println("Can't update");
