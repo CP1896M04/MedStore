@@ -220,7 +220,7 @@ public class addInventoryDetails implements Initializable {
         columnTentativeSalesPrice.setCellValueFactory(new PropertyValueFactory<>("TentativeSalesPrice"));
         columnQuantityBought.setCellValueFactory(new PropertyValueFactory<>("QuantityBought"));
         columnQuantityAvailable.setCellValueFactory(new PropertyValueFactory<>("QuantityAvailable"));
-        columnBatchid.setCellValueFactory(new PropertyValueFactory<>("columnBatchid"));
+        columnBatchid.setCellValueFactory(new PropertyValueFactory<>("Batchid"));
         columnManufacturedDate.setCellValueFactory(new PropertyValueFactory<>("ManufacturedDate"));
         columnExpiryDate.setCellValueFactory(new PropertyValueFactory<>("ExpiryDate"));
     }

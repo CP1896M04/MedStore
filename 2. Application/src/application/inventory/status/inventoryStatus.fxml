@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.inventory.status.InventoryStatusPresenter">
+   <children>
+      <TreeView fx:id="productTree" layoutX="-2.0" prefHeight="501.0" prefWidth="210.0" />
+      <TableView layoutX="208.0" layoutY="-1.0" prefHeight="247.0" prefWidth="915.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+       <TableView fx:id="tableview" layoutX="206.0" layoutY="244.0" prefHeight="257.0" prefWidth="915.0">
+           <columns>
+               <TableColumn fx:id="columnDetailsID" prefWidth="59.20001220703125" text="DetailsID" />
+               <TableColumn fx:id="columnDetailsCode" prefWidth="91.20001220703125" text="DetailsCode" />
+               <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
+               <TableColumn fx:id="columnPurchasePrice" prefWidth="95.199951171875" text="PurchasePrice" />
+               <TableColumn fx:id="columnTentativeSalesPrice" prefWidth="117.60003662109375" text="TentativeSalesPrice" />
+               <TableColumn fx:id="columnQuantityBought" prefWidth="102.4000244140625" text="QuantityBought" />
+               <TableColumn fx:id="columnQuantityAvailable" minWidth="0.0" prefWidth="111.2000732421875" text="QuantityAvailable" />
+               <TableColumn fx:id="columnBatchid" minWidth="0.0" prefWidth="60.800048828125" text="Batchid" />
+               <TableColumn fx:id="columnManufacturedDate" minWidth="0.0" prefWidth="121.5999755859375" text="ManufacturedDate" />
+               <TableColumn fx:id="columnExpiryDate" minWidth="1.5999755859375" prefWidth="72.7999267578125" text="ExpiryDate" />
+           </columns>
+       </TableView>
+   </children>
+</AnchorPane>

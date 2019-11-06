@@ -105,6 +105,12 @@ public class MainPresenter implements Initializable {
                InventoryDetailsStage.setScene((new Scene(InventoryDetailsParent)));
                InventoryDetailsStage.show();
                break;
+           case "InventoryStatus":
+               Parent InventoryStatusParent = FXMLLoader.load(getClass().getResource("/application/inventory/status/inventoryStatus.fxml"));
+               Stage InventoryStatusStage = InventoryStatus.getInstance();
+               InventoryStatusStage.setScene((new Scene(InventoryStatusParent)));
+               InventoryStatusStage.show();
+               break;
        }
     }
 
