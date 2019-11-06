@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -19,7 +20,10 @@ import pattern.model.Supplier;
 import pattern.model.Unit;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import static java.lang.Integer.parseInt;
 
 public class AddNewProductPresenter implements Initializable {
 
@@ -204,6 +208,40 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.add(product);
+            System.out.println("Da add"+txtPName.getText());
+
+        }catch (Exception e){
+            System.out.println("Can't update");
+        }
+    }
+    @FXML
+    void btnRemove(ActionEvent event) throws SQLException {
+        Product product= new Product();
+        productDAO.remove(txtProductId.getText());
+        System.out.println("Da xoa" +txtPName.getText());
+    }
+
+
+
+    @FXML
+    void btnUpdate(ActionEvent event) {
+        try {
+            Product product = new Product();
+            product.setProductID(parseInt(txtProductId.getText()));
+            product.setPName(txtPName.getText());
+            product.setCatID(comboboxCatID.getSelectionModel().getSelectedItem().getCatID());
+            product.setSupplierID(comboboxSupplierID.getSelectionModel().getSelectedItem().getSupplierID());
+            product.setUnitID(comboboxUnitID.getSelectionModel().getSelectedItem().getUnitID());
+            product.setPComposition(txtPComposition.getText());
+            product.setUPrice(Float.valueOf(txtUprice.getText()));
+            product.setUSP(Float.valueOf(txtUSP.getText()));
+            product.setReOrLevel(Integer.valueOf(txtReOrLevel.getText()));
+            product.setDefaultInDose(Integer.valueOf(txtDefaultInDose.getText()));
+            product.setPManufacturer(txtPManufacturer.getText());
+            product.setPDescr(txtPDescr.getText());
+            product.setHTU(txtHTU.getText());
+            productDAO.update(product);
+            System.out.println("Da updade"+txtPName.getText());
 
         }catch (Exception e){
             System.out.println("Can't update");
