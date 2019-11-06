@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/login/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/META-INF/2. Application.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/status/inventoryStatus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/status/inventoryStatus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/LeftMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LeftMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/login/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryDetailsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryDetailsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/user/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/user/login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/StaffDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/StaffDAO.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
