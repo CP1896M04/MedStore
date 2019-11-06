@@ -23,9 +23,8 @@
       <TextField fx:id="txtStaffCode" layoutX="69.0" layoutY="53.0" />
       <TextField fx:id="txtFName" layoutX="69.0" layoutY="134.0" />
       <TextField fx:id="txtLName" layoutX="69.0" layoutY="173.0" />
-      <TextField fx:id="txtDOB" layoutX="69.0" layoutY="217.0" />
       <TextField fx:id="txtAddress" layoutX="69.0" layoutY="264.0" />
-      <TextField fx:id="txtSEX" layoutX="69.0" layoutY="306.0" />
+      <TextField fx:id="txtSEX" layoutX="69.0" layoutY="306.0" text="M or F" />
       <TextField fx:id="txtPhoneNo" layoutX="69.0" layoutY="353.0" />
       <TextField fx:id="txtUsername" layoutX="69.0" layoutY="409.0" />
       <TextField fx:id="txtPassword" layoutX="69.0" layoutY="453.0" />

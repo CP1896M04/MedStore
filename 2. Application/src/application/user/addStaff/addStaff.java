@@ -7,16 +7,16 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.time.DateTimeException;
 import java.time.Instant;
+import java.time.format.DateTimeParseException;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
-import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 import pattern.dao.RoleDAO;
 import pattern.dao.StaffDAO;
@@ -25,6 +25,7 @@ import pattern.model.Staff;
 
 
 import static java.lang.Integer.parseInt;
+import static java.sql.Date.valueOf;
 
 public class addStaff implements Initializable {
     @FXML
@@ -73,7 +74,7 @@ public class addStaff implements Initializable {
     private TextField txtLName;
 
     @FXML
-    private TextField txtDOB;
+    private DatePicker datePickerDOB;
 
     @FXML
     private TextField txtAddress;
@@ -100,6 +101,7 @@ public class addStaff implements Initializable {
     private Button btnRemove;
     @FXML
     private ComboBox<Role> comboboxRoleID;
+
 
 
     @Override
@@ -144,8 +146,8 @@ public class addStaff implements Initializable {
             staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
             staff.setFName(txtFName.getText());
             staff.setLName(txtLName.getText());
-            staff.setDOB((Date.valueOf(txtDOB.getText())));
-            ;
+            staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
+
             staff.setAddress(txtAddress.getText());
             staff.setSEX(txtSEX.getText());
             staff.setPhoneNo(txtPhoneNo.getText());
@@ -176,7 +178,7 @@ public class addStaff implements Initializable {
             staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
             staff.setFName(txtFName.getText());
             staff.setLName(txtLName.getText());
-            staff.setDOB((Date.valueOf(txtDOB.getText())));
+            staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
             staff.setAddress(txtAddress.getText());
             staff.setSEX(txtSEX.getText());
             staff.setPhoneNo(txtPhoneNo.getText());

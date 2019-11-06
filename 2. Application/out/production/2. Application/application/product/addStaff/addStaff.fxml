@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -23,7 +24,7 @@
       <TextField fx:id="txtStaffCode" layoutX="69.0" layoutY="53.0" />
       <TextField fx:id="txtFName" layoutX="69.0" layoutY="134.0" />
       <TextField fx:id="txtLName" layoutX="69.0" layoutY="173.0" />
-      <TextField fx:id="txtDOB" layoutX="69.0" layoutY="217.0" />
+
       <TextField fx:id="txtAddress" layoutX="69.0" layoutY="264.0" />
       <TextField fx:id="txtSEX" layoutX="69.0" layoutY="306.0" />
       <TextField fx:id="txtPhoneNo" layoutX="69.0" layoutY="353.0" />
@@ -33,5 +34,6 @@
       <Button fx:id="btnUpdate" layoutX="92.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
       <Button fx:id="btnRemove" layoutX="166.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
       <ComboBox fx:id="comboboxRoleID" layoutX="69.0" layoutY="95.0" prefWidth="150.0" />
+      <DatePicker fx:id="datePickerDOB" layoutX="69.0" layoutY="217.0" prefHeight="25.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
