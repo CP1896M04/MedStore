@@ -142,6 +142,27 @@ public class StaffDAO implements DAO<Staff> {
         }
         return staffs;
     }
+    public Boolean checkExist(String username , String password) {
+        boolean exist = false;
+        String sql = "SELECT [Username] FROM [dbo].[Staff] WHERE Username = ? and Password = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            int i=0;
+            while (resultSet.next()) {
+                i++;
+            }
+            if (i>0){
+                exist = true;
+                System.out.println("User dang nhap thanh cong");
+            }
+        } catch (  SQLException e ) {
 
+            throw new RuntimeException(e);
+        }
+        return exist;
+    }
 
 }
