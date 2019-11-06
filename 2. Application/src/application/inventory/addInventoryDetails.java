@@ -196,7 +196,6 @@ public class addInventoryDetails implements Initializable {
         initColumn();
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
-<<<<<<< HEAD
             public void handle(MouseEvent mouseEvent) {
                 InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
                 txtDetailID.setText(inventoryDetails.getDetailsID().toString());
@@ -209,16 +208,6 @@ public class addInventoryDetails implements Initializable {
                 txtBatchid.setText(inventoryDetails.getBatchid());
                 dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
                 dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
-=======
-            public String toString(Product product) {
-                return product.getPName();
-            }
-
-            @Override
-            public Product fromString(String s) {
-                return comboboxProductID.getItems().stream().filter(Product ->
-                        Product.getPName().equals(s)).findFirst().orElse(null);
->>>>>>> 6c2fba321c88936deebff6ba19d64ee60da05f80
             }
         });
     }
