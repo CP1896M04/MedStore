@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/META-INF/2. Application.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/InventoryView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/status/inventoryStatus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/status/inventoryStatus.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSalePresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/sale/poinofsale/PointOfSaleView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/LeftMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LeftMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/login/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryDetailsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/InventoryDetailsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/InventoryDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +48,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\MedStore\2. Application\src\application\sale\poinofsale" />
       <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
       <recent name="D:\JAVA\MedStore\2. Application" />
       <recent name="D:\JAVA\MedStore\2. Application\src\resource" />
       <recent name="D:\JAVA\MedStore\2. Application\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
     </key>
   </component>
   <component name="RunDashboard">
