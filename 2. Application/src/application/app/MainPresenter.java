@@ -13,11 +13,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lib.control.ComboBoxAutoComplete;
 import lib.window.*;
+import pattern.connection.ConnectionFactory;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -59,6 +62,8 @@ public class MainPresenter implements Initializable {
 
 
     }
+
+
     public void selectItems(MouseEvent event) throws Exception {
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         String nodeName = item.getValue();
