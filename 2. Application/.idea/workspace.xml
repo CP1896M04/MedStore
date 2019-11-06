@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/addInventoryDetails$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/addInventoryDetails$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/inventory/addInventoryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/inventory/addInventoryDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/inventory/addInventoryDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/inventory/addInventoryDetails.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
