@@ -110,4 +110,9 @@ public class InventoryDetails {
     public void setExpiryDate(Date expiryDate) {
         ExpiryDate = expiryDate;
     }
+    public String toString() {
+        return String.format("DetailsID "+DetailsID+"DetailsCode"+DetailsCode+"ProductID "+ProductID +" PurchasePrice"+ PurchasePrice+"TentativeSalesPrice"+TentativeSalesPrice+"QuantityBought"+QuantityBought+"QuantityAvailable"+QuantityAvailable+"Batchid"+Batchid+"ManufacturedDate"+ManufacturedDate +"ExpiryDate"+ExpiryDate);
+    }
+
+
 }

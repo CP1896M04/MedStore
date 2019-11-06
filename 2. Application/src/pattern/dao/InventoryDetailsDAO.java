@@ -1,7 +1,6 @@
 package pattern.dao;
 
 import pattern.connection.ConnectionFactory;
-import pattern.model.Category;
 import pattern.model.InventoryDetails;
 
 import java.sql.*;
@@ -79,7 +78,17 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     @Override
     public List<InventoryDetails> getList() {
         List<InventoryDetails> inventoryDetails = new ArrayList<>();
-        String sql = "select * from InventoryDetails";
+        String sql = "SELECT [DetailsID]\n" +
+                "      ,[DetailsCode]\n" +
+                "      ,[ProductID]\n" +
+                "      ,[PurchasePrice]\n" +
+                "      ,[TentativeSalesPrice]\n" +
+                "      ,[QuantityBought]\n" +
+                "      ,[QuantityAvailable]\n" +
+                "      ,[Batchid]\n" +
+                "      ,[ManufacturedDate]\n" +
+                "      ,[ExpiryDate]\n" +
+                "  FROM [dbo].[InventoryDetails]\n"                ;
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -90,7 +99,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
                 Float tentativeSalesPrice = resultSet.getFloat("TentativeSalesPrice");
                 int quantityBought = resultSet.getInt("QuantityBought");
                 int quantityAvailable = resultSet.getInt("QuantityAvailable");
-                String batchID = resultSet.getString("Batchid");
+                String batchID=resultSet.getString("Batchid");
                 Date manufacturedDate = resultSet.getDate("ManufacturedDate");
                 Date expiryDate = resultSet.getDate("ExpiryDate");
                 InventoryDetails inventorydetails = new InventoryDetails(detailsID, detailsCode ,productID,purchasePrice,tentativeSalesPrice,quantityBought,quantityAvailable,batchID,manufacturedDate,expiryDate);
