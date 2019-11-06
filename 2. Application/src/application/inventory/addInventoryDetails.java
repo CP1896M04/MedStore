@@ -180,8 +180,8 @@ public class addInventoryDetails implements Initializable {
 
             @Override
             public Product fromString(String s) {
-                return comboboxProductID.getItems().stream().filter(ap ->
-                        ap.getPName().equals(s)).findFirst().orElse(null);
+                return comboboxProductID.getItems().stream().filter(Product ->
+                        Product.getPName().equals(s)).findFirst().orElse(null);
             }
         });
 
