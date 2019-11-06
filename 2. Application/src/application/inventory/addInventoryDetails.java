@@ -151,7 +151,7 @@ public class addInventoryDetails implements Initializable {
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.add(inventoryDetails);
             System.out.println("da them "+txtDetailsCode.getText());
-
+            loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
         }
@@ -164,7 +164,7 @@ public class addInventoryDetails implements Initializable {
         InventoryDetailsDAO inventoryDetailsDAO= new InventoryDetailsDAO();
         inventoryDetailsDAO.remove(txtDetailID.getText());
         System.out.println("DA xoa"+txtDetailsCode.getText());
-
+        loaddataTableview();
     }
 
     @FXML
@@ -183,7 +183,7 @@ public class addInventoryDetails implements Initializable {
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.update(inventoryDetails);
             System.out.println("update thanh cong"+txtDetailsCode.getText());
-
+            loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
         }
@@ -227,7 +227,9 @@ public class addInventoryDetails implements Initializable {
     public void loaddataTableview(){
      List<InventoryDetails> inventoryDetails= new ArrayList<>();
      inventoryDetails=inventorydetailsDAO.getList();
+     tableview.getItems().clear();
      tableview.getItems().addAll(inventoryDetails);
+
     }
 
     public void loadData() {
