@@ -171,8 +171,6 @@ public class AddNewProductPresenter implements Initializable {
         comboboxUnitID.setItems(units);
         comboboxUnitID.getSelectionModel().select(1);
         comboboxUnitID.setConverter(new StringConverter<Unit>() {
-
-
             @Override
             public String toString(Unit unit) {
                 return unit.getUname();
@@ -184,9 +182,6 @@ public class AddNewProductPresenter implements Initializable {
                         ap.getUname().equals(string)).findFirst().orElse(null);
             }
         });
-
-
-
     }
 
     @FXML
@@ -240,7 +235,7 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.update(product);
-            System.out.println("Da updade"+txtPName.getText()   );
+            System.out.println("Da Updade "+txtPName.getText());
 
         }catch (Exception e){
             System.out.println("Can't update");
