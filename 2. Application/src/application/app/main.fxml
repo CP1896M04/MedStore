@@ -157,7 +157,10 @@
                                                     </font>
                                                 </Text>
                                                 <Button fx:id="btnSearch" layoutX="326.0" layoutY="86.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="59.0" text="Search" />
-                                    <TextField fx:id="txtProductName" layoutX="79.0" layoutY="138.0" />
+                                    <TextField fx:id="txtProductName" layoutX="79.0" layoutY="138.0" prefHeight="25.0" prefWidth="235.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></TextField>
                                             </children>
                                         </AnchorPane>
                                     </top>
