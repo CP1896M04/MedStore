@@ -2,6 +2,7 @@
 package application.inventory;
 
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,14 +16,13 @@ import pattern.dao.InventoryDetailsDAO;
 import pattern.dao.ProductDAO;
 import pattern.model.InventoryDetails;
 import pattern.model.Product;
+import pattern.model.ViewProduct;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
@@ -59,37 +59,40 @@ public class addInventoryDetails implements Initializable {
     private TextField txtTentativeSalesPrice;
 
     @FXML
-    private TableView<InventoryDetails> tableview;
+    private TableView<ViewProduct> tableview;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnDetailsID;
+    private TableColumn<ViewProduct, Integer> columnDetailsID;
 
     @FXML
-    private TableColumn<InventoryDetails, String> columnDetailsCode;
+    private TableColumn<ViewProduct, String> columnDetailsCode;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnProductID;
+    private TableColumn<ViewProduct, Integer> columnProductID;
 
     @FXML
-    private TableColumn<InventoryDetails, Float> columnPurchasePrice;
+    private TableColumn<ViewProduct, String> columnProductName;
 
     @FXML
-    private TableColumn<InventoryDetails, Float> columnTentativeSalesPrice;
+    private TableColumn<ViewProduct, Float> columnPurchasePrice;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnQuantityBought;
+    private TableColumn<ViewProduct, Float> columnTentativeSalesPrice;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnQuantityAvailable;
+    private TableColumn<ViewProduct, Integer> columnQuantityBought;
 
     @FXML
-    private TableColumn<InventoryDetails, String> columnBatchid;
+    private TableColumn<ViewProduct, Integer> columnQuantityAvailable;
 
     @FXML
-    private TableColumn<InventoryDetails, Date> columnManufacturedDate;
+    private TableColumn<ViewProduct, String> columnBatchid;
 
     @FXML
-    private TableColumn<InventoryDetails, Date> columnExpiryDate;
+    private TableColumn<ViewProduct, Date> columnManufacturedDate;
+
+    @FXML
+    private TableColumn<ViewProduct, Date> columnExpiryDate;
 
     @FXML
     private Label lbQuantityBought;
@@ -132,8 +135,8 @@ public class addInventoryDetails implements Initializable {
     private Connection connection;
 
 
-
     InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
+    ProductDAO productDAO = new ProductDAO();
 
     @FXML
     void bntAdd(ActionEvent event) {
@@ -146,11 +149,11 @@ public class addInventoryDetails implements Initializable {
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
             inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
             inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-            inventoryDetails.setBatchid(txtBatchid.getText());
+            inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.add(inventoryDetails);
-            System.out.println("da them "+txtDetailsCode.getText());
+            System.out.println("da them " + txtDetailsCode.getText());
             loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
@@ -161,9 +164,9 @@ public class addInventoryDetails implements Initializable {
 
     @FXML
     void bntDelete(ActionEvent event) throws SQLException {
-        InventoryDetailsDAO inventoryDetailsDAO= new InventoryDetailsDAO();
+        InventoryDetailsDAO inventoryDetailsDAO = new InventoryDetailsDAO();
         inventoryDetailsDAO.remove(txtDetailID.getText());
-        System.out.println("DA xoa"+txtDetailsCode.getText());
+        System.out.println("DA xoa" + txtDetailsCode.getText());
         loaddataTableview();
     }
 
@@ -178,11 +181,11 @@ public class addInventoryDetails implements Initializable {
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
             inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
             inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-            inventoryDetails.setBatchid(txtBatchid.getText());
+            inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.update(inventoryDetails);
-            System.out.println("update thanh cong"+txtDetailsCode.getText());
+            System.out.println("update thanh cong" + txtDetailsCode.getText());
             loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
@@ -197,25 +200,26 @@ public class addInventoryDetails implements Initializable {
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
-                txtDetailID.setText(inventoryDetails.getDetailsID().toString());
-                txtDetailsCode.setText(inventoryDetails.getDetailsCode());
+                ViewProduct viewProduct = tableview.getSelectionModel().getSelectedItem();
+                txtDetailID.setText(viewProduct.getDetailsID().toString());
+                txtDetailsCode.setText(viewProduct.getDetailsCode());
                 comboboxProductID.getValue();
-                txtPurchaseprice.setText(inventoryDetails.getPurchasePrice().toString());
-                txtTentativeSalesPrice.setText(inventoryDetails.getTentativeSalesPrice().toString());
-                txtQuantityBought.setText(String.valueOf(inventoryDetails.getQuantityBought()));
-                txtQuantityAvailable.setText(String.valueOf(inventoryDetails.getQuantityAvailable()));
-                txtBatchid.setText(inventoryDetails.getBatchid());
-                dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
-                dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
+                txtPurchaseprice.setText(viewProduct.getPurchasePrice().toString());
+                txtTentativeSalesPrice.setText(viewProduct.getTentativeSalesPrice().toString());
+                txtQuantityBought.setText(String.valueOf(viewProduct.getQuantityBought()));
+                txtQuantityAvailable.setText(String.valueOf(viewProduct.getQuantityAvailable()));
+                txtBatchid.setText(String.valueOf(txtBatchid.getText()));
+                dataPickerExpiryDate.setValue(LocalDate.parse(viewProduct.getExpiryDate().toString()));
+                dataPickerManufacturedDate.setValue(LocalDate.parse(viewProduct.getManufacturedDate().toString()));
             }
         });
     }
 
-    public void initColumn(){
-       columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
+    public void initColumn() {
+        columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
         columnDetailsCode.setCellValueFactory(new PropertyValueFactory<>("DetailsCode"));
         columnProductID.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
+        columnProductName.setCellValueFactory(new PropertyValueFactory<>("PName"));
         columnPurchasePrice.setCellValueFactory(new PropertyValueFactory<>("PurchasePrice"));
         columnTentativeSalesPrice.setCellValueFactory(new PropertyValueFactory<>("TentativeSalesPrice"));
         columnQuantityBought.setCellValueFactory(new PropertyValueFactory<>("QuantityBought"));
@@ -223,40 +227,40 @@ public class addInventoryDetails implements Initializable {
         columnBatchid.setCellValueFactory(new PropertyValueFactory<>("Batchid"));
         columnManufacturedDate.setCellValueFactory(new PropertyValueFactory<>("ManufacturedDate"));
         columnExpiryDate.setCellValueFactory(new PropertyValueFactory<>("ExpiryDate"));
+
     }
-    public void loaddataTableview(){
-     List<InventoryDetails> inventoryDetails= new ArrayList<>();
-     inventoryDetails=inventorydetailsDAO.getList();
-     tableview.getItems().clear();
-     tableview.getItems().addAll(inventoryDetails);
+
+    public void loaddataTableview() {
+        ObservableList<ViewProduct> viewProducts = FXCollections.observableArrayList();
+        viewProducts = inventorydetailsDAO.getTableView();
+        tableview.getItems().clear();
+        tableview.getItems().addAll(viewProducts);
 
     }
 
     public void loadData() {
-
         try {
             ProductDAO productDAO = new ProductDAO();
             ObservableList<Product> products = productDAO.getList();
-            System.out.println("Size: "+ products.size());
+            System.out.println("Size: " + products.size());
             comboboxProductID.setItems(products);
             comboboxProductID.getSelectionModel().select(0);
             comboboxProductID.setConverter(new StringConverter<Product>() {
-
                 @Override
                 public String toString(Product product) {
                     return product.getPName();
                 }
+
                 @Override
                 public Product fromString(String string) {
                     return comboboxProductID.getItems().stream().filter(ap ->
                             ap.getPName().equals(string)).findFirst().orElse(null);
                 }
             });
-        } catch ( Exception e ){
+        } catch (Exception e) {
 
         }
     }
-
 }
 
 
