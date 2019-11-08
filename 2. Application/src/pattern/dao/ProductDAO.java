@@ -149,7 +149,7 @@ public class ProductDAO implements DAO<Product>{
     }
     public ObservableList<Product> searchProductByID(int ProductID) {
         ObservableList<Product> products = FXCollections.observableArrayList();
-        String sql = "Select [ProductID],[PName] from Product where ProductID =?";
+        String sql = "Select * from Product where ProductID =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, ProductID);
