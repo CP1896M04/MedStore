@@ -13,16 +13,15 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lib.control.ComboBoxAutoComplete;
 import lib.window.*;
-import pattern.connection.ConnectionFactory;
 import pattern.dao.ProductDAO;
 import pattern.model.Product;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static java.lang.Integer.parseInt;
 
 public class MainPresenter implements Initializable {
     @FXML
@@ -39,12 +38,20 @@ public class MainPresenter implements Initializable {
 
 
     @FXML
-    private TextField txtProductName;
+    private TextField txtHtu;
 
 
     @FXML
     private ComboBox<Product> cbProductName;
 
+    @FXML
+    private TextField txtUSP;
+
+    @FXML
+    private TextField txtQty;
+
+    @FXML
+    private TextField txtDay;
 
     public void initialize(URL location, ResourceBundle resources) {
         lib.LeftMenu instance = lib.LeftMenu.getInstance();
@@ -59,6 +66,33 @@ public class MainPresenter implements Initializable {
         cbProductName.setTooltip(new Tooltip());
         cbProductName.getItems().addAll(persons);
         new ComboBoxAutoComplete<Product>(cbProductName);
+//        cbProductName.setConverter(new StringConverter<Product>() {
+//            @Override
+//            public String toString(Product product) {
+//                return null;
+//            }
+//
+//            @Override
+//            public Product fromString(String string) {
+//                return cbProductName.getItems().stream().filter(ap ->
+//                        ap.getPNamed().equals(string)).findFirst().orElse(null);
+//            }
+//        });
+        cbProductName.valueProperty().addListener((obs, oldval, newval) -> {
+            if(newval != null){
+                try{
+                    List<Product> products = productDAO.searchProductByID(newval.getProductID());
+                    Product product= products.get(0);
+                    txtHtu.setText(product.getHTU().toString());
+                    int days = parseInt(txtDay.getText());
+                    int numbers = product.getDefaultInDose()*days;
+                    txtQty.setText(String.valueOf(numbers));
+                    txtUSP.setText(product.getUSP().toString());
+                } catch (Exception e){
+
+                }
+            }
+        });
 
 
     }

@@ -147,4 +147,33 @@ public class ProductDAO implements DAO<Product>{
         }
         return products;
     }
+    public ObservableList<Product> searchProductByID(int ProductID) {
+        ObservableList<Product> products = FXCollections.observableArrayList();
+        String sql = "Select * from Product where ProductID =?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, ProductID);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int productID= resultSet.getInt("ProductID");
+                int catID = resultSet.getInt("CatID");
+                int unitID = resultSet.getInt("UnitID");
+                int supplierID = resultSet.getInt("SupplierID");
+                String pName = resultSet.getString("PName");
+                String pDescr  = resultSet.getString("PDescr");
+                String pComposition  = resultSet.getString("PComposition");
+                String pManufacturer = resultSet.getString("PManufacturer");
+                Float uprice = resultSet.getFloat("Uprice");
+                Float usp = resultSet.getFloat("USP");
+                int reOrLevel= resultSet.getInt("ReOrLevel");
+                String htu= resultSet.getString("HTU");
+                int defaultInDose = resultSet.getInt("DefaultInDose");
+                Product product = new Product(productID,catID,unitID ,supplierID,pName,pDescr,pComposition,pManufacturer,uprice,usp,reOrLevel,htu,defaultInDose);
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return products;
+    }
 }

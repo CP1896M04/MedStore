@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/login/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addStaff/addStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/user/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/user/login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/StaffDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/StaffDAO.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,17 +50,17 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
+      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\MedStore\2. Application\src\application\sale\poinofsale" />
       <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
       <recent name="D:\JAVA\MedStore\2. Application" />
       <recent name="D:\JAVA\MedStore\2. Application\src\resource" />
       <recent name="D:\JAVA\MedStore\2. Application\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -213,8 +213,6 @@ public class AddNewProductPresenter implements Initializable {
         comboboxUnitID.setItems(units);
         comboboxUnitID.getSelectionModel().select(1);
         comboboxUnitID.setConverter(new StringConverter<Unit>() {
-
-
             @Override
             public String toString(Unit unit) {
                 return unit.getUname();
@@ -277,8 +275,14 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.update(product);
+<<<<<<< HEAD
             System.out.println("Da updade" + txtPName.getText());
         } catch ( Exception e ) {
+=======
+            System.out.println("Da Updade "+txtPName.getText());
+
+        }catch (Exception e){
+>>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
             System.out.println("Can't update");
         }
     }

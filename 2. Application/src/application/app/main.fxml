@@ -140,24 +140,43 @@
                                                     <font>
                                                         <Font size="15.0" />
                                                     </font></Label>
-                                                <ComboBox layoutX="79.0" layoutY="43.0" prefHeight="31.0" prefWidth="66.0" promptText="1" />
-                                                <Label layoutX="393.0" layoutY="94.0" text="Qty">
+                                                <Label layoutX="400.0" layoutY="94.0" text="Qty">
                                                     <font>
                                                         <Font size="15.0" />
                                                     </font></Label>
-                                                <TextField layoutX="432.0" layoutY="90.0" prefHeight="25.0" prefWidth="64.0" promptText="1" />
+                                                <TextField fx:id="txtQty" layoutX="432.0" layoutY="90.0" prefHeight="25.0" prefWidth="64.0" promptText="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
                                                 <Label layoutX="20.0" layoutY="142.0" text="Manual">
                                                     <font>
                                                         <Font name="Arial" size="15.0" />
                                                     </font></Label>
-                                                <Button fx:id="btnInsert" layoutX="325.0" layoutY="138.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="59.0" text="Insert" AnchorPane.leftAnchor="325.0" />
-                                                <Text layoutX="251.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POINT OF SALE" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="400.13671875">
+                                                <Button fx:id="btnInsert" layoutX="481.0" layoutY="136.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="59.0" text="Insert" AnchorPane.leftAnchor="481.0" />
+                                                <Text layoutX="346.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POINT OF SALE" AnchorPane.leftAnchor="346.0" AnchorPane.rightAnchor="305.13671875">
                                                     <font>
                                                         <Font name="System Bold" size="24.0" />
                                                     </font>
                                                 </Text>
                                                 <Button fx:id="btnSearch" layoutX="326.0" layoutY="86.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="59.0" text="Search" />
-                                    <TextField fx:id="txtProductName" layoutX="79.0" layoutY="138.0" />
+                                    <TextField fx:id="txtHtu" layoutX="79.0" layoutY="138.0" prefHeight="29.0" prefWidth="391.0">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></TextField>
+                                    <Label layoutX="528.0" layoutY="94.0" text="USP">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtUSP" layoutX="567.0" layoutY="90.0" prefHeight="30.0" prefWidth="93.0" promptText="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDay" layoutX="79.0" layoutY="44.0" prefHeight="25.0" prefWidth="64.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
                                             </children>
                                         </AnchorPane>
                                     </top>
@@ -183,9 +202,17 @@
                             </children></AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Inventory">
+                <Tab text="Product ">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="42.0" prefHeight="520.0" prefWidth="817.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
                     </content>
                 </Tab>
             </tabs>
