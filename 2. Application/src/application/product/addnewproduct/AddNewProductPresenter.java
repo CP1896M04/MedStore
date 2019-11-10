@@ -3,11 +3,10 @@ package application.product.addnewproduct;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
 import javafx.util.StringConverter;
 import pattern.dao.CatDAO;
 import pattern.dao.ProductDAO;
@@ -18,6 +17,7 @@ import pattern.model.Product;
 import pattern.model.Supplier;
 import pattern.model.Unit;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -112,20 +112,62 @@ public class AddNewProductPresenter implements Initializable {
 
     @FXML
     private ComboBox<Unit> comboboxUnitID;
+
+    @FXML
+    private TableView<Product> tableview;
+    @FXML
+    private TableColumn<Product, Integer> columnProductID;
+
+    @FXML
+    private TableColumn<Product, Integer> columnCatID;
+
+    @FXML
+    private TableColumn<Product, Integer> columnUnitID;
+
+    @FXML
+    private TableColumn<Product, Integer> columnSupplierID;
+
+    @FXML
+    private TableColumn<Product, String> columnPName;
+
+    @FXML
+    private TableColumn<Product, String> columnPDescr;
+
+    @FXML
+    private TableColumn<Product, String> columnPComposition;
+
+    @FXML
+    private TableColumn<Product, String> columnPManufacturer;
+
+    @FXML
+    private TableColumn<Product, Float> columnUprice;
+
+    @FXML
+    private TableColumn<Product, Float> columnUSP;
+
+    @FXML
+    private TableColumn<Product, Integer> columnReOrLevel;
+
+    @FXML
+    private TableColumn<Product, String> columnHTU;
+
+    @FXML
+    private TableColumn<Product, Integer> columnDefaultInDose;
     ProductDAO productDAO = new ProductDAO();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
-    }
+//        initColumn();
+//        loaddataTableview();
 
+    }
     /**
-     *
      * @param
      * @return none
-     * */
+     */
     //Load data
     public void loadData() {
-
         //Load data to Combobox Supplier
         SupplierDao supplierDao = new SupplierDao();
         ObservableList<Supplier> suppliers = supplierDao.getList();
@@ -183,9 +225,8 @@ public class AddNewProductPresenter implements Initializable {
             }
         });
     }
-
     @FXML
-    void btnAddClick(ActionEvent event) {
+    void btnAddClick(ActionEvent event) throws IOException {
         try {
             Product product = new Product();
             product.setProductID(0);
@@ -202,19 +243,18 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.add(product);
-            System.out.println("Da add"+txtPName.getText());
-
-        }catch (Exception e){
+            System.out.println("Da add" + txtPName.getText());
+        } catch ( Exception e ) {
             System.out.println("Can't update");
         }
+        Parent parent = FXMLLoader.load(getClass().getResource("/application/product/addnewproduct/tableviewProduct.fxml"));
     }
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
-        Product product= new Product();
+        Product product = new Product();
         productDAO.remove(txtProductId.getText());
-        System.out.println("Da xoa" +txtPName.getText());
+        System.out.println("Da xoa" + txtPName.getText());
     }
-
 
 
     @FXML
@@ -235,10 +275,43 @@ public class AddNewProductPresenter implements Initializable {
             product.setPDescr(txtPDescr.getText());
             product.setHTU(txtHTU.getText());
             productDAO.update(product);
+<<<<<<< HEAD
+            System.out.println("Da updade" + txtPName.getText());
+        } catch ( Exception e ) {
+=======
             System.out.println("Da Updade "+txtPName.getText());
 
         }catch (Exception e){
+>>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
             System.out.println("Can't update");
         }
     }
+//    public void initColumn() {
+//        columnProductID.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
+//        columnCatID.setCellValueFactory(new PropertyValueFactory<>("CatID"));
+//        columnUnitID.setCellValueFactory(new PropertyValueFactory<>("UnitID"));
+//        columnSupplierID.setCellValueFactory(new PropertyValueFactory<>("SupplierID"));
+//        columnPName.setCellValueFactory(new PropertyValueFactory<>("PName"));
+//        columnPDescr.setCellValueFactory(new PropertyValueFactory<>("PDescr"));
+//        columnPComposition.setCellValueFactory(new PropertyValueFactory<>("PComposition"));
+//        columnPManufacturer.setCellValueFactory(new PropertyValueFactory<>("PManufacturerd"));
+//        columnUprice.setCellValueFactory(new PropertyValueFactory<>("Uprice"));
+//        columnUSP.setCellValueFactory(new PropertyValueFactory<>("USP"));
+//        columnReOrLevel.setCellValueFactory(new PropertyValueFactory<>("ReOrLevel"));
+//        columnHTU.setCellValueFactory(new PropertyValueFactory<>("HTU"));
+//        columnDefaultInDose.setCellValueFactory(new PropertyValueFactory<>("DefaultInDose"));
+//
+//    }
+//    public void loaddataTableview() {
+//        ProductDAO productDAO = new ProductDAO();
+//        ObservableList<Product> products = FXCollections.observableArrayList();
+//        products = productDAO.getList();
+//        tableview.getItems().clear();
+//        tableview.getItems().addAll(products);
+//
+//    }
+
+
+
+
 }

@@ -121,6 +121,9 @@ public class Staff {
         Username = username;
         Password = password;
     }
+    public String toString() {
+        return String.format("StaffID"+StaffID+" StaffCode"+ StaffCode+"  RoleID"+RoleID+"FName"+FName+"LName"+LName+"FName"+FName+"DOB"+DOB+"Address"+Address+"SEX"+SEX+" PhoneNo"+ PhoneNo+" Username" +Username+"Password"+Password);
+    }
 }
 
 

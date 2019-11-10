@@ -3,16 +3,16 @@ package pattern.model;
 import java.sql.Date;
 
 public class InventoryDetails {
-   private Integer  DetailsID ;
-   private String DetailsCode;
-   private Integer ProductID ;
-   private Float PurchasePrice ;
-   private Float TentativeSalesPrice ;
-   private Integer QuantityBought ;
-   private Integer QuantityAvailable;
-   private String Batchid ;
-   private Date ManufacturedDate ;
-   private Date ExpiryDate;
+    private Integer DetailsID;
+    private String DetailsCode;
+    private Integer ProductID;
+    private Float PurchasePrice;
+    private Float TentativeSalesPrice;
+    private Integer QuantityBought;
+    private Integer QuantityAvailable;
+    private String Batchid;
+    private Date ManufacturedDate;
+    private Date ExpiryDate;
 
     public InventoryDetails(Integer detailsID, String detailsCode, Integer productID, Float purchasePrice, Float tentativeSalesPrice, Integer quantityBought, Integer quantityAvailable, String batchid, Date manufacturedDate, Date expiryDate) {
         DetailsID = detailsID;
@@ -47,7 +47,7 @@ public class InventoryDetails {
         DetailsCode = detailsCode;
     }
 
-    public int getProductID() {
+    public Integer getProductID() {
         return ProductID;
     }
 
@@ -71,7 +71,7 @@ public class InventoryDetails {
         TentativeSalesPrice = tentativeSalesPrice;
     }
 
-    public int getQuantityBought() {
+    public Integer getQuantityBought() {
         return QuantityBought;
     }
 
@@ -79,7 +79,7 @@ public class InventoryDetails {
         QuantityBought = quantityBought;
     }
 
-    public int getQuantityAvailable() {
+    public Integer getQuantityAvailable() {
         return QuantityAvailable;
     }
 
@@ -110,9 +110,4 @@ public class InventoryDetails {
     public void setExpiryDate(Date expiryDate) {
         ExpiryDate = expiryDate;
     }
-    public String toString() {
-        return String.format("DetailsID "+DetailsID+"DetailsCode"+DetailsCode+"ProductID "+ProductID +" PurchasePrice"+ PurchasePrice+"TentativeSalesPrice"+TentativeSalesPrice+"QuantityBought"+QuantityBought+"QuantityAvailable"+QuantityAvailable+"Batchid"+Batchid+"ManufacturedDate"+ManufacturedDate +"ExpiryDate"+ExpiryDate);
-    }
-
-
 }

@@ -7,12 +7,18 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import pattern.dao.CatDAO;
+import pattern.dao.InventoryDetailsDAO;
 import pattern.dao.ProductDAO;
 import pattern.model.Category;
+import pattern.model.InventoryDetails;
 import pattern.model.Product;
 
 import java.net.URL;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class InventoryStatusPresenter implements Initializable {
@@ -20,41 +26,43 @@ public class InventoryStatusPresenter implements Initializable {
     private TreeView<String> productTree;
 
     @FXML
-    private TableView<?> tableview;
+    private TableView<InventoryDetails> tableview;
 
     @FXML
-    private TableColumn<?, ?> columnDetailsID;
+    private TableColumn<InventoryDetails, Integer> columnDetailsID;
 
     @FXML
-    private TableColumn<?, ?> columnDetailsCode;
+    private TableColumn<InventoryDetails, String> columnDetailsCode;
 
     @FXML
-    private TableColumn<?, ?> columnProductID;
+    private TableColumn<Product, Integer> columnProductID;
+    @FXML
+    private TableColumn<Product,String> columnPname;
 
     @FXML
-    private TableColumn<?, ?> columnPurchasePrice;
+    private TableColumn<InventoryDetails, Float> columnPurchasePrice;
 
     @FXML
-    private TableColumn<?, ?> columnTentativeSalesPrice;
+    private TableColumn<InventoryDetails, Float> columnTentativeSalesPrice;
 
     @FXML
-    private TableColumn<?, ?> columnQuantityBought;
+    private TableColumn<InventoryDetails, Integer> columnQuantityBought;
 
     @FXML
-    private TableColumn<?, ?> columnQuantityAvailable;
+    private TableColumn<InventoryDetails, Integer> columnQuantityAvailable;
 
     @FXML
-    private TableColumn<?, ?> columnBatchid;
+    private TableColumn<InventoryDetails, String> columnBatchid;
 
     @FXML
-    private TableColumn<?, ?> columnManufacturedDate;
+    private TableColumn<InventoryDetails, Date> columnManufacturedDate;
 
     @FXML
-    private TableColumn<?, ?> columnExpiryDate;
-
+    private TableColumn<InventoryDetails, Date> columnExpiryDate;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
+
     }
     public void loadData(){
         TreeItem<String> root = new TreeItem<>("Product");
@@ -73,4 +81,5 @@ public class InventoryStatusPresenter implements Initializable {
             root.getChildren().addAll(cat);
         }
     }
+
 }
