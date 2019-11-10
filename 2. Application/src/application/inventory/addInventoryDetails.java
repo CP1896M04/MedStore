@@ -2,6 +2,7 @@
 package application.inventory;
 
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,13 +16,13 @@ import pattern.dao.InventoryDetailsDAO;
 import pattern.dao.ProductDAO;
 import pattern.model.InventoryDetails;
 import pattern.model.Product;
+import pattern.model.ViewProduct;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
@@ -58,37 +59,40 @@ public class addInventoryDetails implements Initializable {
     private TextField txtTentativeSalesPrice;
 
     @FXML
-    private TableView<InventoryDetails> tableview;
+    private TableView<ViewProduct> tableview;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnDetailsID;
+    private TableColumn<ViewProduct, Integer> columnDetailsID;
 
     @FXML
-    private TableColumn<InventoryDetails, String> columnDetailsCode;
+    private TableColumn<ViewProduct, String> columnDetailsCode;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnProductID;
+    private TableColumn<ViewProduct, Integer> columnProductID;
 
     @FXML
-    private TableColumn<InventoryDetails, Float> columnPurchasePrice;
+    private TableColumn<ViewProduct, String> columnProductName;
 
     @FXML
-    private TableColumn<InventoryDetails, Float> columnTentativeSalesPrice;
+    private TableColumn<ViewProduct, Float> columnPurchasePrice;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnQuantityBought;
+    private TableColumn<ViewProduct, Float> columnTentativeSalesPrice;
 
     @FXML
-    private TableColumn<InventoryDetails, Integer> columnQuantityAvailable;
+    private TableColumn<ViewProduct, Integer> columnQuantityBought;
 
     @FXML
-    private TableColumn<InventoryDetails, String> columnBatchid;
+    private TableColumn<ViewProduct, Integer> columnQuantityAvailable;
 
     @FXML
-    private TableColumn<InventoryDetails, Date> columnManufacturedDate;
+    private TableColumn<ViewProduct, String> columnBatchid;
 
     @FXML
-    private TableColumn<InventoryDetails, Date> columnExpiryDate;
+    private TableColumn<ViewProduct, Date> columnManufacturedDate;
+
+    @FXML
+    private TableColumn<ViewProduct, Date> columnExpiryDate;
 
     @FXML
     private Label lbQuantityBought;
@@ -127,60 +131,29 @@ public class addInventoryDetails implements Initializable {
 
     @FXML
     private Button bntDelete;
-<<<<<<< HEAD
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadData();
-        loaddataTableview();
-        initColumn();
-        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
-                txtDetailID.setText(inventoryDetails.getDetailsID().toString());
-                txtDetailsCode.setText(inventoryDetails.getDetailsCode());
-                comboboxProductID.getValue();
-                txtPurchaseprice.setText(inventoryDetails.getPurchasePrice().toString());
-                txtTentativeSalesPrice.setText(inventoryDetails.getTentativeSalesPrice().toString());
-                txtQuantityBought.setText(String.valueOf(inventoryDetails.getQuantityBought()));
-                txtQuantityAvailable.setText(String.valueOf(inventoryDetails.getQuantityAvailable()));
-                txtBatchid.setText(inventoryDetails.getBatchid());
-                dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
-                dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
-            }
-        });
-    }
-=======
 
     private Connection connection;
 
 
-
     InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
-<<<<<<< HEAD
     ProductDAO productDAO = new ProductDAO();
->>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
-=======
->>>>>>> parent of 91cf87d... Thuan
 
     @FXML
     void bntAdd(ActionEvent event) {
-
-        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
         try {
             InventoryDetails inventoryDetails = new InventoryDetails();
             inventoryDetails.setDetailsID(0);
-            inventoryDetails.setDetailsCode(txtDetailsCode.getText());
+            inventoryDetails.setDetailsCode(txtDetailID.getText());
             inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
             inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
             inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
             inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-            inventoryDetails.setBatchid(txtBatchid.getText());
+            inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.add(inventoryDetails);
-            System.out.println("da them "+txtDetailsCode.getText());
+            System.out.println("da them " + txtDetailsCode.getText());
             loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
@@ -191,37 +164,14 @@ public class addInventoryDetails implements Initializable {
 
     @FXML
     void bntDelete(ActionEvent event) throws SQLException {
-        InventoryDetailsDAO inventoryDetailsDAO= new InventoryDetailsDAO();
+        InventoryDetailsDAO inventoryDetailsDAO = new InventoryDetailsDAO();
         inventoryDetailsDAO.remove(txtDetailID.getText());
-        System.out.println("DA xoa"+txtDetailsCode.getText());
+        System.out.println("DA xoa" + txtDetailsCode.getText());
         loaddataTableview();
     }
 
     @FXML
     void bntUpdate(ActionEvent event) {
-<<<<<<< HEAD
-//        System.out.println("Chay");
-
-        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
-//            InventoryDetails inventoryDetails = new InventoryDetails(parseInt(txtDetailID.getText()),txtDetailsCode.getText(),comboboxProductID.getSelectionModel().getSelectedItem().getProductID(),Float.valueOf(txtPurchaseprice.getText()),Float.valueOf(txtTentativeSalesPrice.getText()),Integer.valueOf(txtQuantityBought.getText()),Integer.valueOf(txtQuantityAvailable.getText()),txtBatchid.getText(),Date.valueOf(dataPickerManufacturedDate.getValue()),Date.valueOf(dataPickerExpiryDate.getValue()));
-            InventoryDetails inventoryDetails = new InventoryDetails();
-            try{
-                inventoryDetails.setDetailsID(parseInt(txtDetailID.getText()));
-                inventoryDetails.setDetailsCode(txtDetailsCode.getText());
-                inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
-                inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
-                inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
-                inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
-                inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-                inventoryDetails.setBatchid(txtBatchid.getText());
-                inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
-                inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
-                inventorydetailsDAO.update(inventoryDetails);
-                System.out.println("update thanh cong"+txtDetailID.getText());
-                loaddataTableview();
-            }catch ( Exception e ){
-                e.printStackTrace();
-=======
         try {
             InventoryDetails inventoryDetails = new InventoryDetails();
             inventoryDetails.setDetailsID(parseInt(txtDetailID.getText()));
@@ -231,11 +181,11 @@ public class addInventoryDetails implements Initializable {
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
             inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
             inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-            inventoryDetails.setBatchid(txtBatchid.getText());
+            inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.update(inventoryDetails);
-            System.out.println("update thanh cong"+txtDetailsCode.getText());
+            System.out.println("update thanh cong" + txtDetailsCode.getText());
             loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
@@ -250,11 +200,10 @@ public class addInventoryDetails implements Initializable {
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
-                txtDetailID.setText(inventoryDetails.getDetailsID().toString());
-                txtDetailsCode.setText(inventoryDetails.getDetailsCode());
+                ViewProduct viewProduct = tableview.getSelectionModel().getSelectedItem();
+                txtDetailID.setText(viewProduct.getDetailsID().toString());
+                txtDetailsCode.setText(viewProduct.getDetailsCode());
                 comboboxProductID.getValue();
-<<<<<<< HEAD
                 txtPurchaseprice.setText(viewProduct.getPurchasePrice().toString());
                 txtTentativeSalesPrice.setText(viewProduct.getTentativeSalesPrice().toString());
                 txtQuantityBought.setText(String.valueOf(viewProduct.getQuantityBought()));
@@ -262,37 +211,15 @@ public class addInventoryDetails implements Initializable {
                 txtBatchid.setText(String.valueOf(txtBatchid.getText()));
                 dataPickerExpiryDate.setValue(LocalDate.parse(viewProduct.getExpiryDate().toString()));
                 dataPickerManufacturedDate.setValue(LocalDate.parse(viewProduct.getManufacturedDate().toString()));
->>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
-=======
-                txtPurchaseprice.setText(inventoryDetails.getPurchasePrice().toString());
-                txtTentativeSalesPrice.setText(inventoryDetails.getTentativeSalesPrice().toString());
-                txtQuantityBought.setText(String.valueOf(inventoryDetails.getQuantityBought()));
-                txtQuantityAvailable.setText(String.valueOf(inventoryDetails.getQuantityAvailable()));
-                txtBatchid.setText(inventoryDetails.getBatchid());
-                dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
-                dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
->>>>>>> parent of 91cf87d... Thuan
             }
-        loaddataTableview();
-
-
+        });
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    public void initColumn(){
-       columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
-=======
     public void initColumn() {
         columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
->>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
-=======
-    public void initColumn(){
-       columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
->>>>>>> parent of 91cf87d... Thuan
         columnDetailsCode.setCellValueFactory(new PropertyValueFactory<>("DetailsCode"));
         columnProductID.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
+        columnProductName.setCellValueFactory(new PropertyValueFactory<>("PName"));
         columnPurchasePrice.setCellValueFactory(new PropertyValueFactory<>("PurchasePrice"));
         columnTentativeSalesPrice.setCellValueFactory(new PropertyValueFactory<>("TentativeSalesPrice"));
         columnQuantityBought.setCellValueFactory(new PropertyValueFactory<>("QuantityBought"));
@@ -300,58 +227,40 @@ public class addInventoryDetails implements Initializable {
         columnBatchid.setCellValueFactory(new PropertyValueFactory<>("Batchid"));
         columnManufacturedDate.setCellValueFactory(new PropertyValueFactory<>("ManufacturedDate"));
         columnExpiryDate.setCellValueFactory(new PropertyValueFactory<>("ExpiryDate"));
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public void loaddataTableview(){
 
-        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
-=======
-    public void loaddataTableview(){
->>>>>>> parent of 91cf87d... Thuan
-     List<InventoryDetails> inventoryDetails= new ArrayList<>();
-     inventoryDetails=inventorydetailsDAO.getList();
-     tableview.getItems().clear();
-     tableview.getItems().addAll(inventoryDetails);
-<<<<<<< HEAD
-=======
+    }
 
     public void loaddataTableview() {
         ObservableList<ViewProduct> viewProducts = FXCollections.observableArrayList();
         viewProducts = inventorydetailsDAO.getTableView();
         tableview.getItems().clear();
         tableview.getItems().addAll(viewProducts);
->>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
-=======
->>>>>>> parent of 91cf87d... Thuan
 
     }
 
     public void loadData() {
-
         try {
             ProductDAO productDAO = new ProductDAO();
             ObservableList<Product> products = productDAO.getList();
-            System.out.println("Size: "+ products.size());
+            System.out.println("Size: " + products.size());
             comboboxProductID.setItems(products);
             comboboxProductID.getSelectionModel().select(0);
             comboboxProductID.setConverter(new StringConverter<Product>() {
-
                 @Override
                 public String toString(Product product) {
                     return product.getPName();
                 }
+
                 @Override
                 public Product fromString(String string) {
                     return comboboxProductID.getItems().stream().filter(ap ->
                             ap.getPName().equals(string)).findFirst().orElse(null);
                 }
             });
-        } catch ( Exception e ){
+        } catch (Exception e) {
 
         }
     }
-
 }
 
 

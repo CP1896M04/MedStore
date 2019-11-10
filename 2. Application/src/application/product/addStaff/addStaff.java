@@ -2,27 +2,18 @@ package application.product.addStaff;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.util.StringConverter;
 import pattern.dao.RoleDAO;
 import pattern.dao.StaffDAO;
 import pattern.model.Role;
 import pattern.model.Staff;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
@@ -101,62 +92,11 @@ public class addStaff implements Initializable {
     private Button btnRemove;
     @FXML
     private ComboBox<Role> comboboxRoleID;
-    @FXML
-    private TableView<Staff> tableview;
-    @FXML
-    private TableColumn<Staff, Integer> columnStaffID;
 
-    @FXML
-    private TableColumn<Staff, String> columnStaffCode;
-
-    @FXML
-    private TableColumn<Role, Integer> columnRoleID;
-
-    @FXML
-    private TableColumn<Staff, String> columnFName;
-
-    @FXML
-    private TableColumn<Staff, String> columnLName;
-
-    @FXML
-    private TableColumn<Staff, Date> columnDOB;
-
-    @FXML
-    private TableColumn<Staff, String> columnAddress;
-
-    @FXML
-    private TableColumn<Staff, String> columnSEX;
-
-    @FXML
-    private TableColumn<Staff, String> columnPhoneNo;
-
-    @FXML
-    private TableColumn<Staff, String> columnUsername;
-
-    @FXML
-    private TableColumn<Staff, String> columnPassword;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
-        initColumn();
-        loadDataTableview();
-        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                Staff staff=tableview.getSelectionModel().getSelectedItem();
-                txtStaffID.setText(staff.getStaffID().toString());
-                txtStaffCode.setText(staff.getStaffCode());
-                comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID();
-                txtFName.setText(staff.getFName());
-                txtLName.setText(staff.getLName());
-                datePickerDOB.setValue(LocalDate.parse(staff.getDOB().toString()));
-                txtPhoneNo.setText(staff.getPhoneNo());
-                txtUsername.setText(staff.getUsername());
-                txtPassword.setText(staff.getPassword());
-
-            }
-        });
     }
 
     public void loadData() {
@@ -181,7 +121,7 @@ public class addStaff implements Initializable {
     StaffDAO staffDAO = new StaffDAO();
 
     @FXML
-    void btnAdd(ActionEvent event) throws IOException {
+    void btnAdd(ActionEvent event) {
         Staff staff = new Staff();
         try {
             staff.setStaffID(0);
@@ -201,8 +141,7 @@ public class addStaff implements Initializable {
         } catch ( Exception e ) {
             e.printStackTrace();
         }
-        loadDataTableview();
-        Parent parent = FXMLLoader.load(getClass().getResource("/application/product/addnewproduct/tableviewProduct.fxml"));
+
 
     }
 
@@ -211,7 +150,6 @@ public class addStaff implements Initializable {
         Staff staff = new Staff();
         staffDAO.remove(txtStaffID.getText());
         System.out.println("Da xoa" + txtStaffCode.getText());
-        loadDataTableview();
     }
 
     @FXML
@@ -235,28 +173,6 @@ public class addStaff implements Initializable {
         } catch ( Exception e ) {
             e.printStackTrace();
         }
-        loadDataTableview();
-    }
-    public void loadDataTableview(){
-        StaffDAO staffDAO= new StaffDAO();
-        List<Staff> staffs= new ArrayList<>();
-        staffs=staffDAO.getList();
-        tableview.getItems().clear();
-        tableview.getItems().addAll(staffs);
-
-    }
-    public void initColumn(){
-       columnStaffID.setCellValueFactory(new PropertyValueFactory<>("StaffID"));
-        columnStaffCode.setCellValueFactory(new PropertyValueFactory<>("StaffCode"));
-        columnRoleID.setCellValueFactory(new PropertyValueFactory<>("RoleID"));
-        columnFName.setCellValueFactory(new PropertyValueFactory<>("FName"));
-        columnLName.setCellValueFactory(new PropertyValueFactory<>("LName"));
-        columnDOB.setCellValueFactory(new PropertyValueFactory<>("DOB"));
-        columnAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
-        columnSEX.setCellValueFactory(new PropertyValueFactory<>("SEX"));
-        columnPhoneNo.setCellValueFactory(new PropertyValueFactory<>("PhoneNo"));
-        columnUsername.setCellValueFactory(new PropertyValueFactory<>("Username"));
-       columnPassword.setCellValueFactory(new PropertyValueFactory<>("Password"));
     }
 
 }
