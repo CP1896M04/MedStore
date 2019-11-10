@@ -23,12 +23,17 @@ public class Main extends Application {
     public void start(Stage primaryStage)  throws IOException {
         logger.info("Load main form");
 <<<<<<< HEAD
+<<<<<<< HEAD
         Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
 //       Parent parent = FXMLLoader.load(getClass().getResource("/application/user/login/login.fxml"));
 =======
       Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
      // Parent parent = FXMLLoader.load(getClass().getResource("/application/user/login/login.fxml"));
 >>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
+=======
+      // Parent parent = FXMLLoader.load(getClass().getResource("/application/app/main.fxml"));
+      Parent parent = FXMLLoader.load(getClass().getResource("/application/user/login/login.fxml"));
+>>>>>>> parent of 91cf87d... Thuan
         Scene scene = new Scene(parent);
         primaryStage.setTitle("App");
         //final String uri = getClass().getResource("app.css").toExternalForm();

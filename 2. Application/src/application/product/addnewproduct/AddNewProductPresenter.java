@@ -213,6 +213,8 @@ public class AddNewProductPresenter implements Initializable {
         comboboxUnitID.setItems(units);
         comboboxUnitID.getSelectionModel().select(1);
         comboboxUnitID.setConverter(new StringConverter<Unit>() {
+
+
             @Override
             public String toString(Unit unit) {
                 return unit.getUname();
@@ -224,6 +226,9 @@ public class AddNewProductPresenter implements Initializable {
                         ap.getUname().equals(string)).findFirst().orElse(null);
             }
         });
+
+
+
     }
     @FXML
     void btnAddClick(ActionEvent event) throws IOException {
@@ -276,10 +281,14 @@ public class AddNewProductPresenter implements Initializable {
             product.setHTU(txtHTU.getText());
             productDAO.update(product);
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.out.println("Da updade" + txtPName.getText());
         } catch ( Exception e ) {
 =======
             System.out.println("Da Updade "+txtPName.getText());
+=======
+            System.out.println("Da updade"+txtPName.getText()   );
+>>>>>>> parent of 91cf87d... Thuan
 
         }catch (Exception e){
 >>>>>>> fd7101e52d30e629bdd7bd8f86a115fea32f328c
