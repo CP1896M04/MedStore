@@ -17,7 +17,6 @@ import pattern.model.InventoryDetails;
 import pattern.model.Product;
 
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -128,19 +127,37 @@ public class addInventoryDetails implements Initializable {
 
     @FXML
     private Button bntDelete;
-
-    private Connection connection;
-
-
-
-    InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadData();
+        loaddataTableview();
+        initColumn();
+        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
+                txtDetailID.setText(inventoryDetails.getDetailsID().toString());
+                txtDetailsCode.setText(inventoryDetails.getDetailsCode());
+                comboboxProductID.getValue();
+                txtPurchaseprice.setText(inventoryDetails.getPurchasePrice().toString());
+                txtTentativeSalesPrice.setText(inventoryDetails.getTentativeSalesPrice().toString());
+                txtQuantityBought.setText(String.valueOf(inventoryDetails.getQuantityBought()));
+                txtQuantityAvailable.setText(String.valueOf(inventoryDetails.getQuantityAvailable()));
+                txtBatchid.setText(inventoryDetails.getBatchid());
+                dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
+                dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
+            }
+        });
+    }
 
     @FXML
     void bntAdd(ActionEvent event) {
+
+        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
         try {
             InventoryDetails inventoryDetails = new InventoryDetails();
             inventoryDetails.setDetailsID(0);
-            inventoryDetails.setDetailsCode(txtDetailID.getText());
+            inventoryDetails.setDetailsCode(txtDetailsCode.getText());
             inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
             inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
@@ -169,48 +186,33 @@ public class addInventoryDetails implements Initializable {
 
     @FXML
     void bntUpdate(ActionEvent event) {
-        try {
+//        System.out.println("Chay");
+
+        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
+//            InventoryDetails inventoryDetails = new InventoryDetails(parseInt(txtDetailID.getText()),txtDetailsCode.getText(),comboboxProductID.getSelectionModel().getSelectedItem().getProductID(),Float.valueOf(txtPurchaseprice.getText()),Float.valueOf(txtTentativeSalesPrice.getText()),Integer.valueOf(txtQuantityBought.getText()),Integer.valueOf(txtQuantityAvailable.getText()),txtBatchid.getText(),Date.valueOf(dataPickerManufacturedDate.getValue()),Date.valueOf(dataPickerExpiryDate.getValue()));
             InventoryDetails inventoryDetails = new InventoryDetails();
-            inventoryDetails.setDetailsID(parseInt(txtDetailID.getText()));
-            inventoryDetails.setDetailsCode(txtDetailID.getText());
-            inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
-            inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
-            inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
-            inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
-            inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
-            inventoryDetails.setBatchid(txtBatchid.getText());
-            inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
-            inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
-            inventorydetailsDAO.update(inventoryDetails);
-            System.out.println("update thanh cong"+txtDetailsCode.getText());
-            loaddataTableview();
-        } catch (Exception e) {
-            System.out.println("Can't update");
-        }
+            try{
+                inventoryDetails.setDetailsID(parseInt(txtDetailID.getText()));
+                inventoryDetails.setDetailsCode(txtDetailsCode.getText());
+                inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
+                inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
+                inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
+                inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
+                inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
+                inventoryDetails.setBatchid(txtBatchid.getText());
+                inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
+                inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
+                inventorydetailsDAO.update(inventoryDetails);
+                System.out.println("update thanh cong"+txtDetailID.getText());
+                loaddataTableview();
+            }catch ( Exception e ){
+                e.printStackTrace();
+            }
+        loaddataTableview();
+
+
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadData();
-        loaddataTableview();
-        initColumn();
-        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                InventoryDetails inventoryDetails= tableview.getSelectionModel().getSelectedItem();
-                txtDetailID.setText(inventoryDetails.getDetailsID().toString());
-                txtDetailsCode.setText(inventoryDetails.getDetailsCode());
-                comboboxProductID.getValue();
-                txtPurchaseprice.setText(inventoryDetails.getPurchasePrice().toString());
-                txtTentativeSalesPrice.setText(inventoryDetails.getTentativeSalesPrice().toString());
-                txtQuantityBought.setText(String.valueOf(inventoryDetails.getQuantityBought()));
-                txtQuantityAvailable.setText(String.valueOf(inventoryDetails.getQuantityAvailable()));
-                txtBatchid.setText(inventoryDetails.getBatchid());
-                dataPickerExpiryDate.setValue(LocalDate.parse(inventoryDetails.getExpiryDate().toString()));
-                dataPickerManufacturedDate.setValue(LocalDate.parse(inventoryDetails.getManufacturedDate().toString()));
-            }
-        });
-    }
 
     public void initColumn(){
        columnDetailsID.setCellValueFactory(new PropertyValueFactory<>("DetailsID"));
@@ -225,6 +227,8 @@ public class addInventoryDetails implements Initializable {
         columnExpiryDate.setCellValueFactory(new PropertyValueFactory<>("ExpiryDate"));
     }
     public void loaddataTableview(){
+
+        InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
      List<InventoryDetails> inventoryDetails= new ArrayList<>();
      inventoryDetails=inventorydetailsDAO.getList();
      tableview.getItems().clear();

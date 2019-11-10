@@ -9,7 +9,7 @@ import java.util.List;
 
 public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     private Connection connection;
-    public InventoryDetailsDAO(){
+    public InventoryDetailsDAO () {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connection =connectionFactory.getConnection();
     }
@@ -29,7 +29,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
             preparedStatement.setDate(9, o.getExpiryDate());
 
             preparedStatement.execute();
-        } catch (  SQLException e ) {
+        } catch ( SQLException e ) {
 
             throw new RuntimeException(e);
         }
@@ -47,17 +47,17 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     }
     @Override
     public void update(InventoryDetails o) {
-        String sql = "UPDATE [dbo].[InventoryDetails]" +
-                "   SET [DetailsCode] = ?" +
-                "      ,[ProductID] = ?" +
-                "      ,[PurchasePrice] = ?" +
-                "      ,[TentativeSalesPrice] = ?" +
-                "      ,[QuantityBought] = ?" +
-                "      ,[QuantityAvailable] = ?" +
-                "      ,[Batchid] = ?" +
-                "      ,[ManufacturedDate] = ?" +
-                "      ,[ExpiryDate] = ?" +
-                " WHERE DetailsID = ?";
+        String sql = " Update [dbo].[InventoryDetails]\n" +
+                "   SET [DetailsCode] =?\n" +
+                "      ,[ProductID] =?\n" +
+                "      ,[PurchasePrice] =?\n" +
+                "      ,[TentativeSalesPrice] = ?\n" +
+                "      ,[QuantityBought] = ?\n" +
+                "      ,[QuantityAvailable] =?\n" +
+                "      ,[Batchid] = ?\n" +
+                "      ,[ManufacturedDate] =?\n" +
+                "      ,[ExpiryDate] =?\n" +
+                " WHERE DetailsID=?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, o.getDetailsCode());
@@ -69,6 +69,8 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
             preparedStatement.setString(7, o.getBatchid());
             preparedStatement.setDate(8, o.getManufacturedDate());
             preparedStatement.setDate(9, o.getExpiryDate());
+            preparedStatement.setInt(10,o.getDetailsID());
+            preparedStatement.execute();
         } catch (  SQLException e ) {
 
             throw new RuntimeException(e);
@@ -111,5 +113,6 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         }
         return inventoryDetails;
     }
+
     }
 
