@@ -48,8 +48,8 @@ public class ViewCurrentProductController implements Initializable {
     @FXML
     private TableColumn<Product, String> columnPManufacturer;
 
-@FXML
-private  TableColumn<Product,Float> columnUprice;
+    @FXML
+    private  TableColumn<Product,Float> columnUprice;
 
     @FXML
     private TableColumn<Product, Float> columnUSP;
@@ -89,7 +89,6 @@ private  TableColumn<Product,Float> columnUprice;
         columnPDescr.setCellValueFactory(new PropertyValueFactory<>("PDescr"));
         columnPComposition.setCellValueFactory(new PropertyValueFactory<>("PComposition"));
         columnPManufacturer.setCellValueFactory(new PropertyValueFactory<>("PManufacturer"));
-//        columnUprice.setCellValueFactory(new PropertyValueFactory<>("Uprice"));
         columnUprice.setCellValueFactory(new PropertyValueFactory<>("Uprice"));
         columnUSP.setCellValueFactory(new PropertyValueFactory<>("USP"));
         columnReOrLevel.setCellValueFactory(new PropertyValueFactory<>("ReOrLevel"));
