@@ -9,13 +9,14 @@ public class Product {
     private String PDescr;
     private String PComposition;
     private String PManufacturer;
-    private Float UPrice;
+     private  Float Uprice;
     private Float USP;
     private Integer ReOrLevel;
     private String HTU;
     private Integer DefaultInDose;
 
-    public Product(Integer productID, Integer catID, Integer unitID, Integer supplierID, String PName, String PDescr, String PComposition, String PManufacturer, Float UPrice, Float USP, Integer reOrLevel, String HTU, Integer defaultInDose) {
+    public Product(Integer productID, Integer catID, Integer unitID, Integer supplierID, String PName, String PDescr, String PComposition, String PManufacturer, Float Uprice, Float USP, Integer reOrLevel, String HTU, Integer defaultInDose) {
+
         ProductID = productID;
         CatID = catID;
         UnitID = unitID;
@@ -24,15 +25,13 @@ public class Product {
         this.PDescr = PDescr;
         this.PComposition = PComposition;
         this.PManufacturer = PManufacturer;
-        this.UPrice = UPrice;
+        this.Uprice = Uprice;
         this.USP = USP;
         ReOrLevel = reOrLevel;
         this.HTU = HTU;
         DefaultInDose = defaultInDose;
     }
 
-    public Product() {
-    }
 
     public Integer getProductID() {
         return ProductID;
@@ -98,12 +97,12 @@ public class Product {
         this.PManufacturer = PManufacturer;
     }
 
-    public Float getUPrice() {
-        return UPrice;
+    public Float getUprice() {
+        return Uprice;
     }
 
-    public void setUPrice(Float UPrice) {
-        this.UPrice = UPrice;
+    public void setUprice(Float uprice) {
+        Uprice = uprice;
     }
 
     public Float getUSP() {
@@ -137,9 +136,11 @@ public class Product {
     public void setDefaultInDose(Integer defaultInDose) {
         DefaultInDose = defaultInDose;
     }
-    @Override
-    public String toString(){
 
-        return this.getPName()+"-"+ this.getPComposition();
+    @Override
+
+        public String toString() {
+            return String.format("ProductID "+ProductID +"CatID"+CatID+"UnitID"+UnitID+" SupplierID"+ SupplierID+" PName"+ PName+"PDescr"+PDescr+"PComposition"+PComposition
+            + "PManufacturer"+ PManufacturer+" UPrice"+Uprice+"USP"+USP+" ReOrLevel"+"HTU"+HTU+"DefaultInDose"+DefaultInDose);
+        }
     }
-}

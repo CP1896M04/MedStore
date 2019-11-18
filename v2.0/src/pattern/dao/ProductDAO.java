@@ -28,7 +28,7 @@ public class ProductDAO implements DAO<Product>{
             preparedStatement.setString(5, o.getPDescr());
             preparedStatement.setString(6, o.getPComposition());
             preparedStatement.setString(7, o.getPManufacturer());
-            preparedStatement.setFloat(8, o.getUPrice());
+            preparedStatement.setFloat(8, o.getUprice());
             preparedStatement.setFloat(9,o.getUSP());
             preparedStatement.setInt(10, o.getReOrLevel());
             preparedStatement.setString(11, o.getHTU());
@@ -76,7 +76,7 @@ public class ProductDAO implements DAO<Product>{
             preparedStatement.setString(5, o.getPDescr());
             preparedStatement.setString(6, o.getPComposition());
             preparedStatement.setString(7, o.getPManufacturer());
-            preparedStatement.setFloat(8, o.getUPrice());
+            preparedStatement.setFloat(8, o.getUprice());
             preparedStatement.setFloat(9,o.getUSP());
             preparedStatement.setInt(10, o.getReOrLevel());
             preparedStatement.setString(11, o.getHTU());
@@ -149,7 +149,20 @@ public class ProductDAO implements DAO<Product>{
     }
     public ObservableList<Product> searchProductByID(int ProductID) {
         ObservableList<Product> products = FXCollections.observableArrayList();
-        String sql = "Select * from Product where ProductID =?";
+        String sql = "SELECT [ProductID]\n" +
+                "      ,[CatID]\n" +
+                "      ,[UnitID]\n" +
+                "      ,[SupplierID]\n" +
+                "      ,[PName]\n" +
+                "      ,[PDescr]\n" +
+                "      ,[PComposition]\n" +
+                "      ,[PManufacturer]\n" +
+                "      ,[Uprice]\n" +
+                "      ,[USP]\n" +
+                "      ,[ReOrLevel]\n" +
+                "      ,[HTU]\n" +
+                "      ,[DefaultInDose]\n" +
+                "  FROM [dbo].[Product] where ProductID =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, ProductID);
@@ -163,12 +176,12 @@ public class ProductDAO implements DAO<Product>{
                 String pDescr  = resultSet.getString("PDescr");
                 String pComposition  = resultSet.getString("PComposition");
                 String pManufacturer = resultSet.getString("PManufacturer");
-                Float uprice = resultSet.getFloat("Uprice");
+               Float uPrice= resultSet.getFloat("Uprice");
                 Float usp = resultSet.getFloat("USP");
                 int reOrLevel= resultSet.getInt("ReOrLevel");
                 String htu= resultSet.getString("HTU");
                 int defaultInDose = resultSet.getInt("DefaultInDose");
-                Product product = new Product(productID,catID,unitID ,supplierID,pName,pDescr,pComposition,pManufacturer,uprice,usp,reOrLevel,htu,defaultInDose);
+                Product product = new Product(productID,catID,unitID ,supplierID,pName,pDescr,pComposition,pManufacturer,uPrice,usp,reOrLevel,htu,defaultInDose);
                 products.add(product);
             }
         } catch (SQLException e) {
