@@ -90,6 +90,7 @@ public class LibraryAssistant {
         Calendar calendar = Calendar.getInstance();
         dateTag.setDate(DateTimeFormatter.ISO_DATE.format(today));
         dateTag.setMonth(getMonthForInt(today.getMonthValue()));
+        dateTag.setMonthNumber(today.getMonthValue());
         dateTag.setYear(today.getYear());
         int quarter = (today.getMonthValue() / 3) + 1;
         dateTag.setQuarter(quarter);

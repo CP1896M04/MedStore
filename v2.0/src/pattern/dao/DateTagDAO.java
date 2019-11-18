@@ -35,36 +35,15 @@ public class DateTagDAO implements DAO<DateTag> {
     }
     @Override
     public void add(DateTag o) {
-        String sql ="";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getDate());
-            preparedStatement.setString(2, o.getMonth());
-            preparedStatement.setInt(3, o.getMonthNumber());
-            preparedStatement.setInt(4, o.getYear());
-            preparedStatement.setInt(5, o.getQuarter());
-            preparedStatement.execute();
-        } catch (  SQLException e ) {
-
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
     public void remove(String dateKey) throws SQLException {
-        String sql = "DELETE FROM [dbo].[InventoryLedger] WHERE [DateKey] = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, Integer.parseInt(dateKey));
-            preparedStatement.execute();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
     public void update(DateTag o) {
     }
-
     @Override
     public List<DateTag> getList() {
         List<DateTag> dateTags = new ArrayList<>();

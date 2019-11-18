@@ -31,18 +31,33 @@
                      <children>
                         <HBox prefHeight="46.0" prefWidth="361.0">
                            <children>
-                              <Label prefHeight="34.0" prefWidth="93.0" text="Product">
+                              <Label prefHeight="34.0" prefWidth="73.0" text="Product">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="cbProductName" prefHeight="31.0" prefWidth="168.0" />
+                              <ComboBox fx:id="cbProductName" prefHeight="31.0" prefWidth="199.0" />
                            </children>
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
                               <Label prefHeight="27.0" prefWidth="73.0" text="Days" />
                               <TextField fx:id="txtDay" prefHeight="26.0" prefWidth="64.0" text="1" />
+                              <Label prefHeight="27.0" prefWidth="58.0" text="Discount">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtDiscount" prefHeight="30.0" prefWidth="36.0" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label prefHeight="27.0" prefWidth="58.0" text="\%">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
@@ -63,9 +78,9 @@
                      <children>
                         <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="New" />
-                              <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Save" />
-                              <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Print" />
+                              <Button fx:id="btnNew" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="New" />
+                              <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveOrder" prefHeight="33.0" prefWidth="108.0" text="Save" />
+                              <Button fx:id="btnPrint" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Print" />
                            </children>
                         </HBox>
                      </children>
@@ -80,34 +95,36 @@
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label prefHeight="27.0" prefWidth="90.0" text="Qty" textAlignment="RIGHT" GridPane.rowIndex="2">
+                  <Label prefHeight="27.0" prefWidth="90.0" text="Qty" textAlignment="RIGHT" GridPane.rowIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtQty" prefHeight="30.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <TextField fx:id="txtQty" prefHeight="30.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </TextField>
-                  <Label prefHeight="27.0" prefWidth="90.0" text="USP" GridPane.rowIndex="3">
+                  <Label prefHeight="27.0" prefWidth="90.0" text="USP" GridPane.rowIndex="4">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUSP" prefHeight="30.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <TextField fx:id="txtUSP" prefHeight="30.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </TextField>
-                  <Label prefHeight="27.0" prefWidth="90.0" text="Manual" GridPane.rowIndex="4">
+                  <Label prefHeight="27.0" prefWidth="90.0" text="Manual" GridPane.rowIndex="6">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -117,23 +134,43 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="27.0" prefWidth="90.0" text="Available" textAlignment="RIGHT" GridPane.rowIndex="1">
+                  <Label prefHeight="27.0" prefWidth="90.0" text="Available" textAlignment="RIGHT" GridPane.rowIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtAvailable" prefHeight="30.0" prefWidth="102.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="txtAvailable" prefHeight="30.0" prefWidth="102.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="txtProductName" prefHeight="30.0" prefWidth="102.0" GridPane.columnIndex="1">
+                  <TextField fx:id="txtProductName" prefHeight="30.0" prefWidth="174.0" GridPane.columnIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="btnInsert" mnemonicParsing="false" prefHeight="43.0" prefWidth="137.0" text="Add to cart" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="txtHtu" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#addToCart" prefHeight="43.0" prefWidth="137.0" text="Add to cart" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="txtHtu" prefHeight="30.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label prefHeight="27.0" prefWidth="90.0" text="ID" textAlignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbProductID" prefHeight="27.0" prefWidth="90.0" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="90.0" text="Total" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUSP11" prefHeight="30.0" prefWidth="89.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -150,7 +187,7 @@
                   <TableColumn fx:id="colQty" prefWidth="75.0" text="Qty" />
                   <TableColumn fx:id="colUPS" prefWidth="75.0" text="UPS" />
                   <TableColumn fx:id="colDiscount" prefWidth="75.0" text="Discount" />
-                  <TableColumn fx:id="Total" prefWidth="75.0" text="Total" />
+                  <TableColumn fx:id="colTotal" prefWidth="75.0" text="Total" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
