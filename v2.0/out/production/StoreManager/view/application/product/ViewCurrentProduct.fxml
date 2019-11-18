@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="482.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.product.ViewCurrentProductController">
+<AnchorPane prefHeight="482.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.product.ViewCurrentProductController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <BorderPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+            <BorderPane prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER" />
          </top>
          <bottom>
             <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="608.0" BorderPane.alignment="CENTER">
@@ -23,21 +23,21 @@
             </HBox>
          </bottom>
          <center>
-            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tableview" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn prefWidth="75.0" text="ProductID" />
-                <TableColumn prefWidth="75.0" text="CatID" />
-                  <TableColumn prefWidth="75.0" text="UnitID" />
-                  <TableColumn prefWidth="75.0" text="SupplierID" />
-                  <TableColumn prefWidth="75.0" text="PName" />
-                  <TableColumn prefWidth="75.0" text="PDescr" />
-                  <TableColumn prefWidth="75.0" text="PComposition" />
-                  <TableColumn prefWidth="75.0" text="PManufacturer" />
-                  <TableColumn prefWidth="75.0" text="Uprice" />
-                  <TableColumn prefWidth="75.0" text="USP" />
-                  <TableColumn prefWidth="75.0" text="ReOrLevel" />
-                  <TableColumn prefWidth="75.0" text="HTU" />
-                  <TableColumn prefWidth="75.0" text="DefaultInDose" />
+                <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
+                <TableColumn fx:id="columnCatID" prefWidth="75.0" text="CatID" />
+                  <TableColumn fx:id="columnUnitID" prefWidth="75.0" text="UnitID" />
+                  <TableColumn fx:id="columnSupplierID" prefWidth="75.0" text="SupplierID" />
+                  <TableColumn fx:id="columnPName" prefWidth="75.0" text="PName" />
+                  <TableColumn fx:id="columnPDescr" prefWidth="75.0" text="PDescr" />
+                  <TableColumn fx:id="columnPComposition" prefWidth="75.0" text="PComposition" />
+                  <TableColumn fx:id="columnPManufacturer" prefWidth="75.0" text="PManufacturer" />
+                  <TableColumn fx:id="columnUprice" prefWidth="75.0" text="Uprice" />
+                  <TableColumn fx:id="columnUSP" prefWidth="75.0" text="USP" />
+                  <TableColumn fx:id="columnReOrLevel" prefWidth="75.0" text="ReOrLevel" />
+                  <TableColumn fx:id="columnHTU" prefWidth="75.0" text="HTU" />
+                  <TableColumn fx:id="columnDefaultInDose" prefWidth="75.0" text="DefaultInDose" />
               </columns>
             </TableView>
          </center>
