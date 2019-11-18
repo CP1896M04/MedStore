@@ -94,7 +94,6 @@ public class ViewCurrentProductController implements Initializable {
         columnReOrLevel.setCellValueFactory(new PropertyValueFactory<>("ReOrLevel"));
         columnHTU.setCellValueFactory(new PropertyValueFactory<>("HTU"));
         columnDefaultInDose.setCellValueFactory(new PropertyValueFactory<>("DefaultInDose"));
-
     }
 
 }
