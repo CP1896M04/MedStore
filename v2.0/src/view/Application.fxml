@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApplicationController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0">
+               <center>
+                  <BorderPane fx:id="appContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <AnchorPane fx:id="acHead" prefHeight="41.0" prefWidth="400.0" stylesheets="@../asset/css/MainStyle.css" BorderPane.alignment="CENTER" />
+                     </top>
+                     <center>
+                        <StackPane fx:id="acContent" prefHeight="150.0" prefWidth="200.0" stylesheets="@../asset/css/MainStyle.css" BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding></StackPane>
+                     </center>
+                     <left>
+                        <AnchorPane prefHeight="539.0" prefWidth="143.0" stylesheets="@../asset/css/MainStyle.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox prefHeight="539.0" prefWidth="143.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="110.0" prefWidth="154.0" text="Home">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/Home-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnProduct" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnProductClick" prefHeight="110.0" prefWidth="154.0" text="Product">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/product-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnSale" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSaleClick" prefHeight="110.0" prefWidth="154.0" text="Sale">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/sale-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnInventory" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnInventoryClick" prefHeight="110.0" prefWidth="154.0" text="Inventory">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/Inventory-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnReport" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnReportClick" prefHeight="110.0" prefWidth="154.0" text="Inventory">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/Custom-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </BorderPane>
+               </center>
+               <bottom>
+                  <AnchorPane prefHeight="33.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children></StackPane>
+   </children>
+</AnchorPane>

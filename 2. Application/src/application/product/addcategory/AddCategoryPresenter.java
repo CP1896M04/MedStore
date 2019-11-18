@@ -1,23 +1,19 @@
 package application.product.addcategory;
 
-import javafx.event.EventHandler;
-import javafx.fxml.Initializable;
-
 import javafx.event.ActionEvent;
-
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import pattern.dao.CatDAO;
 import pattern.model.Category;
 
-import javax.swing.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
 

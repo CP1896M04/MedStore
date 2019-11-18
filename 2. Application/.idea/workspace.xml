@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/style/AddButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/Application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/MainStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/PopUp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/Settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/StoreCombobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/btnOnText.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/store.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DateTagDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DateTagDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ODetailDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ODetailDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/OderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/OderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/ODetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/ODetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/DateTagDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/DateTagDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ODetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ODetailDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/dao/OderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/OderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/DateTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/DateTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/ODetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/ODetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pattern/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +56,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -56,9 +81,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\MedStore\2. Application\src\application\newapp" />
+      <recent name="D:\Git\MedStore\2. Application\src\application\main" />
+      <recent name="D:\Git\MedStore\2. Application\src" />
+      <recent name="D:\Git\MedStore\2. Application\src\application\product\home" />
       <recent name="D:\JAVA\MedStore\2. Application\src\vendor\icon" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\vendor\image\menu" />
-      <recent name="D:\JAVA\MedStore\2. Application\src\application\demo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application.main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\MedStore\2. Application\src\application\sale\poinofsale" />
@@ -146,19 +176,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScreensFramework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.demo.ScreensFramework" />
-      <module name="2. Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="application.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.hello" />
       <module name="2. Application" />
@@ -172,13 +189,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.main.main" />
+      <module name="2. Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.hello" />
-        <item itemvalue="Application.ScreensFramework" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +224,9 @@
       <updated>1571932720205</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
