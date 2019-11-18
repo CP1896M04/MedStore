@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/style/AddButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/Application.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/MainStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/PopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/Settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/StoreCombobox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/btnOnText.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/store.css" afterDir="false" />
+    <list default="true" id="f9416b72-fa50-4b2f-8f79-30f0dbca4d2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/application/product/addcategory/AddCategoryPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/lib/LibraryAssistant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DateTagDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/DateTagDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ODetailDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ODetailDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/OderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/OderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/DateTag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/ODetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/ODetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/product/addcategory/AddCategoryPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LibraryAssistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/DateTagDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/DateTagDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ODetailDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ODetailDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/OderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/OderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/model/DateTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/DateTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/model/ODetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/ODetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
     </list>
-=======
-    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="" />
->>>>>>> 09a4f5ce985ef48d24f39edc53a722152e174f85
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +187,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="" />
+      <changelist id="f9416b72-fa50-4b2f-8f79-30f0dbca4d2f" name="Default Changelist" comment="" />
       <created>1571932720205</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
