@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/style/AddButton.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/style/Application.css" afterDir="false" />
@@ -34,6 +35,9 @@
       <change beforePath="$PROJECT_DIR$/src/pattern/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../3. Database/CREATE DB.sql" afterDir="false" />
     </list>
+=======
+    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="" />
+>>>>>>> 09a4f5ce985ef48d24f39edc53a722152e174f85
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
