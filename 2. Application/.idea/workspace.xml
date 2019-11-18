@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2. Application/pattern/dao/ProductDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/app/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/app/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pattern/dao/ProductDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="64fa80e3-fccf-4f5c-b825-68639fa99a6d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
