@@ -189,7 +189,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
             preparedStatement.setInt(1,ProductId);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (!resultSet.next()) {
-                
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

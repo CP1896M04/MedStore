@@ -58,40 +58,40 @@ public class ViewInventoryDetailController implements Initializable {
     private TextField txtTentativeSalesPrice;
 
     @FXML
-    private TableView<ViewProduct> tableview;
+    private TableView<InventoryDetails> tableview;
 
     @FXML
-    private TableColumn<ViewProduct, Integer> columnDetailsID;
+    private TableColumn<InventoryDetails, Integer> columnDetailsID;
 
     @FXML
-    private TableColumn<ViewProduct, String> columnDetailsCode;
+    private TableColumn<InventoryDetails, String> columnDetailsCode;
 
     @FXML
-    private TableColumn<ViewProduct, Integer> columnProductID;
+    private TableColumn<InventoryDetails, Integer> columnProductID;
 
     @FXML
-    private TableColumn<ViewProduct, String> columnProductName;
+    private TableColumn<InventoryDetails, String> columnProductName;
 
     @FXML
-    private TableColumn<ViewProduct, Float> columnPurchasePrice;
+    private TableColumn<InventoryDetails, Float> columnPurchasePrice;
 
     @FXML
-    private TableColumn<ViewProduct, Float> columnTentativeSalesPrice;
+    private TableColumn<InventoryDetails, Float> columnTentativeSalesPrice;
 
     @FXML
-    private TableColumn<ViewProduct, Integer> columnQuantityBought;
+    private TableColumn<InventoryDetails, Integer> columnQuantityBought;
 
     @FXML
-    private TableColumn<ViewProduct, Integer> columnQuantityAvailable;
+    private TableColumn<InventoryDetails, Integer> columnQuantityAvailable;
 
     @FXML
-    private TableColumn<ViewProduct, String> columnBatchid;
+    private TableColumn<InventoryDetails, String> columnBatchid;
 
     @FXML
-    private TableColumn<ViewProduct, Date> columnManufacturedDate;
+    private TableColumn<InventoryDetails, Date> columnManufacturedDate;
 
     @FXML
-    private TableColumn<ViewProduct, Date> columnExpiryDate;
+    private TableColumn<InventoryDetails, Date> columnExpiryDate;
 
     @FXML
     private Label lbQuantityBought;
@@ -237,8 +237,6 @@ public class ViewInventoryDetailController implements Initializable {
         viewProducts = inventorydetailsDAO.getTableView();
         tableview.getItems().clear();
         tableview.getItems().addAll(viewProducts);
-
-
     }
 
     public void loadData() {

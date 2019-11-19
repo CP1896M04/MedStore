@@ -2,65 +2,96 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="491.0" prefWidth="1302.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.inventory.ViewInventoryDetailController">
-    <children>
-        <Label fx:id="lbDetailsID" layoutX="25.0" layoutY="27.0" text="DetailsID" />
-        <TextFlow accessibleText="1" layoutX="149.0" layoutY="25.0">
-            <children>
-                <TextFlow accessibleRoleDescription="1">
-                    <children>
-                        <TextField fx:id="txtDetailID" prefHeight="26.0" prefWidth="150.0" />
-                    </children>
-                </TextFlow>
-            </children>
-        </TextFlow>
-        <Label fx:id="lbDetailsCode" layoutX="25.0" layoutY="66.0" text="DetailsCode" />
-        <TextFlow layoutX="149.0" layoutY="64.0">
-            <children>
-                <TextField fx:id="txtDetailsCode" prefHeight="26.0" prefWidth="150.0" text="1" />
-            </children>
-        </TextFlow>
-        <Label fx:id="lbProductID" layoutX="25.0" layoutY="109.0" text="ProductID" />
-        <Label fx:id="lbPurchasePrice" layoutX="25.0" layoutY="150.0" text="PurchasePrice" />
-        <TextField fx:id="txtPurchaseprice" layoutX="147.0" layoutY="148.0" prefHeight="26.0" prefWidth="150.0" text="1" />
-        <Label fx:id="lbTentativeSalesPrice" layoutX="25.0" layoutY="190.0" text="TentativeSalesPrice" />
-        <TextField fx:id="txtTentativeSalesPrice" layoutX="148.0" layoutY="188.0" prefHeight="26.0" prefWidth="150.0" text="3.5" />
-        <TableView fx:id="tableview" layoutX="311.0" layoutY="25.0" prefHeight="395.0" prefWidth="990.0">
-            <columns>
-                <TableColumn fx:id="columnDetailsID" prefWidth="59.20001220703125" text="DetailsID" />
-                <TableColumn fx:id="columnDetailsCode" prefWidth="91.20001220703125" text="DetailsCode" />
-                <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
-                <TableColumn fx:id="columnProductName" prefWidth="75.0" text="ProductName" />
-                <TableColumn fx:id="columnPurchasePrice" prefWidth="95.199951171875" text="PurchasePrice" />
-                <TableColumn fx:id="columnTentativeSalesPrice" prefWidth="117.60003662109375" text="TentativeSalesPrice" />
-                <TableColumn fx:id="columnQuantityBought" prefWidth="102.4000244140625" text="QuantityBought" />
-                <TableColumn fx:id="columnQuantityAvailable" minWidth="0.0" prefWidth="111.2000732421875" text="QuantityAvailable" />
-                <TableColumn fx:id="columnBatchid" minWidth="0.0" prefWidth="60.800048828125" text="Batchid" />
-                <TableColumn fx:id="columnManufacturedDate" minWidth="0.0" prefWidth="121.5999755859375" text="ManufacturedDate" />
-                <TableColumn fx:id="columnExpiryDate" minWidth="1.5999755859375" prefWidth="72.7999267578125" text="ExpiryDate" />
-            </columns>
-        </TableView>
-        <Label fx:id="lbQuantityBought" layoutX="25.0" layoutY="230.0" text="QuantityBought" />
-        <TextField fx:id="txtQuantityBought" layoutX="147.0" layoutY="228.0" prefHeight="26.0" prefWidth="150.0" text="4" />
-        <Label fx:id="ldQuantityAvailable" layoutX="25.0" layoutY="273.0" text="QuantityAvailable" />
-        <TextField fx:id="txtQuantityAvailable" layoutX="147.0" layoutY="271.0" prefHeight="26.0" prefWidth="150.0" text="3" />
-        <Label fx:id="lbBatchid" layoutX="25.0" layoutY="314.0" text="Batchid" />
-        <TextField fx:id="txtBatchid" layoutX="147.0" layoutY="312.0" prefHeight="26.0" prefWidth="150.0" text="DHGPR" />
-        <Label fx:id="lbManufacturedDate" layoutX="25.0" layoutY="356.0" text="ManufacturedDate" />
-        <Label fx:id="lbExpiryDate" layoutX="25.0" layoutY="399.0" text="ExpiryDate" />
-        <Button fx:id="bntAdd" layoutX="24.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntAdd" prefHeight="26.0" prefWidth="85.0" text="Add" />
-        <Button fx:id="bntUpdate" layoutX="124.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntUpdate" prefHeight="26.0" prefWidth="85.0" text="Update" />
-        <Button fx:id="bntDelete" layoutX="224.0" layoutY="441.0" mnemonicParsing="false" onAction="#bntDelete" prefHeight="26.0" prefWidth="85.0" text="Delete" />
-        <ComboBox fx:id="comboboxProductID" layoutX="149.0" layoutY="105.0" prefWidth="150.0" />
-        <DatePicker fx:id="dataPickerManufacturedDate" layoutX="143.0" layoutY="352.0" prefHeight="25.0" prefWidth="158.0" promptText="17/21/2019" />
-        <DatePicker fx:id="dataPickerExpiryDate" layoutX="144.0" layoutY="395.0" prefHeight="25.0" prefWidth="158.0" promptText="01/01/2001" />
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.inventory.ViewInventoryDetailController">
+   <children>
+      <BorderPane prefHeight="475.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView prefHeight="408.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="columnDetailsID" prefWidth="75.0" text="DetailsID" />
+                <TableColumn fx:id="columnDetailsCode" prefWidth="75.0" text="DetailsCode" />
+                  <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
+                  <TableColumn fx:id="columnPName" prefWidth="75.0" text="PName" />
+                  <TableColumn fx:id="columnPurchasePrice" prefWidth="75.0" text="PurchasePrice" />
+                  <TableColumn fx:id="columnTentativeSalesPrice" prefWidth="75.0" text="TentativeSalesPrice" />
+                  <TableColumn fx:id="columnQuantityBought" prefWidth="75.0" text="QuantityBought" />
+                  <TableColumn fx:id="columnQuantityAvailable" prefWidth="75.0" text="QuantityAvailable" />
+                  <TableColumn fx:id="columnBatchid" prefWidth="75.0" text="Batchid" />
+                  <TableColumn fx:id="columnManufacturedDate" prefWidth="75.0" text="ManufacturedDate" />
+                  <TableColumn fx:id="columnExpiryDate" prefWidth="75.0" text="ExpiryDate" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <AnchorPane prefHeight="26.0" prefWidth="671.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="30.0" prefWidth="671.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="549.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Add" />
+                  <Button layoutX="682.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Update" />
+                  <Button layoutX="806.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Delete" />
+               </children></AnchorPane>
+         </bottom>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutY="-7.0" prefHeight="415.0" prefWidth="195.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-7.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.5999755859375" minWidth="10.0" prefWidth="110.4" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.19998779296876" minWidth="10.0" prefWidth="90.4" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lbDetailsID" prefHeight="42.0" prefWidth="91.0" text="DetailsID" />
+                        <Label fx:id="lbDetailsCode" text="DetailsCode" GridPane.rowIndex="1" />
+                        <Label fx:id="lbProductID" text="ProductID" GridPane.rowIndex="2" />
+                        <Label fx:id="lbPName" text="PName" GridPane.rowIndex="3" />
+                        <Label fx:id="lbPurchasePrice" text="PurchasePrice" GridPane.rowIndex="4" />
+                        <Label fx:id="lbTentativeSalesPrice" text="TentativeSalesPrice" GridPane.rowIndex="5" />
+                        <Label fx:id="lbQuantityBought" text="QuantityBought" GridPane.rowIndex="6" />
+                        <Label fx:id="ldQuantityAvailable" text="QuantityAvailable" GridPane.rowIndex="7" />
+                        <Label fx:id="lbBatchid" text="Batchid" GridPane.rowIndex="8" />
+                        <Label fx:id="lbManufacturedDate" text="ManufacturedDate" GridPane.rowIndex="9" />
+                        <Label fx:id="lbExpiryDate" text="ExpiryDate" GridPane.rowIndex="10" />
+                        <ComboBox fx:id="comboboxProductID" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtDetailsCode" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDetailID" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtPName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtPurchaseprice" prefHeight="26.0" prefWidth="78.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtTentativeSalesPrice" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtQuantityBought" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtQuantityAvailable" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtBatchid" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="txtManufacturedDate" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="txtExpiryDate" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
 </AnchorPane>
