@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -94,6 +95,27 @@ public class ViewCurrentProductController implements Initializable {
         columnReOrLevel.setCellValueFactory(new PropertyValueFactory<>("ReOrLevel"));
         columnHTU.setCellValueFactory(new PropertyValueFactory<>("HTU"));
         columnDefaultInDose.setCellValueFactory(new PropertyValueFactory<>("DefaultInDose"));
+    }
+    public void addNewProduct(){
+        FXMLLoader fXMLLoader = new FXMLLoader();
+        fXMLLoader.setLocation(getClass().getResource("/view/application/product"));
+        try {
+            fXMLLoader.load();
+            Parent parent = fXMLLoader.getRoot();
+            Scene scene = new Scene(parent);
+            scene.setFill(new Color(0, 0, 0, 0));
+            NewSellController newSellController = fXMLLoader.getController();
+            media.setId(userId);
+            newSellController.setNameMedia(nameMedia);
+            newSellController.genarateSellID();
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(ViewCustomerController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
