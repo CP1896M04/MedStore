@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -64,8 +65,8 @@
                         <TextField fx:id="txtQuantityBought" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <TextField fx:id="txtQuantityAvailable" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                         <TextField fx:id="txtBatchid" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <TextField fx:id="txtManufacturedDate" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <TextField fx:id="txtExpiryDate" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <DatePicker fx:id="dataPickerManufacturedDate" prefHeight="26.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <DatePicker fx:id="dataPickerExpiryDate" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                      </children>
                   </GridPane>
                </children>

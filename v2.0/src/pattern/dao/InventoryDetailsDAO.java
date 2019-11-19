@@ -85,7 +85,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
 
 
     @Override
-    public List<InventoryDetails>  getList() {
+    public List<InventoryDetails> getList() {
 
         List<InventoryDetails> inventoryDetails = new ArrayList<>();
         String sql = "SELECT * FROM [dbo].[InventoryDetails]";

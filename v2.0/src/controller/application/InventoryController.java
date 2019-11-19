@@ -1,8 +1,8 @@
 package controller.application;
 
-import controller.application.inventory.ViewInventoryDetailController;
+import controller.application.inventory.InventoryDetailController;
+import controller.application.inventory.ViewInventoryDetailAddController;
 import controller.application.inventory.ViewInventoryLogController;
-import controller.application.product.ViewCategoryController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,10 +34,11 @@ public class InventoryController implements Initializable {
     }
     @FXML
     void btnInventoryDetailClick(ActionEvent event) throws IOException {
+        InventoryDetailController inventoryDetailController = new InventoryDetailController();
         lblHeader.setText("Inventory Details");
         FXMLLoader fXMLLoader = new FXMLLoader();
         fXMLLoader.load(getClass().getResource("/view/application/inventory/ViewInventoryDetail.fxml").openStream());
-        ViewInventoryDetailController viewInventoryDetailController = fXMLLoader.getController();
+        inventoryDetailController= fXMLLoader.getController();
         AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();
         spMainContent.getChildren().add(acPane);
