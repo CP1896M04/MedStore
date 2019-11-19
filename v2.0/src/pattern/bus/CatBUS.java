@@ -70,12 +70,43 @@ public class CatBUS implements BUS<Category> {
         }
 
         return isTrue;
+<<<<<<< HEAD
+=======
+    }
+
+    @Override
+    public boolean isUniqueName(Category o) {
+        return false;
+>>>>>>> d4c69ec7fd3df8ac54babbc919e626c013217c66
     }
 
     @Override
     public boolean isUniqName(Category o) {
         boolean uniqCategory = false;
+<<<<<<< HEAD
 
+=======
+        String sql = "Insert into Category (CatName, [Desc]) values (?,?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, o.getCatName());
+            preparedStatement.setString(2, o.getDesc());
+            preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                System.out.println("in not uniq");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Sucess");
+                alert.setHeaderText("ERROR : used");
+                alert.setContentText("CategoryName" + "  '" + o.getCatName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+            }
+            uniqCategory = true;
+        } catch (SQLException e) {
+            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, e);
+        }
+>>>>>>> d4c69ec7fd3df8ac54babbc919e626c013217c66
         return uniqCategory;
     }
 }
