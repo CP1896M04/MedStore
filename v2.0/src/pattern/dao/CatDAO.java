@@ -87,10 +87,8 @@ public class CatDAO implements DAO<Category> {
 
     public boolean isNotUsed(Category o) {
         boolean inNotUsed = false;
-        String sql = "DELETE FROM [dbo].[Category] WHERE CatID = ?";
+        String sql = "select [CatID] from Category where CatID=? ";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, Integer.parseInt("catID"));
-            preparedStatement.execute();
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -100,26 +98,31 @@ public class CatDAO implements DAO<Category> {
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
                 return inNotUsed;
-            }resultSet.close();
-            preparedStatement.close();
-            connection.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return inNotUsed;
-    }
-    public boolean isTrueUpdate(Category category) {
-        boolean isTrue = false;
-        String sql = "select * from Category where CatID=?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                isTrue=true;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return isTrue;
+        return inNotUsed;
+    }
+    public boolean isUniqName(Category o) {
+        boolean isUniq = false;
+        String sql = "select [CatID] from Category where CatName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getCatName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
     }
 
 }

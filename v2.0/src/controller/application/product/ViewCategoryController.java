@@ -107,7 +107,7 @@ public class ViewCategoryController implements Initializable {
     public void btnDelete(ActionEvent event) {
         Category category = new Category();
         category.setCatID(Integer.valueOf(txtCatId.getText()));
-        catBUS.delete(category);
+        catBUS.delete(txtCatId.getText());
         System.out.println("Da xoa" + txtCatId.getText());
 
     }
