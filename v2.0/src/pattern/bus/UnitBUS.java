@@ -14,19 +14,27 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class UnitBUS implements BUS<Unit> {
-
+UnitDAO unitDAO= new UnitDAO();
     @Override
     public void add(Unit o) {
-
+        if (unitDAO.isUniqName(o)) {
+            unitDAO.add(o);
+        }
     }
 
     @Override
     public void update(Unit o) {
-
+        if (unitDAO.isUpdate(o)) {
+            unitDAO.update(o);
+        }
     }
 
     @Override
     public void delete(String id) {
-
+        try {
+            unitDAO.remove(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

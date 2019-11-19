@@ -2,6 +2,8 @@ package pattern.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Product;
 
@@ -189,4 +191,45 @@ public class ProductDAO implements DAO<Product>{
         }
         return products;
     }
+    public boolean isUniqName(Product o) {
+        boolean isUniq = false;
+        String sql = "select [ProductID] from Product where PName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getPName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getPName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+    public boolean isUpdate(Product o) {
+        boolean isUniq = false;
+        String sql = "select [ProductID] from Product where PName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getPName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Name doesn't exist ");
+                alert.setContentText("Brand" + "  '" + o.getPName() + "' " + "not exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+
 }
