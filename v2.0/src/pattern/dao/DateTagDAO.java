@@ -87,17 +87,17 @@ public class DateTagDAO implements DAO<DateTag> {
 
     }
 
-    public boolean isUniqName(Category o) {
+    public boolean isUniqName(DateTag o) {
         boolean isUniq = false;
-        String sql = "select [CatID] from Category where CatName=? ";
+        String sql = "select [DateKey] from Category where Date=? ";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setString(1, o.getCatName());
+            preparedStatement.setString(1, o.getDate());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText("ERROE : Already exist ");
-                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
+                alert.setContentText("Brand" + "  '" + o.getDate() + "' " + "Already exist");
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
                 return isUniq;
@@ -107,17 +107,17 @@ public class DateTagDAO implements DAO<DateTag> {
         }
         return isUniq;
     }
-    public boolean isUpdate(Category o) {
+    public boolean isUpdate(DateTag o) {
         boolean isUniq = false;
-        String sql = "select [CatID] from Category where CatName=? ";
+        String sql = "select [DateKey] from Category where Date=? ";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setString(1, o.getCatName());
+            preparedStatement.setString(1, o.getDate());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (!resultSet.next()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText("ERROE : Name doesn't exist ");
-                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "not exist");
+                alert.setContentText("Brand" + "  '" + o.getDate() + "' " + "not exist");
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
                 return isUniq;
