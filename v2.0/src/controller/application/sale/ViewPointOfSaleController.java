@@ -135,28 +135,30 @@ public class ViewPointOfSaleController implements Initializable {
         ODetail oDetail = new ODetail();
         Integer productID = Integer.valueOf(lbProductID.getText());
         Boolean exist = false;
-        for(ODetail thisoDetail:oDetails){
-            if(thisoDetail.getProductID()==productID){
-                exist =true;
-                thisoDetail.setQty(Integer.valueOf(txtQty.getText())+ thisoDetail.getQty());
-                Float preTotal = thisoDetail.getQty()*thisoDetail.getUPS();
-                thisoDetail.setTotal((float) (preTotal*(1-thisoDetail.getDiscount())));
+        if(lbProductID.getText()!=""){
+            for(ODetail thisoDetail:oDetails){
+                if(thisoDetail.getProductID()==productID){
+                    exist =true;
+                    thisoDetail.setQty(Integer.valueOf(txtQty.getText())+ thisoDetail.getQty());
+                    Float preTotal = thisoDetail.getQty()*thisoDetail.getUPS();
+                    thisoDetail.setTotal((float) (preTotal*(1-thisoDetail.getDiscount())));
+                }
             }
+            if(!exist){
+                oDetail.setProductID(Integer.valueOf(lbProductID.getText()));
+                oDetail.setPName(cbProductName.getSelectionModel().getSelectedItem().getPName());
+                oDetail.setUPS(Float.valueOf(txtUSP.getText()));
+                System.out.println(txtUSP.getText());
+                oDetail.setHTU(txtHtu.getText());
+                oDetail.setQty(Integer.valueOf(txtQty.getText()));
+                oDetail.setDiscount((Double.valueOf(txtDiscount.getText()))/100);
+                Float preTotal = oDetail.getQty()*oDetail.getUPS();
+                oDetail.setTotal((float) (preTotal*(1-oDetail.getDiscount())));
+                oDetails.add(oDetail);
+            }
+            viewOrderdetail.setItems(oDetails);
+            viewOrderdetail.refresh();
         }
-        if(!exist){
-            oDetail.setProductID(Integer.valueOf(lbProductID.getText()));
-            oDetail.setPName(cbProductName.getSelectionModel().getSelectedItem().getPName());
-            oDetail.setUPS(Float.valueOf(txtUSP.getText()));
-            System.out.println(txtUSP.getText());
-            oDetail.setHTU(txtHtu.getText());
-            oDetail.setQty(Integer.valueOf(txtQty.getText()));
-            oDetail.setDiscount((Double.valueOf(txtDiscount.getText()))/100);
-            Float preTotal = oDetail.getQty()*oDetail.getUPS();
-            oDetail.setTotal((float) (preTotal*(1-oDetail.getDiscount())));
-            oDetails.add(oDetail);
-        }
-        viewOrderdetail.setItems(oDetails);
-        viewOrderdetail.refresh();
     }
     @FXML
     private void saveOrder(){
