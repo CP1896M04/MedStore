@@ -2,7 +2,10 @@ package pattern.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
+import pattern.model.Category;
 import pattern.model.InventoryDetails;
 import pattern.model.ViewProduct;
 
@@ -149,5 +152,46 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
             throw new RuntimeException(e);
         }
         return viewProducts;
+    }
+    public boolean isUniqName(InventoryDetails o) {
+        boolean isUniq = false;
+        String sql = "select [DetailsID] from InventoryDetails where DetailsCode=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getDetailsCode());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getDetailsCode() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+
+    public boolean isUpdate(InventoryDetails o) {
+        boolean isUniq = false;
+        String sql = "select [DetailsID] from InventoryDetails where DetailsCode=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getDetailsCode());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Name doesn't exist ");
+                alert.setContentText("Brand" + "  '" + o.getDetailsCode() + "' " + "not exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
     }
 }
