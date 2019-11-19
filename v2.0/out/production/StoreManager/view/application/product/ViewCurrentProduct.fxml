@@ -17,8 +17,8 @@
             <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="608.0" BorderPane.alignment="CENTER">
                <children>
                   <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Delete" textAlignment="RIGHT" />
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Update" textAlignment="RIGHT" />
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Add" textAlignment="RIGHT" />
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateClick" prefHeight="33.0" prefWidth="120.0" text="Update" textAlignment="RIGHT" />
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="33.0" prefWidth="120.0" text="Add" textAlignment="RIGHT" />
                </children>
             </HBox>
          </bottom>

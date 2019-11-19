@@ -254,10 +254,9 @@ public class ViewAddNewProductController implements Initializable {
             product.setHTU(txtHTU.getText());
             productDAO.add(product);
             System.out.println("Da add" + txtPName.getText());
-        } catch ( Exception e ) {
+        } catch (Exception e) {
             System.out.println("Can't update");
         }
-        Parent parent = FXMLLoader.load(getClass().getResource("/application/product/addnewproduct/tableviewProduct.fxml"));
     }
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
@@ -289,29 +288,16 @@ public class ViewAddNewProductController implements Initializable {
             System.out.println("Can't update");
         }
     }
-//    public void initColumn() {
-//        columnProductID.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
-//        columnCatID.setCellValueFactory(new PropertyValueFactory<>("CatID"));
-//        columnUnitID.setCellValueFactory(new PropertyValueFactory<>("UnitID"));
-//        columnSupplierID.setCellValueFactory(new PropertyValueFactory<>("SupplierID"));
-//        columnPName.setCellValueFactory(new PropertyValueFactory<>("PName"));
-//        columnPDescr.setCellValueFactory(new PropertyValueFactory<>("PDescr"));
-//        columnPComposition.setCellValueFactory(new PropertyValueFactory<>("PComposition"));
-//        columnPManufacturer.setCellValueFactory(new PropertyValueFactory<>("PManufacturerd"));
-//        columnUprice.setCellValueFactory(new PropertyValueFactory<>("Uprice"));
-//        columnUSP.setCellValueFactory(new PropertyValueFactory<>("USP"));
-//        columnReOrLevel.setCellValueFactory(new PropertyValueFactory<>("ReOrLevel"));
-//        columnHTU.setCellValueFactory(new PropertyValueFactory<>("HTU"));
-//        columnDefaultInDose.setCellValueFactory(new PropertyValueFactory<>("DefaultInDose"));
-//
-//    }
-//    public void loaddataTableview() {
-//        ProductDAO productDAO = new ProductDAO();
-//        ObservableList<Product> products = FXCollections.observableArrayList();
-//        products = productDAO.getList();
-//        tableview.getItems().clear();
-//        tableview.getItems().addAll(products);
-//
-//    }
-
+    void SetData(Product product){
+        txtDefaultInDose.setText(product.getDefaultInDose().toString());
+        txtHTU.setText(product.getHTU());
+        txtPComposition.setText(product.getPComposition());
+        txtPDescr.setText(product.getPDescr());
+        txtPManufacturer.setText(product.getPManufacturer());
+        txtPName.setText(product.getPName());
+        txtProductId.setText(product.getProductID().toString());
+        txtReOrLevel.setText(product.getReOrLevel().toString());
+        txtUprice.setText(product.getUprice().toString());
+        txtUSP.setText(product.getUSP().toString());
+    }
 }

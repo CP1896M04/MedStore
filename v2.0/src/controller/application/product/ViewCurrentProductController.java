@@ -1,27 +1,43 @@
 package controller.application.product;
 
+import controller.application.sale.ViewPointOfSaleController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import pattern.dao.ProductDAO;
 import pattern.model.Category;
 import pattern.model.Product;
 import pattern.model.Supplier;
 import pattern.model.Unit;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ViewCurrentProductController implements Initializable {
+    @FXML
+    private Button btnUpdate;
+    @FXML
+    private Button btnAdd;
     @FXML
     private TableView<Product> tableview;
 
@@ -96,26 +112,27 @@ public class ViewCurrentProductController implements Initializable {
         columnHTU.setCellValueFactory(new PropertyValueFactory<>("HTU"));
         columnDefaultInDose.setCellValueFactory(new PropertyValueFactory<>("DefaultInDose"));
     }
-    public void addNewProduct(){
+    @FXML
+    void addNewProduct(ActionEvent event) throws IOException {
+        ViewAddNewProductController viewAddNewProductController = new ViewAddNewProductController();
         FXMLLoader fXMLLoader = new FXMLLoader();
-        fXMLLoader.setLocation(getClass().getResource("/view/application/product"));
-        try {
-            fXMLLoader.load();
-            Parent parent = fXMLLoader.getRoot();
-            Scene scene = new Scene(parent);
-            scene.setFill(new Color(0, 0, 0, 0));
-            NewSellController newSellController = fXMLLoader.getController();
-            media.setId(userId);
-            newSellController.setNameMedia(nameMedia);
-            newSellController.genarateSellID();
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(ViewCustomerController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       Parent parent= fXMLLoader.load(getClass().getResource("/view/application/product/ViewAddNewProduct.fxml").openStream());
+        viewAddNewProductController = fXMLLoader.getController();
+        Stage stage = new Stage();
+        stage.setScene((new Scene(parent)));
+        stage.show();
+    }
+    @FXML
+    void btnUpdateClick(ActionEvent event) throws IOException {
+        ViewAddNewProductController viewAddNewProductController = new ViewAddNewProductController();
+         Product product =tableview.getSelectionModel().getSelectedItem();
+        FXMLLoader fXMLLoader = new FXMLLoader();
+        Parent parent= fXMLLoader.load(getClass().getResource("/view/application/product/ViewAddNewProduct.fxml").openStream());
+        viewAddNewProductController = fXMLLoader.getController();
+        viewAddNewProductController.SetData(product);
+        Stage stage = new Stage();
+        stage.setScene((new Scene(parent)));
+        stage.show();
     }
 
 }
