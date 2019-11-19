@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import pattern.bus.SupplierBUS;
 import pattern.connection.ConnectionFactory;
 import pattern.dao.SupplierDao;
 import pattern.model.Supplier;
@@ -98,6 +99,7 @@ public class ViewSupplierCotroller implements Initializable {
     @FXML
     private TextField txtTax;
     SupplierDao supplierDao= new SupplierDao();
+    SupplierBUS supplierBUS= new SupplierBUS();
     private Connection connection;
     public ViewSupplierCotroller() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
@@ -108,7 +110,7 @@ public class ViewSupplierCotroller implements Initializable {
     void btnAdd(ActionEvent event) {
 
         Supplier supplier= new Supplier(0,txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
-        supplierDao.add(supplier);
+        supplierBUS.add(supplier);
         System.out.println(supplier.toString());
         System.out.println("Da them"+ supplier.getComName());
         loadTableview();
@@ -117,7 +119,7 @@ public class ViewSupplierCotroller implements Initializable {
 
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
-        supplierDao.remove(txtSupplierId.getText());
+        supplierBUS.delete(txtSupplierId.getText());
         System.out.println("Da xoa"+txtSupplierId.getText());
         loadTableview();
 
@@ -126,7 +128,7 @@ public class ViewSupplierCotroller implements Initializable {
     @FXML
     void btnUpdate(ActionEvent event) {
         Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
-        supplierDao.update(supplier);
+       supplierBUS.update(supplier);
         loadTableview();
         System.out.println("Da up date"+txtSupplierId.getText());
 

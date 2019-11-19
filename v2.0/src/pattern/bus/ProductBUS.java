@@ -15,19 +15,27 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ProductBUS implements BUS<Product> {
-
+ProductDAO productDAO= new ProductDAO();
     @Override
     public void add(Product o) {
-
+        if (productDAO.isUniqName(o)) {
+        productDAO.add(o);
+        }
     }
 
     @Override
     public void update(Product o) {
-
+        if (productDAO.isUpdate(o)) {
+            productDAO.update(o);
+        }
     }
 
     @Override
     public void delete(String id) {
-
+        try {
+            productDAO.remove(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

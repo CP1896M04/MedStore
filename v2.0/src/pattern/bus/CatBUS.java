@@ -31,6 +31,7 @@ public class CatBUS implements BUS<Category> {
 
     @Override
     public void delete(String id) {
+
         catDAO.remove(id);
     }
 
