@@ -32,7 +32,8 @@ public class ViewSaleHistoryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        initColumn();
+        loadData();
     }
     public void loadData(){
         OderDAO oderDAO= new OderDAO();

@@ -78,7 +78,7 @@
                      <children>
                         <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Button fx:id="btnNew" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="New" />
+                              <Button fx:id="btnNew" mnemonicParsing="false" onAction="#btnNewClick" prefHeight="33.0" prefWidth="108.0" text="New" />
                               <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveOrder" prefHeight="33.0" prefWidth="108.0" text="Save" />
                               <Button fx:id="btnPrint" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Print" />
                            </children>

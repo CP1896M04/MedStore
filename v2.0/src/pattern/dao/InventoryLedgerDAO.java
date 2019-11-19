@@ -1,5 +1,7 @@
 package pattern.dao;
 
+import javafx.scene.control.Alert;
+import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Category;
 import pattern.model.InventoryLedger;
@@ -106,5 +108,45 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
             throw new RuntimeException(e);
         }
         return inventoryLedgers;
+    }
+    public boolean isUniqName(InventoryLedger o) {
+        boolean isUniq = false;
+        String sql = "select [LegerID] from InventoryLedger where LegerCode=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getLegerCode());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getLegerCode() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+    public boolean isUpdate(InventoryLedger o) {
+        boolean isUniq = false;
+        String sql = "select [LegerID] from InventoryLedger where LegerCode=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getLegerCode());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Name doesn't exist ");
+                alert.setContentText("Brand" + "  '" + o.getLegerCode() + "' " + "not exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
     }
 }

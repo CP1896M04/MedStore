@@ -174,16 +174,32 @@ public class ViewPointOfSaleController implements Initializable {
             oDetailDAO.add(oDetail);
             addLeger(oDetail,dateTagDAO.procInsert(dateTag));
         }
+        clear();
     }
     public void addLeger(ODetail oDetail,int datTagID){
         InventoryLedgerDAO inventoryLedgerDAO = new InventoryLedgerDAO();
         InventoryLedger inventoryLedger = new InventoryLedger();
-        inventoryLedger.setLegerCode(oDetail.getPName()+ oDetail.getQty());
+        inventoryLedger.setLegerCode(oDetail.getProductID()+"-"+datTagID);
         inventoryLedger.setInventoryPurchaseCost(oDetail.getTotal());
         inventoryLedger.setProductID(oDetail.getProductID());
         inventoryLedger.setQuantityTransacted(oDetail.getQty());
         inventoryLedger.setDateTag(datTagID);
         inventoryLedger.setTransactionType("O");
+
         inventoryLedgerDAO.add(inventoryLedger);
+    }
+    @FXML
+    void btnNewClick(ActionEvent event) {
+        clear();
+    }
+
+    public void clear(){
+        viewOrderdetail.getItems().clear();
+        txtAvailable.clear();
+        txtHtu.clear();
+        txtProductName.clear();
+        txtQty.clear();
+        txtUSP.clear();
+
     }
 }
