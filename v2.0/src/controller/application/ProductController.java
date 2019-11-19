@@ -62,7 +62,7 @@ public class ProductController implements Initializable {
         lblHeader.setText("Category");
         ViewCategoryController viewCategoryController = new ViewCategoryController();
         FXMLLoader fXMLLoader = new FXMLLoader();
-        fXMLLoader.load(getClass().getResource("/view/application/product/ViewCategory.fxml").openStream());
+        fXMLLoader.load(getClass().getResource("/view/application/product/ViewAddNewProduct.fxml").openStream());
         ViewCategoryController viewCategoryControllers = fXMLLoader.getController();
         AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();

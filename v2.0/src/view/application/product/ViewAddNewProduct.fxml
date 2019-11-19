@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="615.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.product.ViewAddNewProductController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="65.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnAddClick" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="151.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="17.0" prefWidth="55.0" text="Update" />
+      <Button fx:id="btnRemove" layoutX="269.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
+      <Label fx:id="lbProducId" layoutX="28.0" layoutY="43.0" prefHeight="25.0" prefWidth="59.0" text="ProductID" />
+      <Label fx:id="lbUnitId" layoutX="29.0" layoutY="214.0" prefHeight="25.0" prefWidth="43.0" text="UnitID" />
+      <Label fx:id="lbPName" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="52.0" text="PName" />
+      <Label fx:id="lbCatId" layoutX="32.0" layoutY="122.0" prefHeight="25.0" prefWidth="52.0" text="CatID" />
+      <TextField fx:id="txtProductId" layoutX="97.0" layoutY="43.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtPName" layoutX="97.0" layoutY="79.0" prefHeight="25.0" prefWidth="208.0" />
+      <Label fx:id="lbPComposition" layoutX="9.0" layoutY="265.0" prefHeight="17.0" prefWidth="106.0" text="PComposition" />
+      <Label fx:id="lbUprice" layoutX="16.0" layoutY="304.0" prefHeight="17.0" prefWidth="83.0" text="Uprice" />
+      <Label fx:id="lbUSP" layoutX="21.0" layoutY="346.0" prefHeight="17.0" prefWidth="55.0" text="USP" />
+      <Label fx:id="lbHTU" layoutX="12.0" layoutY="519.0" text="HTU" />
+      <Label fx:id="lbSupplierId" layoutX="20.0" layoutY="172.0" text="SupplierID" />
+      <Label fx:id="lbPDescr" layoutX="10.0" layoutY="485.0" prefHeight="17.0" prefWidth="43.0" text="PDescr" />
+      <Label fx:id="lbPManufacturer" layoutX="10.0" layoutY="443.0" text="PManufacturer" />
+      <Label fx:id="lbReOrLevel" layoutX="12.0" layoutY="378.0" text="ReOrLevel" />
+      <Label fx:id="lbDefaultInDose" layoutX="10.0" layoutY="409.0" text="DefaultInDose" />
+      <TextField fx:id="txtPComposition" layoutX="97.0" layoutY="261.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtUprice" layoutX="97.0" layoutY="300.0" prefHeight="25.0" prefWidth="97.0" promptText="0" />
+      <TextField fx:id="txtUSP" layoutX="99.0" layoutY="342.0" prefHeight="25.0" prefWidth="52.0" promptText="0" />
+      <TextField fx:id="txtHTU" layoutX="91.0" layoutY="515.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtPDescr" layoutX="91.0" layoutY="481.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="txtPManufacturer" layoutX="96.0" layoutY="439.0" prefHeight="25.0" prefWidth="202.0" />
+      <TextField fx:id="txtReOrLevel" layoutX="99.0" layoutY="374.0" prefHeight="25.0" prefWidth="52.0" promptText="1" />
+      <TextField fx:id="txtDefaultInDose" layoutX="98.0" layoutY="405.0" prefHeight="25.0" prefWidth="52.0" promptText="2" />
+      <ComboBox fx:id="comboboxCatID" layoutX="97.0" layoutY="126.0" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxSupplierID" editable="true" layoutX="97.0" layoutY="168.0" prefHeight="25.0" prefWidth="208.0" />
+      <ComboBox fx:id="comboboxUnitID" layoutX="97.0" layoutY="214.0" prefHeight="25.0" prefWidth="208.0" />
+      <Text layoutX="167.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
