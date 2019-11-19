@@ -79,6 +79,11 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
     }
 
     @Override
+    public boolean isNotUsed(InventoryLedger o) {
+        return false;
+    }
+
+    @Override
     public List<InventoryLedger> getList() {
         List<InventoryLedger> inventoryLedgers = new ArrayList<>();
         String sql = "SELECT [LegerID]\n" +

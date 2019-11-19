@@ -99,6 +99,11 @@ public class ODetailDAO implements DAO<ODetail> {
     }
 
     @Override
+    public boolean isNotUsed(ODetail o) {
+        return false;
+    }
+
+    @Override
     public List<ODetail> getList() {
         List<ODetail> oDetails = new ArrayList<>();
         String sql = "select * from ODetail";

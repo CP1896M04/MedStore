@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import pattern.bus.CatBUS;
 import pattern.dao.CatDAO;
 import pattern.model.Category;
 
@@ -22,7 +23,7 @@ import java.util.ResourceBundle;
 import static java.lang.Integer.parseInt;
 
 public class ViewCategoryController implements Initializable {
-
+    CatBUS catBUS= new CatBUS();
     CatDAO catDAO = new CatDAO();
     @FXML
     private Label lbCatID;
@@ -97,14 +98,14 @@ public class ViewCategoryController implements Initializable {
             System.out.println("error desc");
         } else {
             Category category = new Category(0, txtCatName.getText(), txtDesc.getText());
-            catDAO.add(category);
+            catBUS.add(category);
             System.out.println("Da them" + category.getCatName());
         }
     }
 
     @FXML
     public void btnDelete(ActionEvent event) {
-        catDAO.remove(txtCatId.getText());
+        catBUS.delete(txtCatId.getText());
         System.out.println("Da xoa" + txtCatId.getText());
 
     }
@@ -114,7 +115,7 @@ public class ViewCategoryController implements Initializable {
 
         Category category = new Category(parseInt(txtCatId.getText()), txtCatName.getText(), txtDesc.getText());
 
-        catDAO.update(category);
+        catBUS.update(category);
         System.out.println("Da update" + category.getCatName());
     }
 }

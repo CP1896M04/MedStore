@@ -2,6 +2,8 @@ package pattern.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Category;
 import pattern.model.Supplier;
@@ -12,6 +14,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CatDAO implements DAO<Category> {
     private Connection connection;
@@ -83,4 +87,34 @@ public class CatDAO implements DAO<Category> {
         }
         return categories;
     }
+
+    public boolean isNotUsed(Category o) {
+        boolean inNotUsed = false;
+        String sql = "DELETE FROM [dbo].[Category] WHERE CatID = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt("catID"));
+            preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return inNotUsed;
+            }resultSet.close();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return inNotUsed;
+    }
 }
+
+
+
+
+
+

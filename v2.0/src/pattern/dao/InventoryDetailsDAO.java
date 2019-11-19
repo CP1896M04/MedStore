@@ -79,6 +79,8 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         }
     }
 
+
+
     @Override
     public List<InventoryDetails>  getList() {
 
@@ -148,5 +150,11 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         }
         return viewProducts;
     }
-}
+    @Override
+    public boolean isNotUsed(InventoryDetails o) {
+        return false;
+    }
+
+    }
+
 
