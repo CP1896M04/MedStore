@@ -126,44 +126,5 @@ public class ODetailDAO implements DAO<ODetail> {
         }
         return oDetails;
     }
-    public boolean isUniqName(Order o) {
-        boolean isUniq = false;
-        String sql = "select [OrderID] from dbo.[Order] where DateKey=? ";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, o.getDateKey());
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error");
-                alert.setHeaderText("ERROE : Already exist ");
-                alert.setContentText("Brand" + "  '" + o.getDateKey() + "' " + "Already exist");
-                alert.initStyle(StageStyle.UNDECORATED);
-                alert.showAndWait();
-                return isUniq;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return isUniq;
-    }
-    public boolean isUpdate(Order o) {
-        boolean isUniq = false;
-        String sql = "select [OrderID] from dbo.[Order] where DateKey=? ";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, o.getDateKey());
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (!resultSet.next()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error");
-                alert.setHeaderText("ERROE : Name doesn't exist ");
-                alert.setContentText("Brand" + "  '" + o.getDateKey() + "' " + "not exist");
-                alert.initStyle(StageStyle.UNDECORATED);
-                alert.showAndWait();
-                return isUniq;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return isUniq;
-    }
+
 }

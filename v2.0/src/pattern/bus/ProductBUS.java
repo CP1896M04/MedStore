@@ -6,7 +6,6 @@ import pattern.connection.ConnectionFactory;
 import pattern.dao.ProductDAO;
 import pattern.model.Category;
 import pattern.model.Product;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
