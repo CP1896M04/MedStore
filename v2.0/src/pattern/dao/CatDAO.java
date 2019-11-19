@@ -8,10 +8,7 @@ import pattern.connection.ConnectionFactory;
 import pattern.model.Category;
 import pattern.model.Supplier;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -111,6 +108,20 @@ public class CatDAO implements DAO<Category> {
         }
         return inNotUsed;
     }
+    public boolean isTrueUpdate(Category category) {
+        boolean isTrue = false;
+        String sql = "select * from Category where CatID=?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                isTrue=true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isTrue;
+    }
+
 }
 
 

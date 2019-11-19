@@ -49,7 +49,7 @@ public class CatBUS implements BUS<Category> {
 
     @Override
     public boolean isTrueUpdate(Category o) {
-        boolean isTreu = false;
+        boolean isTrue = false;
         System.out.println("we are in update");
         try {
             String sql = "UPDATE [dbo].[Category]" +
@@ -63,42 +63,20 @@ public class CatBUS implements BUS<Category> {
             preparedStatement.execute();
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                return isTreu;
+                isTrue=true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return isTreu;
+        return isTrue;
     }
 
     @Override
     public boolean isUniqName(Category o) {
         boolean uniqCategory = false;
-        String sql = "insert into Category (CatName, [Desc]) values (?,?)";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, o.getCatName());
-            preparedStatement.setString(2, o.getDesc());
 
-            preparedStatement.execute();
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                System.out.println("in not uniq");
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Sucess");
-                alert.setHeaderText("ERROR : used");
-                alert.setContentText("CategoryName" + "  '" + o.getCatName() + "' " + "Already exist");
-                alert.initStyle(StageStyle.UNDECORATED);
-                alert.showAndWait();
-
-
-            }
-            uniqCategory = true;
-        } catch (SQLException e) {
-            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, e);
-        }
-           return uniqCategory;
+        return uniqCategory;
     }
 }
 
