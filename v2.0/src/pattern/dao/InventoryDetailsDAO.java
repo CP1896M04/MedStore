@@ -150,11 +150,4 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         }
         return viewProducts;
     }
-    @Override
-    public boolean isNotUsed(InventoryDetails o) {
-        return false;
-    }
-
-    }
-
-
+}

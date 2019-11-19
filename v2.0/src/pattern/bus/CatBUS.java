@@ -24,7 +24,7 @@ public class CatBUS implements BUS<Category> {
 
     @Override
     public void update(Category o) {
-        if (!catDAO.isUniqName(o)) {
+        if (catDAO.isUpdate(o)) {
             catDAO.update(o);
         }
     }
@@ -33,7 +33,6 @@ public class CatBUS implements BUS<Category> {
     public void delete(String id) {
         catDAO.remove(id);
     }
-
 
 }
 

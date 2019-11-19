@@ -84,26 +84,6 @@ public class CatDAO implements DAO<Category> {
         }
         return categories;
     }
-
-    public boolean isNotUsed(Category o) {
-        boolean inNotUsed = false;
-        String sql = "select [CatID] from Category where CatID=? ";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error");
-                alert.setHeaderText("ERROE : Already exist ");
-                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
-                alert.initStyle(StageStyle.UNDECORATED);
-                alert.showAndWait();
-                return inNotUsed;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return inNotUsed;
-    }
     public boolean isUniqName(Category o) {
         boolean isUniq = false;
         String sql = "select [CatID] from Category where CatName=? ";
@@ -115,6 +95,26 @@ public class CatDAO implements DAO<Category> {
                 alert.setTitle("Error");
                 alert.setHeaderText("ERROE : Already exist ");
                 alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+    public boolean isUpdate(Category o) {
+        boolean isUniq = false;
+        String sql = "select [CatID] from Category where CatName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getCatName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Name doesn't exist ");
+                alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "not exist");
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
                 return isUniq;

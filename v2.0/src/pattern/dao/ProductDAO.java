@@ -91,11 +91,6 @@ public class ProductDAO implements DAO<Product>{
     }
 
     @Override
-    public boolean isNotUsed(Product o) {
-        return false;
-    }
-
-    @Override
     public ObservableList<Product> getList() {
         ObservableList<Product> products = FXCollections.observableArrayList();
         String sql = "select * from Product";

@@ -105,12 +105,6 @@ public class StaffDAO implements DAO<Staff> {
     }
 
     @Override
-    public boolean isNotUsed(Staff o) {
-        return false;
-    }
-
-
-    @Override
     public List<Staff> getList() {
         List<Staff> staffs = new ArrayList<>();
         String sql = "SELECT [StaffID]\n" +

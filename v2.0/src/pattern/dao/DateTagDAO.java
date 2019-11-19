@@ -44,10 +44,6 @@ public class DateTagDAO implements DAO<DateTag> {
     @Override
     public void update(DateTag o) {
     }
-    @Override
-    public boolean isNotUsed(DateTag o) {
-        return false;
-    }
 
     @Override
     public List<DateTag> getList() {

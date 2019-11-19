@@ -9,6 +9,5 @@ public interface DAO<T> {
     public void remove(String id) throws SQLException;
 
     public void update(T o);
-  public boolean isNotUsed(T o);
     public List<T> getList();
 }

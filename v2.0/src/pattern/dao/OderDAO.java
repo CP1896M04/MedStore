@@ -63,10 +63,6 @@ public class OderDAO implements DAO<Order> {
         }
     }
 
-    @Override
-    public boolean isNotUsed(Order o) {
-        return false;
-    }
 
     @Override
     public List<Order> getList() {

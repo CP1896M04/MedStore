@@ -90,12 +90,6 @@ public class UnitDAO implements DAO<Unit> {
             throw new RuntimeException(e);
         }
     }
-
-    @Override
-    public boolean isNotUsed(Unit o) {
-        return false;
-    }
-
     @Override
     public ObservableList<Unit> getList() {
         ObservableList<Unit> units  = FXCollections.observableArrayList();
