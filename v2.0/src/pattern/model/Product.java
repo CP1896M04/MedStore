@@ -140,7 +140,6 @@ public class Product {
     @Override
 
         public String toString() {
-            return String.format("ProductID "+ProductID +"CatID"+CatID+"UnitID"+UnitID+" SupplierID"+ SupplierID+" PName"+ PName+"PDescr"+PDescr+"PComposition"+PComposition
-            + "PManufacturer"+ PManufacturer+" UPrice"+Uprice+"USP"+USP+" ReOrLevel"+"HTU"+HTU+"DefaultInDose"+DefaultInDose);
+            return String.format(PName+"("+PComposition+")");
         }
     }

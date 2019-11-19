@@ -21,13 +21,10 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
                 "           ,[ProductID]\n" +
                 "           ,[TransactionType]\n" +
                 "           ,[QuantityTransacted]\n" +
-                "           ,[InventoryPurchaseCost])\n" +
+                "           ,[InventoryPurchaseCost]\n" +
+                "           ,[DateKey])\n" +
                 "     VALUES\n" +
-                "           (?\n" +
-                "           ,?\n" +
-                "           ,?\n" +
-                "           ,?\n" +
-                "           ,?)";
+                "           (?,?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, o.getLegerCode());
@@ -35,6 +32,7 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
             preparedStatement.setString(3, o.getTransactionType());
             preparedStatement.setInt(4, o.getQuantityTransacted());
             preparedStatement.setFloat(5, o.getInventoryPurchaseCost());
+            preparedStatement.setInt(6,o.getDateTag());
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -61,7 +59,8 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
                 "      ,[ProductID] = ?\n" +
                 "      ,[TransactionType] = ?\n" +
                 "      ,[QuantityTransacted] = ?\n" +
-                "      ,[InventoryPurchaseCost] = ?\n" +
+                "      ,[InventoryPurchaseCost] = ?\n"+
+                "      ,[DateTag]                 =?\n"+
                 " WHERE LegerID = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -70,7 +69,8 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
             preparedStatement.setString(3, o.getTransactionType());
             preparedStatement.setInt(4, o.getQuantityTransacted());
             preparedStatement.setFloat(5, o.getInventoryPurchaseCost());
-            preparedStatement.setInt(6, o.getLegerID());
+            preparedStatement.setInt(6,o.getDateTag());
+            preparedStatement.setInt(7, o.getLegerID());
             preparedStatement.execute();
         } catch (  SQLException e ) {
 
@@ -98,8 +98,8 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
                 String TransactionType = resultSet.getString("TransactionType");
                 Integer QuantityTransacted = resultSet.getInt("QuantityTransacted");
                 Float InventoryPurchaseCost =resultSet.getFloat("InventoryPurchaseCost");
-                Date Datetime =resultSet.getDate("Datetime");
-                InventoryLedger inventoryLedger= new InventoryLedger(LegerID,LegerCode,ProductID,TransactionType,QuantityTransacted,InventoryPurchaseCost,Datetime);
+                 Integer DateKey = resultSet.getInt("DateKey");
+                InventoryLedger inventoryLedger= new InventoryLedger(LegerID,LegerCode,ProductID,TransactionType,QuantityTransacted,InventoryPurchaseCost,DateKey);
                 inventoryLedgers.add(inventoryLedger);
             }
         } catch (SQLException e) {

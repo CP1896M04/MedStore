@@ -10,74 +10,74 @@ public class InventoryLedger {
     private String TransactionType;
     private Integer QuantityTransacted;
     private Float InventoryPurchaseCost;
-    private Timestamp DateTime;
+    private int DateTag;
 
-    public InventoryLedger(Integer legerID, String legerCode, Integer productID, String transactionType, Integer quantityTransacted, Float inventoryPurchaseCost, Timestamp dateTime) {
+    public InventoryLedger(Integer legerID, String legerCode, Integer productID, String transactionType, Integer quantityTransacted, Float inventoryPurchaseCost, int dateTag) {
         LegerID = legerID;
         LegerCode = legerCode;
         ProductID = productID;
         TransactionType = transactionType;
         QuantityTransacted = quantityTransacted;
         InventoryPurchaseCost = inventoryPurchaseCost;
-        DateTime = dateTime;
+        DateTag = dateTag;
     }
 
-    public Integer getLegerID() {
-        return LegerID;
+    public InventoryLedger() {
     }
 
     public void setLegerID(Integer legerID) {
         LegerID = legerID;
     }
 
-    public String getLegerCode() {
-        return LegerCode;
-    }
-
     public void setLegerCode(String legerCode) {
         LegerCode = legerCode;
-    }
-
-    public Integer getProductID() {
-        return ProductID;
     }
 
     public void setProductID(Integer productID) {
         ProductID = productID;
     }
 
-    public String getTransactionType() {
-        return TransactionType;
-    }
-
     public void setTransactionType(String transactionType) {
         TransactionType = transactionType;
-    }
-
-    public Integer getQuantityTransacted() {
-        return QuantityTransacted;
     }
 
     public void setQuantityTransacted(Integer quantityTransacted) {
         QuantityTransacted = quantityTransacted;
     }
 
-    public Float getInventoryPurchaseCost() {
-        return InventoryPurchaseCost;
-    }
-
     public void setInventoryPurchaseCost(Float inventoryPurchaseCost) {
         InventoryPurchaseCost = inventoryPurchaseCost;
     }
 
-    public Timestamp getDateTime() {
-        return DateTime;
+    public void setDateTag(int dateTag) {
+        DateTag = dateTag;
     }
 
-    public void setDateTime(Timestamp dateTime) {
-        DateTime = dateTime;
+    public Integer getLegerID() {
+        return LegerID;
     }
 
-    public InventoryLedger(int legerID, String legerCode, Integer productID, String transactionType, Integer quantityTransacted, Float inventoryPurchaseCost, Date datetime) {
+    public String getLegerCode() {
+        return LegerCode;
+    }
+
+    public Integer getProductID() {
+        return ProductID;
+    }
+
+    public String getTransactionType() {
+        return TransactionType;
+    }
+
+    public Integer getQuantityTransacted() {
+        return QuantityTransacted;
+    }
+
+    public Float getInventoryPurchaseCost() {
+        return InventoryPurchaseCost;
+    }
+
+    public int getDateTag() {
+        return DateTag;
     }
 }

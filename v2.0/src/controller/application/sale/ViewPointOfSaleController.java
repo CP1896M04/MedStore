@@ -14,14 +14,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import lib.LibraryAssistant;
 import lib.control.ComboBoxAutoComplete;
-import pattern.dao.DateTagDAO;
-import pattern.dao.ODetailDAO;
-import pattern.dao.OderDAO;
-import pattern.dao.ProductDAO;
-import pattern.model.DateTag;
-import pattern.model.ODetail;
-import pattern.model.Order;
-import pattern.model.Product;
+import pattern.dao.*;
+import pattern.model.*;
 
 
 import java.io.IOException;
@@ -177,6 +171,19 @@ public class ViewPointOfSaleController implements Initializable {
         int oderID=oDetailDAO.insertProc();
         for (ODetail oDetail : oDetails){
             oDetail.setOrderID(oderID);
-            oDetailDAO.add(oDetail); }
+            oDetailDAO.add(oDetail);
+            addLeger(oDetail,dateTagDAO.procInsert(dateTag));
+        }
+    }
+    public void addLeger(ODetail oDetail,int datTagID){
+        InventoryLedgerDAO inventoryLedgerDAO = new InventoryLedgerDAO();
+        InventoryLedger inventoryLedger = new InventoryLedger();
+        inventoryLedger.setLegerCode(oDetail.getPName()+ oDetail.getQty());
+        inventoryLedger.setInventoryPurchaseCost(oDetail.getTotal());
+        inventoryLedger.setProductID(oDetail.getProductID());
+        inventoryLedger.setQuantityTransacted(oDetail.getQty());
+        inventoryLedger.setDateTag(datTagID);
+        inventoryLedger.setTransactionType("O");
+        inventoryLedgerDAO.add(inventoryLedger);
     }
 }
