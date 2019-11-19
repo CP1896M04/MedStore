@@ -2,8 +2,11 @@ package pattern.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Supplier;
+import pattern.model.Unit;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -94,6 +97,46 @@ public SupplierDao(){
             throw new RuntimeException(e);
         }
         return suppliers;
+    }
+    public boolean isUniqName(Supplier o) {
+        boolean isUniq = false;
+        String sql = "select [SupplierID] from Supplier where ComName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getComName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Already exist ");
+                alert.setContentText("Brand" + "  '" + o.getComName() + "' " + "Already exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
+    }
+    public boolean isUpdate(Supplier o) {
+        boolean isUniq = false;
+        String sql = "select [SupplierID] from Supplier where ComName=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, o.getComName());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("ERROE : Name doesn't exist ");
+                alert.setContentText("Brand" + "  '" + o.getComName() + "' " + "not exist");
+                alert.initStyle(StageStyle.UNDECORATED);
+                alert.showAndWait();
+                return isUniq;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return isUniq;
     }
 
     }
