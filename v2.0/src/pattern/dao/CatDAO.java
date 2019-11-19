@@ -90,16 +90,11 @@ public class CatDAO implements DAO<Category> {
 
     public boolean isNotUsed(Category o) {
         boolean inNotUsed = false;
-        String sql = "select * from Category where CatID=?";
-        boolean inNotUse = false;
+        String sql = "DELETE FROM [dbo].[Category] WHERE CatID = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            ResultSet resultSet = preparedStatement.executeQuery();
-            int catID = resultSet.getInt("CatID");
-            String catName = resultSet.getString("CatName");
-            String desc = resultSet.getString("Desc");
-            preparedStatement.setInt(1, Integer.parseInt(String.valueOf(catID)));
+            preparedStatement.setInt(1, Integer.parseInt("catID"));
             preparedStatement.execute();
-            Category category = new Category(catID, catName, desc);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
@@ -107,14 +102,13 @@ public class CatDAO implements DAO<Category> {
                 alert.setContentText("Brand" + "  '" + o.getCatName() + "' " + "Already exist");
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
-                return inNotUse;
+                return inNotUsed;
             }resultSet.close();
             preparedStatement.close();
             connection.close();
-        } catch (SQLException e) {
-            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, e);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
-
         return inNotUsed;
     }
 }

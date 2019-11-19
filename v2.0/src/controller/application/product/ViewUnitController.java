@@ -15,6 +15,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import pattern.bus.UnitBUS;
 import pattern.connection.ConnectionFactory;
 import pattern.dao.UnitDAO;
 import pattern.model.Unit;
@@ -103,6 +104,7 @@ public class ViewUnitController implements Initializable {
     @FXML
     private TableColumn<Unit,String> columnDesc;
     UnitDAO unitDAO= new UnitDAO();
+    UnitBUS unitBUS= new UnitBUS();
     private Connection connection;
 
     public ViewUnitController() {
@@ -113,7 +115,7 @@ public class ViewUnitController implements Initializable {
     @FXML
     void btnAdd(ActionEvent event) {
         Unit unit= new Unit(0,txtUname.getText(),parseInt(txtUInStock.getText()),txtUInStockName.getText(),parseInt(txtUInOrder.getText()),txtUInOrderName.getText(),txtDesc.getText());
-        unitDAO.add(unit);
+        unitBUS.add(unit);
         System.out.println("Da them"+txtUname.getText());
         loadTableview();
     }

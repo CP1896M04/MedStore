@@ -43,6 +43,7 @@ public class OderBUS implements BUS<Order> {
 
     @Override
     public boolean isUniqName(Order o) {
+
         return false;
     }
 }

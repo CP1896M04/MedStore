@@ -105,7 +105,7 @@ public class ViewCategoryController implements Initializable {
 
     @FXML
     public void btnDelete(ActionEvent event) {
-        catDAO.remove(txtCatId.getText());
+        catBUS.delete(txtCatId.getText());
         System.out.println("Da xoa" + txtCatId.getText());
 
     }
@@ -115,7 +115,7 @@ public class ViewCategoryController implements Initializable {
 
         Category category = new Category(parseInt(txtCatId.getText()), txtCatName.getText(), txtDesc.getText());
 
-        catDAO.update(category);
+        catBUS.update(category);
         System.out.println("Da update" + category.getCatName());
     }
 }

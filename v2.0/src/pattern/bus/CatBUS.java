@@ -44,14 +44,32 @@ public class CatBUS implements BUS<Category> {
     public void delete(Category o) {
         if (catDAO.isNotUsed(o)) {
             catDAO.remove(String.valueOf(o));//
-        } else {
-            //no no;
         }
     }
 
     @Override
     public boolean isTrueUpdate(Category o) {
-            return false;
+        boolean isTreu = false;
+        System.out.println("we are in update");
+        try {
+            String sql = "UPDATE [dbo].[Category]" +
+                    "   SET [CatName] = ? " +
+                    "      ,[Desc] = ?" +
+                    " WHERE [CatId]=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, o.getCatName());
+            preparedStatement.setString(2, o.getDesc());
+            preparedStatement.setInt(3, o.getCatID());
+            preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                return isTreu;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return isTreu;
     }
 
     @Override
@@ -80,9 +98,7 @@ public class CatBUS implements BUS<Category> {
         } catch (SQLException e) {
             Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, e);
         }
-
-
-        return uniqCategory;
+           return uniqCategory;
     }
 }
 
