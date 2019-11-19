@@ -32,7 +32,6 @@ public class Product {
         DefaultInDose = defaultInDose;
     }
 
-
     public Integer getProductID() {
         return ProductID;
     }
@@ -135,6 +134,9 @@ public class Product {
 
     public void setDefaultInDose(Integer defaultInDose) {
         DefaultInDose = defaultInDose;
+    }
+
+    public Product() {
     }
 
     @Override
