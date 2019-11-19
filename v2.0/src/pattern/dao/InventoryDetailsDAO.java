@@ -182,4 +182,19 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         }
         return isUniq;
     }
+    public int checkAvailable(Integer ProductId){
+        int amount=0;
+        String sql = "select [QuantityAvailable] from InventoryDetails where LegerCode=? ";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1,ProductId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (!resultSet.next()) {
+                
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return amount;
+
+    }
 }
