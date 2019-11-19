@@ -15,8 +15,6 @@ import java.util.logging.Logger;
 
 public class CatBUS implements BUS<Category> {
     CatDAO catDAO = new CatDAO();
-    Category category = new Category();
-
     @Override
     public void add(Category o) {
         if (catDAO.isUniqName(o)) {
