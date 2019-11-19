@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.util.StringConverter;
+import pattern.bus.InventoryDetailsBUS;
 import pattern.dao.InventoryDetailsDAO;
 import pattern.dao.ProductDAO;
 import pattern.model.InventoryDetails;
@@ -134,6 +135,7 @@ public class ViewInventoryDetailController implements Initializable {
 
 
     InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
+    InventoryDetailsBUS inventoryDetailsBUS = new InventoryDetailsBUS();
     ProductDAO productDAO = new ProductDAO();
 
     @FXML
@@ -162,8 +164,10 @@ public class ViewInventoryDetailController implements Initializable {
 
     @FXML
     void bntDelete(ActionEvent event) throws SQLException {
-        InventoryDetailsDAO inventoryDetailsDAO = new InventoryDetailsDAO();
-        inventoryDetailsDAO.remove(txtDetailID.getText());
+        InventoryDetailsBUS inventoryDetailsBUS = new InventoryDetailsBUS();
+        InventoryDetails inventoryDetails = new InventoryDetails();
+        inventoryDetails.setDetailsID(Integer.valueOf(txtDetailID.getText()));
+        inventoryDetailsBUS.delete(txtDetailID.getText());
         System.out.println("DA xoa" + txtDetailsCode.getText());
         loaddataTableview();
     }
@@ -233,6 +237,7 @@ public class ViewInventoryDetailController implements Initializable {
         viewProducts = inventorydetailsDAO.getTableView();
         tableview.getItems().clear();
         tableview.getItems().addAll(viewProducts);
+
 
     }
 
