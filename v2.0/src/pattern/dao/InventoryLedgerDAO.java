@@ -83,14 +83,7 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
     @Override
     public List<InventoryLedger> getList() {
         List<InventoryLedger> inventoryLedgers = new ArrayList<>();
-        String sql = "SELECT [LegerID]\n" +
-                "      ,[LegerCode]\n" +
-                "      ,[ProductID]\n" +
-                "      ,[TransactionType]\n" +
-                "      ,[QuantityTransacted]\n" +
-                "      ,[InventoryPurchaseCost]\n" +
-                "      ,[DateTime]\n" +
-                "  FROM [dbo].[InventoryLedger]\n";
+        String sql = "SELECT * FROM [dbo].[InventoryLedger]";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -100,7 +93,7 @@ public class InventoryLedgerDAO implements DAO<InventoryLedger> {
                 String TransactionType = resultSet.getString("TransactionType");
                 Integer QuantityTransacted = resultSet.getInt("QuantityTransacted");
                 Float InventoryPurchaseCost =resultSet.getFloat("InventoryPurchaseCost");
-                 Integer DateKey = resultSet.getInt("DateKey");
+                Integer DateKey =resultSet.getInt("DateKey");
                 InventoryLedger inventoryLedger= new InventoryLedger(LegerID,LegerCode,ProductID,TransactionType,QuantityTransacted,InventoryPurchaseCost,DateKey);
                 inventoryLedgers.add(inventoryLedger);
             }

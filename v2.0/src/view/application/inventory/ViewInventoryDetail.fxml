@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.inventory.ViewInventoryDetailController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.inventory.ViewInventoryDetailController">
    <children>
       <BorderPane prefHeight="475.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <TableView fx:id="tableview" prefHeight="427.0" prefWidth="1029.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tableview" prefHeight="408.0" prefWidth="913.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="columnDetailsID" prefWidth="75.0" text="DetailsID" />
-                <TableColumn fx:id="columnDetailsCode" prefWidth="75.0" text="DetailsCode" />
+                <TableColumn fx:id="columnDetailsID" prefWidth="75.0" text="DetailsID" visible="false" />
+                <TableColumn fx:id="columnDetailsCode" prefWidth="75.0" text="DetailsCode" visible="false" />
                   <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
                   <TableColumn fx:id="columnPName" prefWidth="75.0" text="PName" />
                   <TableColumn fx:id="columnPurchasePrice" prefWidth="75.0" text="PurchasePrice" />
