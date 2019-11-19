@@ -67,7 +67,7 @@ public class OderDAO implements DAO<Order> {
     @Override
     public List<Order> getList() {
         List<Order> orders = new ArrayList<>();
-        String sql = "select * from Order";
+        String sql = "select * from [Order]";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
