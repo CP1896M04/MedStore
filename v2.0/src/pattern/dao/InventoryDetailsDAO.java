@@ -97,6 +97,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
                 int detailsID = resultSet.getInt("DetailsID");
                 String detailsCode = resultSet.getString("DetailsCode");
                 int productID = resultSet.getInt("ProductID");
+                String productName =resultSet.getString("Pname");
                 Float purchasePrice = resultSet.getFloat("PurchasePrice");
                 Float tentativeSalesPrice = resultSet.getFloat("TentativeSalesPrice");
                 int quantityBought = resultSet.getInt("QuantityBought");
@@ -104,7 +105,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
                 String batchID=resultSet.getString("Batchid");
                 Date manufacturedDate = resultSet.getDate("ManufacturedDate");
                 Date expiryDate = resultSet.getDate("ExpiryDate");
-                InventoryDetails inventorydetails = new InventoryDetails(detailsID, detailsCode ,productID ,purchasePrice,tentativeSalesPrice,quantityBought,quantityAvailable,batchID,manufacturedDate,expiryDate);
+                InventoryDetails inventorydetails = new InventoryDetails(detailsID, detailsCode ,productID,productName,purchasePrice,tentativeSalesPrice,quantityBought,quantityAvailable,batchID,manufacturedDate,expiryDate);
 
                 inventoryDetails.add(inventorydetails);
             }
@@ -116,20 +117,7 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     public ObservableList<ViewProduct> getTableView() {
 
         ObservableList<ViewProduct> viewProducts = FXCollections.observableArrayList();
-        String sql = "SELECT [DetailsID]\n" +
-                "      ,[DetailsCode]\n" +
-                "      ,P.[ProductID]\n" +
-                "      ,[PName]\n" +
-                "      ,[PurchasePrice]\n" +
-                "      ,[TentativeSalesPrice]\n" +
-                "      ,[QuantityBought]\n" +
-                "      ,[QuantityAvailable]\n" +
-                "      ,[Batchid]\n" +
-                "      ,[ManufacturedDate]\n" +
-                "      ,[ExpiryDate]\n" +
-                "  FROM [dbo].[InventoryDetails] I\n" +
-                "  INNER JOIN [Product] P ON P.ProductID = I.ProductID";
-
+        String sql = "SELECT * FROM [dbo].[InventoryDetails]";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
