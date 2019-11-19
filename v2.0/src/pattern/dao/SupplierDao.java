@@ -74,6 +74,11 @@ public SupplierDao(){
     }
 
     @Override
+    public boolean isNotUsed(Supplier o) {
+        return false;
+    }
+
+    @Override
     public ObservableList<Supplier> getList() {
         ObservableList<Supplier> suppliers = FXCollections.observableArrayList();
         String sql = "select * from Supplier";

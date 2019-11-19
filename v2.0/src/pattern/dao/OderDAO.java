@@ -64,6 +64,11 @@ public class OderDAO implements DAO<Order> {
     }
 
     @Override
+    public boolean isNotUsed(Order o) {
+        return false;
+    }
+
+    @Override
     public List<Order> getList() {
         List<Order> orders = new ArrayList<>();
         String sql = "select * from Order";

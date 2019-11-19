@@ -66,6 +66,11 @@ public class DateTagDAO implements DAO<DateTag> {
     }
 
     @Override
+    public boolean isNotUsed(DateTag o) {
+        return false;
+    }
+
+    @Override
     public List<DateTag> getList() {
         List<DateTag> dateTags = new ArrayList<>();
         String sql = "SELECT * FROM [dbo].[DateTag]";

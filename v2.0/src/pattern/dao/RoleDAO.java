@@ -66,6 +66,11 @@ public class RoleDAO implements DAO<Role> {
     }
 
     @Override
+    public boolean isNotUsed(Role o) {
+        return false;
+    }
+
+    @Override
     public ObservableList<Role> getList() {
        ObservableList<Role> roles = FXCollections.observableArrayList();
         String sql = "SELECT [RoleID]\n" +

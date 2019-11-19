@@ -92,6 +92,11 @@ public class UnitDAO implements DAO<Unit> {
     }
 
     @Override
+    public boolean isNotUsed(Unit o) {
+        return false;
+    }
+
+    @Override
     public ObservableList<Unit> getList() {
         ObservableList<Unit> units  = FXCollections.observableArrayList();
         String sql = "SELECT [UnitID]\n" +

@@ -10,6 +10,11 @@ public class Category {
         CatName = catName;
         Desc = desc;
     }
+
+    public Category() {
+
+    }
+
     public Integer getCatID() {
 
         return CatID;
