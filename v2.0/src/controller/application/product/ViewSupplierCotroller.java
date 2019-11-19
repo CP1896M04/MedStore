@@ -128,7 +128,7 @@ public class ViewSupplierCotroller implements Initializable {
     @FXML
     void btnUpdate(ActionEvent event) {
         Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
-       supplierBUS.update(supplier);
+        supplierBUS.update(supplier);
         loadTableview();
         System.out.println("Da up date"+txtSupplierId.getText());
 
