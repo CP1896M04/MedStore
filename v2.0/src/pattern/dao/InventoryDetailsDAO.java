@@ -21,22 +21,22 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     }
     @Override
     public void add(InventoryDetails o) {
-        String sql = "insert into InventoryDetails (DetailsCode, ProductID , PurchasePrice, TentativeSalesPrice, QuantityBought ,QuantityAvailable, Batchid , ManufacturedDate, ExpiryDate ) values (?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into InventoryDetails (DetailsCode, ProductID ,PName, PurchasePrice, TentativeSalesPrice, QuantityBought ,QuantityAvailable, Batchid , ManufacturedDate, ExpiryDate ) values (?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, o.getDetailsCode());
             preparedStatement.setInt(2, o.getProductID());
-            preparedStatement.setFloat(3, o.getPurchasePrice());
-            preparedStatement.setFloat(4, o.getTentativeSalesPrice());
-            preparedStatement.setInt(5, o.getQuantityBought());
-            preparedStatement.setInt(6, o.getQuantityAvailable());
-            preparedStatement.setString(7, o.getBatchid());
-            preparedStatement.setDate(8, o.getManufacturedDate());
-            preparedStatement.setDate(9, o.getExpiryDate());
-
+            preparedStatement.setString(3,o.getPName());
+            preparedStatement.setFloat(4, o.getPurchasePrice());
+            preparedStatement.setFloat(5, o.getTentativeSalesPrice());
+            preparedStatement.setInt(6, o.getQuantityBought());
+            preparedStatement.setInt(7, o.getQuantityAvailable());
+            preparedStatement.setString(8, o.getBatchid());
+            preparedStatement.setDate(9, o.getManufacturedDate());
+            preparedStatement.setDate(10, o.getExpiryDate());
             preparedStatement.execute();
         } catch (  SQLException e ) {
-
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
@@ -54,50 +54,48 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
 
     @Override
     public void update(InventoryDetails o) {
-        String sql = "UPDATE [dbo].[InventoryDetails]" +
-                "   SET [DetailsCode] = ?" +
-                "      ,[ProductID] = ?" +
-                "      ,[PurchasePrice] = ?" +
-                "      ,[TentativeSalesPrice] = ?" +
-                "      ,[QuantityBought] = ?" +
-                "      ,[QuantityAvailable] = ?" +
-                "      ,[Batchid] = ?" +
-                "      ,[ManufacturedDate] = ?" +
-                "      ,[ExpiryDate] = ?" +
-                "       WHERE DetailsID = ?";
+        String sql = "UPDATE [dbo].[InventoryDetails]\n" +
+                "   SET [DetailsCode] = ?\n" +
+                "      ,[ProductID] = ?\n" +
+                "      ,[PName] = ?\n" +
+                "      ,[PurchasePrice] = ?\n" +
+                "      ,[TentativeSalesPrice] = ?\n" +
+                "      ,[QuantityBought] = ?\n" +
+                "      ,[QuantityAvailable] = ?\n" +
+                "      ,[Batchid] = ?\n" +
+                "      ,[ManufacturedDate] = ?\n" +
+                "      ,[ExpiryDate] = ?\n" +
+                " WHERE [DetailsID] =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            System.out.println("Bought"+o.getQuantityBought());
             preparedStatement.setString(1, o.getDetailsCode());
             preparedStatement.setInt(2, o.getProductID());
-            preparedStatement.setFloat(3, o.getPurchasePrice());
-            preparedStatement.setFloat(4, o.getTentativeSalesPrice());
-            preparedStatement.setInt(5, o.getQuantityBought());
-            preparedStatement.setInt(6, o.getQuantityAvailable());
-            preparedStatement.setString(7, o.getBatchid());
-            preparedStatement.setDate(8, o.getManufacturedDate());
-            preparedStatement.setDate(9, o.getExpiryDate());
+            preparedStatement.setString(3,o.getPName());
+            preparedStatement.setFloat(4, o.getPurchasePrice());
+            preparedStatement.setFloat(5, o.getTentativeSalesPrice());
+            preparedStatement.setInt(6, o.getQuantityBought());
+            preparedStatement.setInt(7, o.getQuantityAvailable());
+            preparedStatement.setString(8, o.getBatchid());
+            preparedStatement.setDate(9, o.getManufacturedDate());
+            preparedStatement.setDate(10, o.getExpiryDate());
+            preparedStatement.setInt(11, o.getDetailsID());
+            preparedStatement.execute();
         } catch (  SQLException e ) {
-
             throw new RuntimeException(e);
         }
     }
-
-
-
     @Override
     public List<InventoryDetails> getList() {
-
         List<InventoryDetails> inventoryDetails = new ArrayList<>();
         String sql = "SELECT * FROM [dbo].[InventoryDetails]";
-
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int detailsID = resultSet.getInt("DetailsID");
                 String detailsCode = resultSet.getString("DetailsCode");
                 int productID = resultSet.getInt("ProductID");
-                String productName =resultSet.getString("Pname");
+                String productName =resultSet.getString("PName");
                 Float purchasePrice = resultSet.getFloat("PurchasePrice");
                 Float tentativeSalesPrice = resultSet.getFloat("TentativeSalesPrice");
                 int quantityBought = resultSet.getInt("QuantityBought");
@@ -106,7 +104,6 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
                 Date manufacturedDate = resultSet.getDate("ManufacturedDate");
                 Date expiryDate = resultSet.getDate("ExpiryDate");
                 InventoryDetails inventorydetails = new InventoryDetails(detailsID, detailsCode ,productID,productName,purchasePrice,tentativeSalesPrice,quantityBought,quantityAvailable,batchID,manufacturedDate,expiryDate);
-
                 inventoryDetails.add(inventorydetails);
             }
         } catch (SQLException e) {
@@ -115,7 +112,6 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
         return inventoryDetails;
     }
     public ObservableList<ViewProduct> getTableView() {
-
         ObservableList<ViewProduct> viewProducts = FXCollections.observableArrayList();
         String sql = "SELECT * FROM [dbo].[InventoryDetails]";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -143,19 +139,28 @@ public class InventoryDetailsDAO implements DAO<InventoryDetails> {
     }
     public boolean isUniqName(InventoryDetails o) {
         boolean isUniq = false;
-        String sql = "select [DetailsID] from InventoryDetails where DetailsCode=? ";
+        String sql = "select [DetailsID],[QuantityBought] ,[QuantityAvailable] from InventoryDetails where DetailsCode=? ";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, o.getDetailsCode());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error");
-                alert.setHeaderText("ERROE : Already exist ");
-                alert.setContentText("Brand" + "  '" + o.getDetailsCode() + "' " + "Already exist");
+                //Update current
+                Integer currentBought = resultSet.getInt("QuantityBought");
+                Integer currentAvailable = resultSet.getInt("QuantityAvailable");
+                Integer id = resultSet.getInt("DetailsID");
+                o.setQuantityBought(o.getQuantityBought()+currentBought);
+                o.setQuantityAvailable(o.getQuantityAvailable()+currentAvailable);
+                o.setDetailsID(id);
+                update(o);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Update Inventory");
+                alert.setHeaderText("Update inventory");
+                alert.setContentText("Brand" + "  '" + o.getDetailsCode() + "' " + "has been update, Quantity Bought to :"+ o.getQuantityBought());
                 alert.initStyle(StageStyle.UNDECORATED);
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq=true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -93,7 +93,6 @@ public class ODetailDAO implements DAO<ODetail> {
             preparedStatement.setInt(6, o.getQty());
             preparedStatement.setDouble(7, o.getDiscount());
             preparedStatement.setFloat(8, o.getTotal());
-
             preparedStatement.execute();
         } catch (  SQLException e ) {
 

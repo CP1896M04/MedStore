@@ -100,16 +100,16 @@
                            <font>
                               <Font size="14.0" />
                            </font></TextField>
-                        <TextField fx:id="txtQuantityBought" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                        <TextField fx:id="txtQuantityBought" promptText="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                            <font>
                               <Font size="14.0" />
                            </font></TextField>
-                        <TextField fx:id="txtBatchid" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                        <TextField fx:id="txtBatchid" promptText="Lot-xxxxxxxx" GridPane.columnIndex="2" GridPane.rowIndex="6">
                            <font>
                               <Font size="14.0" />
                            </font></TextField>
-                        <DatePicker fx:id="dataPickerManufacturedDate" prefHeight="31.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                        <DatePicker fx:id="dataPickerExpiryDate" prefHeight="30.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <DatePicker fx:id="dataPickerManufacturedDate" prefHeight="31.0" prefWidth="253.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <DatePicker fx:id="dataPickerExpiryDate" prefHeight="30.0" prefWidth="253.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                      </children>
                      <opaqueInsets>
                         <Insets />
@@ -151,7 +151,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" text="Inventory Insert" GridPane.columnIndex="1" />
+                        <Button fx:id="btnInventoryInsert" mnemonicParsing="false" onAction="#btnInventoryInsertClick" prefHeight="38.0" prefWidth="120.0" text="Inventory Insert" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
                </children>

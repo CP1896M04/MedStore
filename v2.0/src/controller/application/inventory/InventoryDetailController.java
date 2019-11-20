@@ -84,7 +84,7 @@ public class InventoryDetailController implements Initializable {
     }
 
     public void loaddataTableview() {
-        System.out.println("vô");
+        //System.out.println("vô");
         List<InventoryDetails> inventoryDetails = new ArrayList<>();
         inventoryDetails = inventoryDetailsDAO.getList();
         tableview.getItems().clear();

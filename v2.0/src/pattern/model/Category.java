@@ -1,7 +1,5 @@
 package pattern.model;
 
-import javax.persistence.Column;
-
 public class Category {
     private Integer CatID;
     private String CatName;
