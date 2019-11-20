@@ -14,6 +14,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import lib.LibraryAssistant;
 import lib.control.ComboBoxAutoComplete;
+import pattern.bus.ODetailBUS;
 import pattern.dao.*;
 import pattern.model.*;
 
@@ -166,29 +167,16 @@ public class ViewPointOfSaleController implements Initializable {
         DateTagDAO dateTagDAO = new DateTagDAO();
         DateTag dateTag = new DateTag();
         LibraryAssistant.formatDate(dateTag);
-        ODetailDAO oDetailDAO = new ODetailDAO();
+        ODetailBUS oDetailBUS = new ODetailBUS();
         Order order = new Order();
         order.setDateKey(dateTagDAO.procInsert(dateTag));
         order.setStaffID(1);
-        int oderID=oDetailDAO.insertProc();
+        int oderID=oDetailBUS.insertProc();
         for (ODetail oDetail : oDetails){
             oDetail.setOrderID(oderID);
-            oDetailDAO.add(oDetail);
-            addLeger(oDetail,dateTagDAO.procInsert(dateTag));
+            oDetailBUS.add(oDetail);
         }
         clear();
-    }
-    public void addLeger(ODetail oDetail,int datTagID){
-        InventoryLedgerDAO inventoryLedgerDAO = new InventoryLedgerDAO();
-        InventoryLedger inventoryLedger = new InventoryLedger();
-        inventoryLedger.setLegerCode(oDetail.getProductID()+"-"+datTagID);
-        inventoryLedger.setInventoryPurchaseCost(oDetail.getTotal());
-        inventoryLedger.setProductID(oDetail.getProductID());
-        inventoryLedger.setQuantityTransacted(oDetail.getQty());
-        inventoryLedger.setDateTag(datTagID);
-        inventoryLedger.setTransactionType("O");
-
-        inventoryLedgerDAO.add(inventoryLedger);
     }
     @FXML
     void btnNewClick(ActionEvent event) {
