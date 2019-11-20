@@ -1,16 +1,16 @@
 package pattern.model;
 
+import javax.persistence.Column;
+
 public class Category {
     private Integer CatID;
     private String CatName;
     private String Desc;
-
     public Category(Integer catID, String catName, String desc) {
         CatID = catID;
         CatName = catName;
         Desc = desc;
     }
-
     public Category() {
 
     }

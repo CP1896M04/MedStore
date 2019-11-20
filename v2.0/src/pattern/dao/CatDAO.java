@@ -6,13 +6,10 @@ import javafx.scene.control.Alert;
 import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
 import pattern.model.Category;
-import pattern.model.Supplier;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class CatDAO implements DAO<Category> {
     private Connection connection;

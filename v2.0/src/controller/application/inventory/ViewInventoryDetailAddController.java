@@ -29,7 +29,7 @@ import static java.lang.Integer.parseInt;
 public class ViewInventoryDetailAddController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        loadData();
     }
     @FXML
     private Label lbDetailsID;
@@ -99,29 +99,27 @@ public class ViewInventoryDetailAddController implements Initializable {
 
     private Connection connection;
 
-
     InventoryDetailsDAO inventorydetailsDAO = new InventoryDetailsDAO();
     InventoryDetailsBUS inventoryDetailsBUS = new InventoryDetailsBUS();
     ProductDAO productDAO = new ProductDAO();
 
    @FXML
     void bntAdd(ActionEvent event) {
-
         try {
             InventoryDetails inventoryDetails = new InventoryDetails();
-            inventoryDetails.setDetailsID(0);
+           // inventoryDetails.setDetailsID(0);
             inventoryDetails.setDetailsCode(txtDetailID.getText());
             inventoryDetails.setProductID(comboboxProductID.getSelectionModel().getSelectedItem().getProductID());
             inventoryDetails.setPurchasePrice(Float.valueOf(txtPurchaseprice.getText()));
             inventoryDetails.setTentativeSalesPrice(Float.valueOf(txtTentativeSalesPrice.getText()));
             inventoryDetails.setQuantityBought(Integer.valueOf(txtQuantityBought.getText()));
-            inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityAvailable.getText()));
+            inventoryDetails.setQuantityAvailable(Integer.valueOf(txtQuantityBought.getText()));
             inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
             inventorydetailsDAO.add(inventoryDetails);
             System.out.println("da them " + txtDetailsCode.getText());
-       //     loaddataTableview();
+             //     loaddataTableview();
         } catch (Exception e) {
             System.out.println("Can't update");
         }
