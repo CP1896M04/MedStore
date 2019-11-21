@@ -81,6 +81,7 @@ public class InventoryDetailController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initColumn();
         loaddataTableview();
+
     }
 
     public void loaddataTableview() {

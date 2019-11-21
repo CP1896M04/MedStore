@@ -129,10 +129,8 @@ public class ViewSupplierCotroller implements Initializable {
     void btnUpdate(ActionEvent event) {
         Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
         supplierBUS.update(supplier);
+        System.out.println("Da update"+txtSupplierId.getText());
         loadTableview();
-        System.out.println("Da up date"+txtSupplierId.getText());
-
-
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -146,6 +144,7 @@ public class ViewSupplierCotroller implements Initializable {
                 txtComCode.setText(supplier.getComCode());
                 txtComName.setText(supplier.getComName());
                 txtAddress.setText(supplier.getAddress());
+                txtEmail.setText(supplier.getEmail());
                 txtPhone.setText(supplier.getPhone());
                 txtTax.setText(supplier.getTax());
             }
@@ -156,6 +155,8 @@ public class ViewSupplierCotroller implements Initializable {
     public void loadTableview(){
         List<Supplier> suppliers = new ArrayList<>();
         suppliers=supplierDao.getList();
+        tableview.getItems().clear();
+        tableview.refresh();
         tableview.getItems().setAll(suppliers);
     }
     public void initColumn(){

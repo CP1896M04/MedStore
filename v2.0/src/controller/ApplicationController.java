@@ -1,9 +1,6 @@
 package controller;
 
-import controller.application.InventoryController;
-import controller.application.ProductController;
-import controller.application.ReportController;
-import controller.application.SaleController;
+import controller.application.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -93,8 +90,8 @@ public class ApplicationController implements Initializable {
     @FXML
     void btnUserClick(ActionEvent event) throws IOException {
         FXMLLoader fXMLLoader = new FXMLLoader();
-        fXMLLoader.load(getClass().getResource("/view/application/Report.fxml").openStream());
-        ReportController reportController = fXMLLoader.getController();
+        fXMLLoader.load(getClass().getResource("/view/application/Staff.fxml").openStream());
+        StaffController staffController = fXMLLoader.getController();
         AnchorPane acPane = fXMLLoader.getRoot();
         acContent.getChildren().clear();
         acContent.getChildren().add(acPane);

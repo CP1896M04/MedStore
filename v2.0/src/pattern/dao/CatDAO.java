@@ -47,6 +47,7 @@ public class CatDAO implements DAO<Category> {
 
     @Override
     public void update(Category o) {
+        System.out.println(o.getDesc());
         String sql = "UPDATE [dbo].[Category]" +
                 "   SET [CatName] = ? " +
                 "      ,[Desc] = ?" +
@@ -116,6 +117,7 @@ public class CatDAO implements DAO<Category> {
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq = true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

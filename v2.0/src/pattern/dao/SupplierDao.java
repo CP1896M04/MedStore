@@ -113,6 +113,7 @@ public SupplierDao(){
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq = true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -133,6 +134,7 @@ public SupplierDao(){
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq = true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

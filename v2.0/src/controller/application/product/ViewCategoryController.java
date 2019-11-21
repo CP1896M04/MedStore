@@ -67,9 +67,7 @@ public class ViewCategoryController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initColumn();
-        List<Category> categories = new ArrayList<>();
-        categories = catDAO.getList();
-        tableview.getItems().setAll(categories);
+        loadTableView();
         tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -100,7 +98,9 @@ public class ViewCategoryController implements Initializable {
             Category category = new Category(0, txtCatName.getText(), txtDesc.getText());
             catBUS.add(category);
             System.out.println("Da them" + category.getCatName());
+            loadTableView();
         }
+
     }
 
     @FXML
@@ -109,15 +109,19 @@ public class ViewCategoryController implements Initializable {
         category.setCatID(Integer.valueOf(txtCatId.getText()));
         catBUS.delete(txtCatId.getText());
         System.out.println("Da xoa" + txtCatId.getText());
-
+        loadTableView();
     }
 
     @FXML
     public void btnUpdate(ActionEvent event) {
-
         Category category = new Category(parseInt(txtCatId.getText()), txtCatName.getText(), txtDesc.getText());
-
         catBUS.update(category);
-        System.out.println("Da update" + category.getCatName());
+        loadTableView();
+    }
+    public void loadTableView(){
+        List<Category> categories = new ArrayList<>();
+        categories = catDAO.getList();
+        tableview.refresh();
+        tableview.getItems().setAll(categories);
     }
 }
