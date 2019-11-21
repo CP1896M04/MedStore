@@ -55,13 +55,14 @@ public class ApplicationController implements Initializable {
     @FXML
     public void btnSaleClick() throws IOException {
         FXMLLoader fXMLLoader = new FXMLLoader();
+        SaleController saleController = new SaleController();
         fXMLLoader.load(getClass().getResource("/view/application/Sale.fxml").openStream());
-        SaleController saleController = fXMLLoader.getController();
+        SaleController saleController1 = fXMLLoader.getController();
         //SaleController.bpContent.getStylesheets().add("/style/MainStyle.css");
         AnchorPane acPane = fXMLLoader.getRoot();
-        saleController.setStaff(staff);
         acContent.getChildren().clear();
         acContent.getChildren().add(acPane);
+        saleController1.setStaff(staff);
     }
     @FXML
     void btnInventoryClick(ActionEvent event) throws IOException {

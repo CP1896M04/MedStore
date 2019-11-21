@@ -83,6 +83,7 @@
                               <Button fx:id="btnPrint" mnemonicParsing="false" onAction="#btnPrintClick" prefHeight="33.0" prefWidth="108.0" text="Print" />
                            </children>
                         </HBox>
+                        <Label fx:id="txtUID" text="Label" />
                      </children>
                   </GridPane>
                </children></AnchorPane>

@@ -64,6 +64,7 @@ public class SaleController implements Initializable {
     }
     public void setStaff(Staff staff){
         this.staff =staff;
+        System.out.println(staff.getStaffCode());
     }
 
 }
