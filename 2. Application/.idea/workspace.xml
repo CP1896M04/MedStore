@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9416b72-fa50-4b2f-8f79-30f0dbca4d2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../v2.0/src/controller/application/report/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/fx8/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Lib/fx8/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/fx8/build/classes/com/jdojo/control/MenuItemTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lib/fx8/build/classes/com/jdojo/control/MenuItemTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lib/fx8/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lib/fx8/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/controller/application/sale/ViewPointOfSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/controller/application/sale/ViewPointOfSaleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/view/application/sale/ViewPointOfSale.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/view/application/sale/ViewPointOfSale.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../v2.0/src/controller/application/sale/ViewPointOfSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/src/controller/application/sale/ViewPointOfSaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../v2.0/src/view/application/report/invoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/src/view/application/report/invoice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../v2.0/src/view/application/sale/ViewPointOfSale.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/src/view/application/sale/ViewPointOfSale.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../v2.0/out/production/StoreManager/view/Login.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/../Lib" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lib/JavaFXExamples-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

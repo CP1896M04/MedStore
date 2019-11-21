@@ -31,7 +31,7 @@
                            <children>
                               <VBox prefHeight="539.0" prefWidth="143.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="110.0" prefWidth="154.0" text="Home">
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="90.0" prefWidth="154.0" text="Home">
                                        <graphic>
                                           <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -43,7 +43,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnProduct" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnProductClick" prefHeight="110.0" prefWidth="154.0" text="Product">
+                                    <Button fx:id="btnProduct" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnProductClick" prefHeight="90.0" prefWidth="154.0" text="Product">
                                        <graphic>
                                           <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -55,7 +55,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnSale" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSaleClick" prefHeight="110.0" prefWidth="154.0" text="Sale">
+                                    <Button fx:id="btnSale" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSaleClick" prefHeight="90.0" prefWidth="154.0" text="Sale">
                                        <graphic>
                                           <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -67,7 +67,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnInventory" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnInventoryClick" prefHeight="110.0" prefWidth="154.0" text="Inventory">
+                                    <Button fx:id="btnInventory" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnInventoryClick" prefHeight="90.0" prefWidth="154.0" text="Inventory">
                                        <graphic>
                                           <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -79,11 +79,23 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="btnReport" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnReportClick" prefHeight="110.0" prefWidth="154.0" text="Inventory">
+                                    <Button fx:id="btnReport" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnReportClick" prefHeight="90.0" prefWidth="154.0" text="Report">
                                        <graphic>
                                           <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../asset/icon/application/Custom-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnUser" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnUserClick" prefHeight="90.0" prefWidth="154.0" text="User">
+                                       <graphic>
+                                          <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../asset/icon/application/Admin-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
