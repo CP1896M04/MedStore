@@ -11,12 +11,14 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import pattern.model.Staff;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SaleController implements Initializable {
+    private Staff staff;
     @FXML
     private StackPane spMainContent;
     @FXML
@@ -43,6 +45,7 @@ public class SaleController implements Initializable {
         FXMLLoader fXMLLoader = new FXMLLoader();
         fXMLLoader.load(getClass().getResource("/view/application/sale/ViewPointOfSale.fxml").openStream());
         ViewPointOfSaleController viewPointOfSaleController1 = fXMLLoader.getController();
+        viewPointOfSaleController.setStaff(staff);
         AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();
         spMainContent.getChildren().add(acPane);
@@ -58,6 +61,9 @@ public class SaleController implements Initializable {
         spMainContent.getChildren().clear();
         spMainContent.getChildren().add(acPane);
 
+    }
+    public void setStaff(Staff staff){
+        this.staff =staff;
     }
 
 }

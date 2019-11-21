@@ -205,6 +205,34 @@ public class StaffDAO implements DAO<Staff> {
         }
         return isUniq;
     }
+    public Staff search(String username , String password) {
+        boolean exist = false;
+        Staff staff = new Staff();
+        String sql = "SELECT * FROM [dbo].[Staff] WHERE Username = ? and Password = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+           while (resultSet.next()){
+               int StaffID= resultSet.getInt("StaffID");
+               String StaffCode = resultSet.getString("StaffCode");
+               int RoleID = resultSet.getInt("RoleID");
+               String FName = resultSet.getString("FName");
+               String LName = resultSet.getString("LName");
+               Date DOB = resultSet.getDate("DOB");
+               String Address = resultSet.getString("Address");
+               String SEX = resultSet.getString("SEX");
+               String PhoneNo = resultSet.getString("PhoneNo");
+               String Username = resultSet.getString("Username");
+               String Password = resultSet.getString("Password");
+               staff= new Staff(StaffID,StaffCode,RoleID,FName,LName,DOB,Address,SEX,PhoneNo,Username,Password);
+           }
+        } catch (  SQLException e ) {
 
+            throw new RuntimeException(e);
+        }
+        return staff;
+    }
 
 }

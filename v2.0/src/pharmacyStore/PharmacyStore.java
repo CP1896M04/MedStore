@@ -18,8 +18,8 @@ public class PharmacyStore extends Application {
     public void start(Stage primaryStage) throws Exception {
         try {
             //Star program here
-            Parent root = FXMLLoader.load(getClass().getResource("/view/Application.fxml"));
-//            Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
+//            Parent root = FXMLLoader.load(getClass().getResource("/view/Application.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Login");

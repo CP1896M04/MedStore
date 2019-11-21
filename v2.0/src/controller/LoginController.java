@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import pattern.dao.StaffDAO;
+import pattern.model.Staff;
 
 import java.io.IOException;
 import java.net.URL;
@@ -50,13 +51,22 @@ public class LoginController implements Initializable {
         else  {
             StaffDAO staffDAO = new StaffDAO();
             boolean exist = staffDAO.checkExist(txtUsername.getText(),txtPassword.getText());
+            Staff staff = staffDAO.search(txtUsername.getText(),txtPassword.getText());
             if (exist==true){
                 Stage stage = (Stage) archorPane.getScene().getWindow();
                 stage.close();
-                Parent parent = FXMLLoader.load(getClass().getResource("/view/Application.fxml"));
-                Scene scene = new Scene(parent);
-                stage.setScene(scene);
-                stage.show();
+                ApplicationController applicationController = new ApplicationController();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/view/Application.fxml"));
+                loader.load();
+                Parent parent = loader.getRoot();
+                Scene adminPanelScene = new Scene(parent);
+                Stage adminPanelStage = new Stage();
+                ApplicationController apControl = loader.getController();
+                apControl.setUsrNameMedia(staff);
+                adminPanelStage.setScene(adminPanelScene);
+                adminPanelStage.setTitle("Home");
+                adminPanelStage.show();
             } else {
                 lbWarnning.setText("Check username or password");
             }
