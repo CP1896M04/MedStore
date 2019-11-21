@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="663.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.application.report.Bill">
+<AnchorPane fx:id="root" prefHeight="663.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.report.InvoiceController">
    <children>
       <AnchorPane layoutX="110.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" />
       <BorderPane layoutX="10.0" layoutY="3.0" prefHeight="85.0" prefWidth="600.0" AnchorPane.topAnchor="3.0">
@@ -83,6 +83,8 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
+                  <Label fx:id="jobStatus" prefHeight="17.0" prefWidth="177.0" text="JobStatus" />
+                  <Button fx:id="btnPrint" mnemonicParsing="false" onAction="#btnPrintClick" prefHeight="32.0" prefWidth="61.0" text="Button" />
                </children>
             </GridPane>
          </bottom>

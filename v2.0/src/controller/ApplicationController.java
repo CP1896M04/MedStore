@@ -59,8 +59,10 @@ public class ApplicationController implements Initializable {
     @FXML
     void btnInventoryClick(ActionEvent event) throws IOException {
         FXMLLoader fXMLLoader = new FXMLLoader();
+        InventoryController inventoryController = new InventoryController();
+        inventoryController = fXMLLoader.getController();
         fXMLLoader.load(getClass().getResource("/view/application/Inventory.fxml").openStream());
-        InventoryController inventoryController = fXMLLoader.getController();
+
         AnchorPane acPane = fXMLLoader.getRoot();
         acContent.getChildren().clear();
         acContent.getChildren().add(acPane);
