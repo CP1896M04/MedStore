@@ -33,6 +33,7 @@ import java.util.ResourceBundle;
 import static java.lang.Integer.parseInt;
 
 public class ViewPointOfSaleController implements Initializable {
+    private Staff staff;
 
     @FXML
     private TableView<ODetail> viewOrderdetail;
@@ -176,7 +177,7 @@ public class ViewPointOfSaleController implements Initializable {
         ODetailBUS oDetailBUS = new ODetailBUS();
         Order order = new Order();
         order.setDateKey(dateTagDAO.procInsert(dateTag));
-        order.setStaffID(1);
+        order.setStaffID(staff.getStaffID());
         int oderID=oDetailBUS.insertProc();
         for (ODetail oDetail : oDetails){
             oDetail.setOrderID(oderID);
@@ -226,5 +227,8 @@ public class ViewPointOfSaleController implements Initializable {
             tsm.clearSelection(selectedIndices[i].intValue());
             viewOrderdetail.getItems().remove(selectedIndices[i].intValue());
         }
+    }
+    public void setStaff(Staff staff){
+        this.staff =staff;
     }
 }
