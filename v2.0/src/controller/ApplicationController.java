@@ -42,6 +42,9 @@ public class ApplicationController implements Initializable {
     @FXML
     private Button btnProduct;
 
+    @FXML
+    private Button btnUser;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -59,8 +62,10 @@ public class ApplicationController implements Initializable {
     @FXML
     void btnInventoryClick(ActionEvent event) throws IOException {
         FXMLLoader fXMLLoader = new FXMLLoader();
+        InventoryController inventoryController = new InventoryController();
+        inventoryController = fXMLLoader.getController();
         fXMLLoader.load(getClass().getResource("/view/application/Inventory.fxml").openStream());
-        InventoryController inventoryController = fXMLLoader.getController();
+
         AnchorPane acPane = fXMLLoader.getRoot();
         acContent.getChildren().clear();
         acContent.getChildren().add(acPane);
@@ -85,5 +90,15 @@ public class ApplicationController implements Initializable {
         acContent.getChildren().clear();
         acContent.getChildren().add(acPane);
     }
+    @FXML
+    void btnUserClick(ActionEvent event) throws IOException {
+        FXMLLoader fXMLLoader = new FXMLLoader();
+        fXMLLoader.load(getClass().getResource("/view/application/Report.fxml").openStream());
+        ReportController reportController = fXMLLoader.getController();
+        AnchorPane acPane = fXMLLoader.getRoot();
+        acContent.getChildren().clear();
+        acContent.getChildren().add(acPane);
+    }
+
 
 }

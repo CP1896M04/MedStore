@@ -11,6 +11,7 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import pattern.model.InventoryDetails;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,9 +35,9 @@ public class InventoryController implements Initializable {
     }
     @FXML
     void btnInventoryDetailClick(ActionEvent event) throws IOException {
-        InventoryDetailController inventoryDetailController = new InventoryDetailController();
         lblHeader.setText("Inventory Details");
         FXMLLoader fXMLLoader = new FXMLLoader();
+        InventoryDetailController inventoryDetailController = new InventoryDetailController();
         fXMLLoader.load(getClass().getResource("/view/application/inventory/ViewInventoryDetail.fxml").openStream());
         inventoryDetailController= fXMLLoader.getController();
         AnchorPane acPane = fXMLLoader.getRoot();
@@ -47,8 +48,9 @@ public class InventoryController implements Initializable {
     void btnInventoryLogClick(ActionEvent event) throws IOException {
         lblHeader.setText("Inventory Log");
         FXMLLoader fXMLLoader = new FXMLLoader();
+        ViewInventoryLogController viewInventoryDetailController = new ViewInventoryLogController();
         fXMLLoader.load(getClass().getResource("/view/application/inventory/ViewInventoryLog.fxml").openStream());
-        ViewInventoryLogController viewInventoryDetailController = fXMLLoader.getController();
+         viewInventoryDetailController = fXMLLoader.getController();
         AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();
         spMainContent.getChildren().add(acPane);

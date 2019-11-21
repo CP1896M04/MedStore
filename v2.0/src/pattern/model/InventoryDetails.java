@@ -14,8 +14,9 @@ public class InventoryDetails {
    private String Batchid ;
    private Date ManufacturedDate ;
    private Date ExpiryDate;
+   private String Status;
 
-    public InventoryDetails(Integer detailsID, String detailsCode, Integer productID, String PName, Float purchasePrice, Float tentativeSalesPrice, Integer quantityBought, Integer quantityAvailable, String batchid, Date manufacturedDate, Date expiryDate) {
+    public InventoryDetails(Integer detailsID, String detailsCode, Integer productID, String PName, Float purchasePrice, Float tentativeSalesPrice, Integer quantityBought, Integer quantityAvailable, String batchid, Date manufacturedDate, Date expiryDate, String status) {
         DetailsID = detailsID;
         DetailsCode = detailsCode;
         ProductID = productID;
@@ -27,6 +28,7 @@ public class InventoryDetails {
         Batchid = batchid;
         ManufacturedDate = manufacturedDate;
         ExpiryDate = expiryDate;
+        Status = status;
     }
 
     public InventoryDetails() {
@@ -118,6 +120,14 @@ public class InventoryDetails {
 
     public void setExpiryDate(Date expiryDate) {
         ExpiryDate = expiryDate;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 
     @Override

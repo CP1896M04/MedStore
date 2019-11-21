@@ -14,12 +14,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.util.StringConverter;
 import javafx.util.converter.LocalDateStringConverter;
+import lib.LibraryAssistant;
 import pattern.bus.InventoryDetailsBUS;
+import pattern.dao.DateTagDAO;
 import pattern.dao.InventoryDetailsDAO;
+import pattern.dao.InventoryLedgerDAO;
 import pattern.dao.ProductDAO;
-import pattern.model.InventoryDetails;
-import pattern.model.Product;
-import pattern.model.ViewProduct;
+import pattern.model.*;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -122,7 +123,12 @@ public class ViewInventoryDetailAddController implements Initializable {
             inventoryDetails.setBatchid(String.valueOf(txtBatchid.getText()));
             inventoryDetails.setManufacturedDate(Date.valueOf(dataPickerManufacturedDate.getValue()));
             inventoryDetails.setExpiryDate(Date.valueOf(dataPickerExpiryDate.getValue()));
+            inventoryDetails.setStatus("Working");
             inventoryDetailsBUS.add(inventoryDetails);
+            DateTagDAO dateTagDAO = new DateTagDAO();
+            DateTag dateTag = new DateTag();
+            LibraryAssistant.formatDate(dateTag);
+            addLeger(inventoryDetails,dateTagDAO.procInsert(dateTag));
             //System.out.println("da them " + txtDetailsCode.getText());
              //     loaddataTableview();
         } catch (Exception e) {
@@ -204,5 +210,17 @@ public class ViewInventoryDetailAddController implements Initializable {
     public void setProduct(InventoryDetails i){
        txtDetailsCode.setText(i.getDetailsCode());
        
+    }
+    public void addLeger(InventoryDetails inventoryDetails, int datTagID){
+        InventoryLedgerDAO inventoryLedgerDAO = new InventoryLedgerDAO();
+        InventoryLedger inventoryLedger = new InventoryLedger();
+        inventoryLedger.setLegerCode(inventoryDetails.getProductID()+"-"+datTagID);
+        Float cost = inventoryDetails.getPurchasePrice()*inventoryDetails.getQuantityBought();
+        inventoryLedger.setInventoryPurchaseCost(cost);
+        inventoryLedger.setProductID(inventoryDetails.getProductID());
+        inventoryLedger.setQuantityTransacted(inventoryDetails.getQuantityBought());
+        inventoryLedger.setDateTag(datTagID);
+        inventoryLedger.setTransactionType("I");
+        inventoryLedgerDAO.add(inventoryLedger);
     }
 }

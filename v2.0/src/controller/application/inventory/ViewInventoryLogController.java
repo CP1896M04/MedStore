@@ -60,6 +60,5 @@ public class ViewInventoryLogController implements Initializable {
         columnQuantityTransacted.setCellValueFactory(new PropertyValueFactory<>("QuantityTransacted"));
         columnInventoryPurchaseCost.setCellValueFactory(new PropertyValueFactory<>("InventoryPurchaseCost"));
         columnDateKey.setCellValueFactory(new PropertyValueFactory<>("DateKey"));
-
     }
 }
