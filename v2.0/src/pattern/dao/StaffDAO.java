@@ -71,8 +71,7 @@ public class StaffDAO implements DAO<Staff> {
             throw new RuntimeException(e);
         }
     }
-
-    @Override
+   @Override
     public void update(Staff o) {
         String sql = "UPDATE [dbo].[Staff]\n" +
                 "   SET [StaffCode] = ?\n" +
