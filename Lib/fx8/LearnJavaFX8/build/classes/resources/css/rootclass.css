@@ -1,8 +1,0 @@
-.root {
-	-fx-cursor: hand;
-	-my-button-color: blue;	
-} 
-
-.button {
-	-fx-text-fill: -my-button-color;
-}

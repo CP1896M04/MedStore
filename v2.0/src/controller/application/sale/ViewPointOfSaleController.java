@@ -3,6 +3,7 @@ package controller.application.sale;
 import controller.application.product.ViewAddNewProductController;
 import controller.application.product.ViewCategoryController;
 import controller.application.report.InvoiceController;
+import controller.application.report.ReportWindow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,8 +23,10 @@ import lib.control.ComboBoxAutoComplete;
 import pattern.bus.ODetailBUS;
 import pattern.dao.*;
 import pattern.model.*;
+import view.PrintReport;
 
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
@@ -196,13 +199,20 @@ public class ViewPointOfSaleController implements Initializable {
     }
     @FXML
     void btnPrintClick(ActionEvent event) throws IOException {
-        InvoiceController invoiceController = new InvoiceController();
-        FXMLLoader fXMLLoader = new FXMLLoader();
-        Parent parent= fXMLLoader.load(getClass().getResource("/view/application/report/invoice.fxml").openStream());
-        invoiceController = fXMLLoader.getController();
-        Stage stage = new Stage();
-        stage.setScene((new Scene(parent)));
-        stage.show();
+//        InvoiceController invoiceController = new InvoiceController();
+//        FXMLLoader fXMLLoader = new FXMLLoader();
+//        Parent parent= fXMLLoader.load(getClass().getResource("/view/application/report/invoice.fxml").openStream());
+//        invoiceController = fXMLLoader.getController();
+//        Stage stage = new Stage();
+//        stage.setScene((new Scene(parent)));
+//        stage.show();
+        try{
+            PrintReport printReport = new PrintReport();
+            printReport.pack();
+            printReport.showReport();
+        }catch (Exception e){
+
+        }
     }
     public void clear(){
         viewOrderdetail.getItems().clear();

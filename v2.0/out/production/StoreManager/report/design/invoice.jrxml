@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d2fb53f-76d1-432c-a850-36b20bf34001">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM ODetail]]>
+	</queryString>
+	<field name="PName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PName"/>
+	</field>
+	<field name="USP" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="USP"/>
+	</field>
+	<field name="HTU" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="HTU"/>
+	</field>
+	<field name="Qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Qty"/>
+	</field>
+	<field name="Total" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="Total"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="0" width="100" height="30" uuid="25a8a790-97f1-467c-bd09-fde4cf87c3a3"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="466db7e2-9c61-4a0c-8a95-48cfe46d7b53"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="100" height="30" uuid="fce0de8d-fed2-4421-b221-fa762ac6d586"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="100" height="30" uuid="22a430e4-5277-4d1b-bcd4-e3f1435e9220"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="100" height="30" uuid="8dac4de3-2c04-48ca-aadc-250f0bf858f5"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="-1" width="100" height="30" uuid="fafeaf1d-b2ed-4f51-86d2-d17c15dc8f4e"/>
+				<textFieldExpression><![CDATA[$F{HTU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="-1" width="100" height="30" uuid="af454963-5163-4fbf-add6-8c19526e5520"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textFieldExpression><![CDATA[$F{PName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="-1" width="100" height="30" uuid="d046406a-9d89-4e0e-a88c-dde1271c3503"/>
+				<textFieldExpression><![CDATA[$F{USP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="-1" width="100" height="30" uuid="030b62b9-70e7-42f1-b70a-13c3782d3a02"/>
+				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="-1" width="100" height="30" uuid="73189713-4d6d-4618-96fc-1cea3d7a9395"/>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
