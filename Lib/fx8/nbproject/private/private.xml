@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/scene/BuilderApp.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/print/PrintDialogs.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/mvc/view/PersonPresenter.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/control/TextFieldTest.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/control/TableViewEditing.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/control/MenuItemTest.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/control/ComboBoxTest.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/print/PrintingWebPage.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/control/TableViewAddDeleteRows.java</file>
-            <file>file:/D:/Git/MedStore/Lib/fx8/src/com/jdojo/print/PrintingNodes.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

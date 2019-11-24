@@ -1,5 +1,6 @@
 package controller.application;
 
+import controller.Controller;
 import controller.application.inventory.InventoryDetailController;
 import controller.application.inventory.ViewInventoryDetailAddController;
 import controller.application.inventory.ViewInventoryLogController;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class InventoryController implements Initializable {
+public class InventoryController extends Controller implements Initializable  {
     @FXML
     private Text lblHeader;
     @FXML
@@ -29,6 +30,9 @@ public class InventoryController implements Initializable {
     @FXML
     private StackPane spMainContent;
 
+    public InventoryController() {
+        super();
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

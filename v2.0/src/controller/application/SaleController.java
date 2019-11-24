@@ -11,6 +11,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.window.application.Sale.viewPointOfSaleWindow;
 import pattern.model.Staff;
 
 import java.io.IOException;
@@ -28,7 +29,9 @@ public class SaleController implements Initializable {
 
     @FXML
     private ToggleButton btnSaleHis;
-
+    private AnchorPane PointOfSalePane;
+    private AnchorPane SaleHistoryPane;
+    FXMLLoader fXMLLoader2 = new FXMLLoader();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Create a ToggleGroup
@@ -36,35 +39,66 @@ public class SaleController implements Initializable {
         // Add all ToggleButtons to the ToggleGroup
         toggleGroup.getToggles().addAll(btnPointOSale, btnSaleHis);
         toggleGroup.selectToggle(btnPointOSale);
+        try {
+            loadData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void btnPointOSaleClick(ActionEvent event) throws IOException {
+    void btnPointOSaleClick(ActionEvent event) throws Exception {
+//        lblHeader.setText("Point of Sale");
+//        ViewPointOfSaleController viewPointOfSaleController = viewPointOfSaleWindow.getInstance();
+//        FXMLLoader fXMLLoader = new FXMLLoader();
+//        fXMLLoader.load(getClass().getResource("/view/application/sale/ViewPointOfSale.fxml").openStream());
+//        ViewPointOfSaleController viewPointOfSaleController1 = fXMLLoader.getController();
+//        viewPointOfSaleController.setStaff(staff);
+//        AnchorPane acPane = fXMLLoader.getRoot();
+//        spMainContent.getChildren().clear();
+//        spMainContent.getChildren().add(acPane);
         lblHeader.setText("Point of Sale");
-        ViewPointOfSaleController viewPointOfSaleController = new ViewPointOfSaleController();
-        FXMLLoader fXMLLoader = new FXMLLoader();
-        fXMLLoader.load(getClass().getResource("/view/application/sale/ViewPointOfSale.fxml").openStream());
-        ViewPointOfSaleController viewPointOfSaleController1 = fXMLLoader.getController();
-        viewPointOfSaleController.setStaff(staff);
-        AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();
-        spMainContent.getChildren().add(acPane);
+        spMainContent.getChildren().add(PointOfSalePane);
     }
 
     @FXML
     void btnSaleHisClick(ActionEvent event) throws IOException {
+//        lblHeader.setText("Sale history");
+//        FXMLLoader fXMLLoader = new FXMLLoader();
+//        fXMLLoader.load(getClass().getResource("/view/application/sale/ViewSaleHistory.fxml").openStream());
+//        ViewSaleHistoryController viewSaleHistoryController = new ViewSaleHistoryController();
+//        AnchorPane acPane = fXMLLoader.getRoot();
+//        spMainContent.getChildren().clear();
+//        spMainContent.getChildren().add(acPane);
         lblHeader.setText("Sale history");
-        FXMLLoader fXMLLoader = new FXMLLoader();
-        fXMLLoader.load(getClass().getResource("/view/application/sale/ViewSaleHistory.fxml").openStream());
-        ViewSaleHistoryController viewSaleHistoryController = new ViewSaleHistoryController();
-        AnchorPane acPane = fXMLLoader.getRoot();
         spMainContent.getChildren().clear();
-        spMainContent.getChildren().add(acPane);
-
+        spMainContent.getChildren().add(SaleHistoryPane);
     }
     public void setStaff(Staff staff){
         this.staff =staff;
         System.out.println(staff.getStaffCode());
+    }
+    public void loadData() throws Exception {
+        //Loadpoitofsale
+        lblHeader.setText("Point of Sale");
+        FXMLLoader fXMLLoader1 = new FXMLLoader();
+        ViewPointOfSaleController viewPointOfSaleController = viewPointOfSaleWindow.getInstance();
+        fXMLLoader1.load(getClass().getResource("/view/application/sale/ViewPointOfSale.fxml").openStream());
+        ViewPointOfSaleController viewPointOfSaleController1 = fXMLLoader1.getController();
+        viewPointOfSaleController.setStaff(staff);
+        PointOfSalePane = fXMLLoader1.getRoot();
+       // spMainContent.getChildren().clear();
+        //spMainContent.getChildren().add(acPane);
+        //Load SaleHis
+        lblHeader.setText("Sale history");
+        FXMLLoader fXMLLoader = new FXMLLoader();
+        fXMLLoader.load(getClass().getResource("/view/application/sale/ViewSaleHistory.fxml").openStream());
+        ViewSaleHistoryController viewSaleHistoryController = new ViewSaleHistoryController();
+        SaleHistoryPane = fXMLLoader.getRoot();
+       // spMainContent.getChildren().clear();
+      //  spMainContent.getChildren().add(acPane);
+
     }
 
 }
