@@ -11,6 +11,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.window.application.Sale.ViewSaleHistoryWindow;
 import lib.window.application.Sale.viewPointOfSaleWindow;
 import pattern.model.Staff;
 
@@ -57,9 +58,10 @@ public class SaleController implements Initializable {
 //        AnchorPane acPane = fXMLLoader.getRoot();
 //        spMainContent.getChildren().clear();
 //        spMainContent.getChildren().add(acPane);
-        lblHeader.setText("Point of Sale");
-        spMainContent.getChildren().clear();
-        spMainContent.getChildren().add(PointOfSalePane);
+//        lblHeader.setText("Point of Sale");
+//        spMainContent.getChildren().clear();
+//        spMainContent.getChildren().add(PointOfSalePane);
+        active(PointOfSalePane,"Point of Sale");
     }
 
     @FXML
@@ -71,9 +73,10 @@ public class SaleController implements Initializable {
 //        AnchorPane acPane = fXMLLoader.getRoot();
 //        spMainContent.getChildren().clear();
 //        spMainContent.getChildren().add(acPane);
-        lblHeader.setText("Sale history");
-        spMainContent.getChildren().clear();
-        spMainContent.getChildren().add(SaleHistoryPane);
+//        lblHeader.setText("Sale history");
+//        spMainContent.getChildren().clear();
+//        spMainContent.getChildren().add(SaleHistoryPane);
+         active(SaleHistoryPane,"Sale History");
     }
     public void setStaff(Staff staff){
         this.staff =staff;
@@ -81,7 +84,6 @@ public class SaleController implements Initializable {
     }
     public void loadData() throws Exception {
         //Loadpoitofsale
-        lblHeader.setText("Point of Sale");
         FXMLLoader fXMLLoader1 = new FXMLLoader();
         ViewPointOfSaleController viewPointOfSaleController = viewPointOfSaleWindow.getInstance();
         fXMLLoader1.load(getClass().getResource("/view/application/sale/ViewPointOfSale.fxml").openStream());
@@ -93,12 +95,18 @@ public class SaleController implements Initializable {
         //Load SaleHis
         lblHeader.setText("Sale history");
         FXMLLoader fXMLLoader = new FXMLLoader();
+        ViewSaleHistoryController viewSaleHistoryController = ViewSaleHistoryWindow.getInstance();
         fXMLLoader.load(getClass().getResource("/view/application/sale/ViewSaleHistory.fxml").openStream());
-        ViewSaleHistoryController viewSaleHistoryController = new ViewSaleHistoryController();
+        viewSaleHistoryController = fXMLLoader.getController();
         SaleHistoryPane = fXMLLoader.getRoot();
        // spMainContent.getChildren().clear();
       //  spMainContent.getChildren().add(acPane);
 
+    }
+    public void active(AnchorPane anchorPane,String tile){
+        lblHeader.setText(tile);
+        spMainContent.getChildren().clear();
+        spMainContent.getChildren().add(anchorPane);
     }
 
 }
