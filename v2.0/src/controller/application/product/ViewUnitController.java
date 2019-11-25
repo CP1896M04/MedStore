@@ -8,13 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.StageStyle;
+import lib.LibraryAssistant;
 import pattern.bus.UnitBUS;
 import pattern.connection.ConnectionFactory;
 import pattern.dao.UnitDAO;
@@ -114,25 +112,57 @@ public class ViewUnitController implements Initializable {
 
     @FXML
     void btnAdd(ActionEvent event) {
-        Unit unit= new Unit(0,txtUname.getText(),parseInt(txtUInStock.getText()),txtUInStockName.getText(),parseInt(txtUInOrder.getText()),txtUInOrderName.getText(),txtDesc.getText());
-        unitBUS.add(unit);
-        System.out.println("Da them"+txtUname.getText());
-        loadTableview();
+        if(txtUname.getText().trim().isEmpty()||txtUInStockName.getText().trim().isEmpty()||txtUInStock.getText().trim().isEmpty()||txtDesc.getText().trim().isEmpty()||txtUInOrder.getText().trim().isEmpty()||txtUInOrderName.getText().trim().isEmpty()||!LibraryAssistant.ktSo(txtUInStock.getText())||!LibraryAssistant.ktSo(txtUInOrder.getText()))
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Unit");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            Unit unit= new Unit(0,txtUname.getText(),parseInt(txtUInStock.getText()),txtUInStockName.getText(),parseInt(txtUInOrder.getText()),txtUInOrderName.getText(),txtDesc.getText());
+            unitBUS.add(unit);
+            System.out.println("Da them"+txtUname.getText());
+            loadTableview();
+        }
+
     }
 
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
-        unitDAO.remove(txtUnitID.getText());
-        System.out.println("đã xóa"+txtUnitID.getText());
-        loadTableview();
+        if(txtUnitID.getText().trim().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Unit");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            unitDAO.remove(txtUnitID.getText());
+            System.out.println("đã xóa"+txtUnitID.getText());
+            loadTableview();
+        }
+
     }
 
     @FXML
     void btnUpdate(ActionEvent event) {
-        Unit unit= new Unit(parseInt(txtUnitID.getText()),txtUname.getText(),parseInt(txtUInStock.getText()),txtUInStockName.getText(),parseInt(txtUInOrder.getText()),txtUInOrderName.getText(),txtDesc.getText());
-        unitDAO.update(unit);
-        System.out.println("đã update"+txtUname.getText());
-        loadTableview();
+        if(txtUname.getText().trim().isEmpty()||txtUInStockName.getText().trim().isEmpty()||txtUInStock.getText().trim().isEmpty()||txtDesc.getText().trim().isEmpty()||txtUInOrder.getText().trim().isEmpty()||txtUInOrderName.getText().trim().isEmpty()||!LibraryAssistant.ktSo(txtUInStock.getText())||!LibraryAssistant.ktSo(txtUInOrder.getText()))
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Unit");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            Unit unit= new Unit(parseInt(txtUnitID.getText()),txtUname.getText(),parseInt(txtUInStock.getText()),txtUInStockName.getText(),parseInt(txtUInOrder.getText()),txtUInOrderName.getText(),txtDesc.getText());
+            unitDAO.update(unit);
+            System.out.println("đã update"+txtUname.getText());
+            loadTableview();
+        }
+
     }
 
     @Override

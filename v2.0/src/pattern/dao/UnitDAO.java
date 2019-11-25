@@ -136,6 +136,7 @@ public class UnitDAO implements DAO<Unit> {
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq=true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -156,6 +157,7 @@ public class UnitDAO implements DAO<Unit> {
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq=true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -67,7 +67,22 @@ public class LibraryAssistant {
         Pattern pattern = Pattern.compile(regex);
         return pattern.matcher(emailID).matches();
     }
+    public static boolean validatePhone(String phoneID){
+        String regex="^[0-9]{10}$";
+        Pattern pattern=Pattern.compile(regex);
+        return pattern.matcher(phoneID).matches();
 
+    }
+    public static boolean validateAddress(String address){
+        String regex="^[0-9\\s\\S]+$";
+        Pattern pattern=Pattern.compile(regex);
+        return pattern.matcher(address).matches();
+    }
+    public static boolean ktSo(String ktso){
+        String regex="^[0-9]+$";
+        Pattern pattern=Pattern.compile(regex);
+        return pattern.matcher(ktso).matches();
+    }
     public static void openFileWithDesktop(File file) {
         try {
             Desktop desktop = Desktop.getDesktop();

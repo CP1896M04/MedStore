@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.StageStyle;
 import pattern.bus.CatBUS;
 import pattern.dao.CatDAO;
 import pattern.model.Category;
@@ -68,7 +69,7 @@ public class ViewCategoryController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         initColumn();
         loadTableView();
-        tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
+            tableview.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 Category category = tableview.getSelectionModel().getSelectedItem();
@@ -88,12 +89,26 @@ public class ViewCategoryController implements Initializable {
     @FXML
     public void btnAdd(ActionEvent e) {
         if (txtCatName.getText().trim().isEmpty() && txtDesc.getText().trim().isEmpty()) {
-            System.out.println("error catname");
-            System.out.println("error desc");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Category");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
         } else if (txtCatName.getText().trim().isEmpty()) {
-            System.out.println("error catname");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Category");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
         } else if (txtDesc.getText().trim().isEmpty()) {
-            System.out.println("error desc");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Category");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
         } else {
             Category category = new Category(0, txtCatName.getText(), txtDesc.getText());
             catBUS.add(category);
@@ -105,18 +120,38 @@ public class ViewCategoryController implements Initializable {
 
     @FXML
     public void btnDelete(ActionEvent event) {
-        Category category = new Category();
-        category.setCatID(Integer.valueOf(txtCatId.getText()));
-        catBUS.delete(txtCatId.getText());
-        System.out.println("Da xoa" + txtCatId.getText());
-        loadTableView();
+        if (txtCatId.getText().trim().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Category");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        } else{
+            Category category = new Category();
+            category.setCatID(Integer.valueOf(txtCatId.getText()));
+            catBUS.delete(txtCatId.getText());
+            System.out.println("Da xoa" + txtCatId.getText());
+            loadTableView();
+        }
+
     }
 
     @FXML
     public void btnUpdate(ActionEvent event) {
-        Category category = new Category(parseInt(txtCatId.getText()), txtCatName.getText(), txtDesc.getText());
-        catBUS.update(category);
-        loadTableView();
+        if(txtCatId.getText().trim().isEmpty()||txtCatName.getText().trim().isEmpty()||txtDesc.getText().trim().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Category");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else {
+            Category category = new Category(parseInt(txtCatId.getText()), txtCatName.getText(), txtDesc.getText());
+            catBUS.update(category);
+            loadTableView();
+        }
+
     }
     public void loadTableView(){
         List<Category> categories = new ArrayList<>();

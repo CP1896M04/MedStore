@@ -14,7 +14,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.StageStyle;
 import javafx.util.StringConverter;
+import lib.LibraryAssistant;
 import pattern.dao.RoleDAO;
 import pattern.dao.StaffDAO;
 import pattern.model.Role;
@@ -190,29 +192,47 @@ public class StaffController implements Initializable {
     @FXML
     void btnAdd(ActionEvent event) throws IOException {
         Staff staff = new Staff();
-        try {
-            staff.setStaffID(0);
-            staff.setStaffCode(txtStaffCode.getText());
-            staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
-            staff.setFName(txtFName.getText());
-            staff.setLName(txtLName.getText());
+        if(txtStaffCode.getText().trim().isEmpty()||txtFName.getText().trim().isEmpty()||txtLName.getText().trim().isEmpty()||txtAddress.getText().trim().isEmpty()||txtSEX.getText().trim().isEmpty()||txtPhoneNo.getText().trim().isEmpty()||txtUsername.getText().trim().isEmpty()||txtPassword.getText().trim().isEmpty()||!LibraryAssistant.validatePhone(txtPhoneNo.getText())){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else {
+            try {
+                staff.setStaffID(0);
+                staff.setStaffCode(txtStaffCode.getText());
+                staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
+                staff.setFName(txtFName.getText());
+                staff.setLName(txtLName.getText());
 //            staff.setDOB((Date.valueOf(txtDOB.getText())));
-            staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
-            staff.setAddress(txtAddress.getText());
-            staff.setSEX(txtSEX.getText());
-            staff.setPhoneNo(txtPhoneNo.getText());
-            staff.setUsername(txtUsername.getText());
-            staff.setPassword(txtPassword.getText());
-            staffDAO.add(staff);
-            System.out.println("Da them" + txtStaffCode.getText());
-        } catch ( Exception e ) {
-            e.printStackTrace();
+                staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
+                staff.setAddress(txtAddress.getText());
+                staff.setSEX(txtSEX.getText());
+                staff.setPhoneNo(txtPhoneNo.getText());
+                staff.setUsername(txtUsername.getText());
+                staff.setPassword(txtPassword.getText());
+                staffDAO.add(staff);
+                System.out.println("Da them" + txtStaffCode.getText());
+            } catch ( Exception e ) {
+                e.printStackTrace();
+            }
         }
-    loadDataTableview();
+
+        loadDataTableview();
     }
 
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
+        if(txtStaffID.getText().trim().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }
         Staff staff = new Staff();
         staffDAO.remove(txtStaffID.getText());
         System.out.println("Da xoa" + txtStaffCode.getText());
@@ -222,24 +242,34 @@ public class StaffController implements Initializable {
     @FXML
     void btnUpdate(ActionEvent event) {
         Staff staff = new Staff();
-        try {
-            staff.setStaffID(parseInt(txtStaffID.getText()));
-            staff.setStaffCode(txtStaffCode.getText());
-            staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
-            staff.setFName(txtFName.getText());
-            staff.setLName(txtLName.getText());
+        if(txtStaffCode.getText().trim().isEmpty()||txtFName.getText().trim().isEmpty()||txtLName.getText().trim().isEmpty()||txtAddress.getText().trim().isEmpty()||txtSEX.getText().trim().isEmpty()||txtPhoneNo.getText().trim().isEmpty()||txtUsername.getText().trim().isEmpty()||txtPassword.getText().trim().isEmpty()||!LibraryAssistant.validatePhone(txtPhoneNo.getText())    ){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            try {
+                staff.setStaffID(parseInt(txtStaffID.getText()));
+                staff.setStaffCode(txtStaffCode.getText());
+                staff.setRoleID(comboboxRoleID.getSelectionModel().getSelectedItem().getRoleID());
+                staff.setFName(txtFName.getText());
+                staff.setLName(txtLName.getText());
 //            staff.setDOB((Date.valueOf(txtDOB.getText())));
-            staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
-            staff.setAddress(txtAddress.getText());
-            staff.setSEX(txtSEX.getText());
-            staff.setPhoneNo(txtPhoneNo.getText());
-            staff.setUsername(txtUsername.getText());
-            staff.setPassword(txtPassword.getText());
-            staffDAO.update(staff);
-            System.out.println("Da Update" + txtStaffCode.getText());
-        } catch ( Exception e ) {
-            e.printStackTrace();
+                staff.setDOB((Date.valueOf(datePickerDOB.getValue())));
+                staff.setAddress(txtAddress.getText());
+                staff.setSEX(txtSEX.getText());
+                staff.setPhoneNo(txtPhoneNo.getText());
+                staff.setUsername(txtUsername.getText());
+                staff.setPassword(txtPassword.getText());
+                staffDAO.update(staff);
+                System.out.println("Da Update" + txtStaffCode.getText());
+            } catch ( Exception e ) {
+                e.printStackTrace();
+            }
         }
+
         loadDataTableview();
     }
     public void loadDataTableview(){

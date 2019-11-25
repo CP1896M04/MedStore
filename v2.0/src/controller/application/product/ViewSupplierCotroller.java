@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.StageStyle;
+import lib.LibraryAssistant;
 import pattern.bus.SupplierBUS;
 import pattern.connection.ConnectionFactory;
 import pattern.dao.SupplierDao;
@@ -108,28 +110,56 @@ public class ViewSupplierCotroller implements Initializable {
 
     @FXML
     void btnAdd(ActionEvent event) {
+        if(txtAddress.getText().trim().isEmpty()||txtComCode.getText().trim().isEmpty() ||txtComName.getText().trim().isEmpty()||txtEmail.getText().trim().isEmpty()||txtPhone.getText().trim().isEmpty()||txtTax.getText().trim().isEmpty()||!LibraryAssistant.validateEmailAddress(txtEmail.getText())||!LibraryAssistant.validatePhone(txtPhone.getText())||!LibraryAssistant.ktSo(txtTax.getText())){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else {
+            Supplier supplier= new Supplier(0,txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
+            supplierBUS.add(supplier);
+            System.out.println(supplier.toString());
+            System.out.println("Da them"+ supplier.getComName());
+        }
 
-        Supplier supplier= new Supplier(0,txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
-        supplierBUS.add(supplier);
-        System.out.println(supplier.toString());
-        System.out.println("Da them"+ supplier.getComName());
         loadTableview();
 
     }
 
     @FXML
     void btnRemove(ActionEvent event) throws SQLException {
-        supplierBUS.delete(txtSupplierId.getText());
-        System.out.println("Da xoa"+txtSupplierId.getText());
-        loadTableview();
+        if(txtSupplierId.getText().trim().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            supplierBUS.delete(txtSupplierId.getText());
+            System.out.println("Da xoa"+txtSupplierId.getText());
+            loadTableview();
+        }
+
 
     }
 
     @FXML
     void btnUpdate(ActionEvent event) {
-        Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
-        supplierBUS.update(supplier);
-        System.out.println("Da update"+txtSupplierId.getText());
+        if(txtAddress.getText().trim().isEmpty()||txtComCode.getText().trim().isEmpty() ||txtComName.getText().trim().isEmpty()||txtEmail.getText().trim().isEmpty()||txtPhone.getText().trim().isEmpty()||txtTax.getText().trim().isEmpty()||!LibraryAssistant.validateEmailAddress(txtEmail.getText())||!LibraryAssistant.validatePhone(txtPhone.getText())||!LibraryAssistant.ktSo(txtTax.getText())){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Supplier");
+            alert.setHeaderText("Error");
+            alert.setContentText("input is not valid");
+            alert.initStyle(StageStyle.UNDECORATED);
+            alert.showAndWait();
+        }else{
+            Supplier supplier= new Supplier(parseInt(txtSupplierId.getText()),txtComCode.getText(),txtComName.getText(),txtAddress.getText(),txtPhone.getText(),txtEmail.getText(),txtTax.getText());
+            supplierBUS.update(supplier);
+            System.out.println("Da update"+txtSupplierId.getText());
+        }
         loadTableview();
     }
     @Override

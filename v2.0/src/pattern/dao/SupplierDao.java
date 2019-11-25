@@ -93,6 +93,7 @@ public SupplierDao(){
                Supplier supplier= new Supplier(supplierID,comCode,comName,address,phone,email,tax);
                 suppliers.add(supplier);
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

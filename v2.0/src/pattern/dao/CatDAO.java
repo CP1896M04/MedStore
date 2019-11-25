@@ -97,6 +97,7 @@ public class CatDAO implements DAO<Category> {
                 alert.showAndWait();
                 return isUniq;
             }
+            isUniq=true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
