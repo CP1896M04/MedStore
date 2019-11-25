@@ -1,32 +1,21 @@
 package controller.application.sale;
 
-import controller.application.product.ViewAddNewProductController;
-import controller.application.product.ViewCategoryController;
-import controller.application.report.InvoiceController;
-import controller.application.report.ReportWindow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import lib.LibraryAssistant;
 import lib.control.ComboBoxAutoComplete;
+import lib.window.application.Sale.ViewSaleHistoryWindow;
 import pattern.bus.ODetailBUS;
 import pattern.dao.*;
 import pattern.model.*;
-import view.PrintReport;
+import report.print.PrintInvoice;
 
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
@@ -176,7 +165,7 @@ public class ViewPointOfSaleController implements Initializable {
         }
     }
     @FXML
-    private void saveOrder(){
+    private void saveOrder() throws Exception {
         OderDAO oderDAO = new OderDAO();
         DateTagDAO dateTagDAO = new DateTagDAO();
         DateTag dateTag = new DateTag();
@@ -191,6 +180,9 @@ public class ViewPointOfSaleController implements Initializable {
             oDetail.setOrderID(oderID);
             oDetailBUS.add(oDetail);
         }
+        PrintInvoice printInvoice = new PrintInvoice();
+        printInvoice.pack();
+        printInvoice.showReport(oderID);
         clear();
     }
     @FXML
@@ -207,9 +199,7 @@ public class ViewPointOfSaleController implements Initializable {
 //        stage.setScene((new Scene(parent)));
 //        stage.show();
         try{
-            PrintReport printReport = new PrintReport();
-            printReport.pack();
-            printReport.showReport();
+
         }catch (Exception e){
 
         }

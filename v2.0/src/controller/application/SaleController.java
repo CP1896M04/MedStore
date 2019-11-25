@@ -77,6 +77,7 @@ public class SaleController implements Initializable {
 //        spMainContent.getChildren().clear();
 //        spMainContent.getChildren().add(SaleHistoryPane);
          active(SaleHistoryPane,"Sale History");
+
     }
     public void setStaff(Staff staff){
         this.staff =staff;

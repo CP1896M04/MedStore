@@ -3,6 +3,7 @@ package pattern.dao;
 import javafx.scene.control.Alert;
 import javafx.stage.StageStyle;
 import pattern.connection.ConnectionFactory;
+import pattern.list.InVoice;
 import pattern.model.ODetail;
 import pattern.model.Order;
 
@@ -124,6 +125,36 @@ public class ODetailDAO implements DAO<ODetail> {
             throw new RuntimeException(e);
         }
         return oDetails;
+    }
+    public List<InVoice> searchOrder(int id) {
+        List<InVoice> invoice = new ArrayList<>();
+        String sql = "SELECT T2.OrderID,T2.PName,T2.ProductID,T2.Qty,T2.USP,T2.HTU,T2.Discount,T2.Total,T3.FName,T3.LName,T4.Date\n" +
+                "FROM [Order] AS T1 JOIN ODetail  AS T2 ON T1.OrderID =T2.OrderID\n" +
+                "\t\t\t\t\tJOIN Staff AS T3 ON T1.StaffID = T3.StaffID\n" +
+                "\t\t\t\t\tJOIN DateTag AS T4 ON T1.DateKey=T4.DateKey\n" +
+                "WHERE T2.OrderID=?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int orderID = resultSet.getInt("OrderID");
+                int productID = resultSet.getInt("ProductID");
+                String productName = resultSet.getString("PName");
+                Float usp = resultSet.getFloat("USP");
+                String htu = resultSet.getString("HTU");
+                int qty = resultSet.getInt("Qty");
+                Double discount = resultSet.getDouble("Discount");
+                Double total = resultSet.getDouble("Total");
+                String fName =resultSet.getString("FName");
+                String lName = resultSet.getString("LName");
+                String dateCreate =resultSet.getString("Date");
+                InVoice inVoice = new InVoice(orderID,productID,productName,usp,htu,qty,discount,total,fName,lName,dateCreate);
+                invoice.add(inVoice);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return invoice;
     }
 
 }

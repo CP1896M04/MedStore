@@ -125,7 +125,7 @@ public class ViewCurrentProductController implements Initializable {
     @FXML
     void btnUpdateClick(ActionEvent event) throws IOException {
         ViewAddNewProductController viewAddNewProductController = new ViewAddNewProductController();
-         Product product =tableview.getSelectionModel().getSelectedItem();
+        Product product =tableview.getSelectionModel().getSelectedItem();
         FXMLLoader fXMLLoader = new FXMLLoader();
         Parent parent= fXMLLoader.load(getClass().getResource("/view/application/product/ViewAddNewProduct.fxml").openStream());
         viewAddNewProductController = fXMLLoader.getController();

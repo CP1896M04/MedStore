@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javafx-swt">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jbr/lib/javafx-swt.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jbr/lib/jrt-fs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
