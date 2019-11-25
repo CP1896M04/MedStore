@@ -6,59 +6,58 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import pattern.dao.InventoryLedgerDAO;
+import pattern.list.InventoryLedgerList;
 import pattern.model.InventoryLedger;
+import pattern.viewDAO.ViewInventoryLedgerDAO;
 
 import java.net.URL;
+import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewInventoryLogController implements Initializable {
     @FXML
-    private TableView<InventoryLedger> tableview;
+    private TableView<InventoryLedgerList> tableview;
 
     @FXML
-    private TableColumn<InventoryLedger, Integer> columnLegerID;
+    private TableColumn<InventoryLedgerList, Integer> columnLegerID;
 
     @FXML
-    private TableColumn<InventoryLedger, String> columnLegerCode;
+    private TableColumn<InventoryLedgerList, Integer> columnProductID;
 
     @FXML
-    private TableColumn<InventoryLedger, Integer> columnProductID;
+    private TableColumn<InventoryLedgerList, String> columnPName;
 
     @FXML
-    private TableColumn<InventoryLedger, String> columnTransactionType;
+    private TableColumn<InventoryLedgerList, Character> columnTransactionType;
 
     @FXML
-    private TableColumn<InventoryLedger, Integer> columnQuantityTransacted;
+    private TableColumn<InventoryLedgerList, Integer> columnQuantityTransacted;
 
     @FXML
-    private TableColumn<InventoryLedger, Float> columnInventoryPurchaseCost;
+    private TableColumn<InventoryLedgerList, Float> columnInventoryPurchaseCost;
 
     @FXML
-    private TableColumn<InventoryLedger, Date> columnDateTime;
-
-    @FXML
-    private TableColumn<InventoryLedger,Integer> columnDateKey;
+    private TableColumn<InventoryLedgerList, Date> columnDateTime;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initColumn();
         loadDatatableview();
     }
     public void loadDatatableview(){
-        InventoryLedgerDAO inventoryLedgerDAO= new InventoryLedgerDAO();
-        List<InventoryLedger> inventoryledgers = new ArrayList<>();
-        inventoryledgers = inventoryLedgerDAO.getList();
-        tableview.getItems().setAll(inventoryledgers);
+        ViewInventoryLedgerDAO viewInventoryLedgerDAO = new ViewInventoryLedgerDAO();
+        List<InventoryLedgerList> inventoryLedgerLists = new ArrayList<>();
+        inventoryLedgerLists = viewInventoryLedgerDAO.getList();
+        tableview.getItems().setAll(inventoryLedgerLists);
     }
     public void initColumn() {
         columnLegerID.setCellValueFactory(new PropertyValueFactory<>("LegerID"));
-        columnLegerCode.setCellValueFactory(new PropertyValueFactory<>("LegerCode"));
         columnProductID.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
+        columnPName.setCellValueFactory(new PropertyValueFactory<>("PName"));
         columnTransactionType.setCellValueFactory(new PropertyValueFactory<>("TransactionType"));
         columnQuantityTransacted.setCellValueFactory(new PropertyValueFactory<>("QuantityTransacted"));
         columnInventoryPurchaseCost.setCellValueFactory(new PropertyValueFactory<>("InventoryPurchaseCost"));
-        columnDateKey.setCellValueFactory(new PropertyValueFactory<>("DateKey"));
+        columnDateTime.setCellValueFactory(new PropertyValueFactory<>("DateTime"));
     }
 }

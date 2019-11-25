@@ -7,40 +7,35 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="482.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.product.ViewCurrentProductController">
-   <children>
-      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <BorderPane prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER" />
-         </top>
-         <bottom>
-            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="608.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Delete" textAlignment="RIGHT" />
-                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateClick" prefHeight="33.0" prefWidth="120.0" text="Update" textAlignment="RIGHT" />
-                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="33.0" prefWidth="120.0" text="Add" textAlignment="RIGHT" />
-               </children>
-            </HBox>
-         </bottom>
-         <center>
-            <TableView fx:id="tableview" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <columns>
-                <TableColumn fx:id="columnProductID" prefWidth="75.0" text="ProductID" />
-                <TableColumn fx:id="columnCatID" prefWidth="75.0" text="CatID" />
-                  <TableColumn fx:id="columnUnitID" prefWidth="75.0" text="UnitID" />
-                  <TableColumn fx:id="columnSupplierID" prefWidth="75.0" text="SupplierID" />
-                  <TableColumn fx:id="columnPName" prefWidth="75.0" text="PName" />
-                  <TableColumn fx:id="columnPDescr" prefWidth="75.0" text="PDescr" />
-                  <TableColumn fx:id="columnPComposition" prefWidth="75.0" text="PComposition" />
-                  <TableColumn fx:id="columnPManufacturer" prefWidth="75.0" text="PManufacturer" />
-                  <TableColumn fx:id="columnUprice" prefWidth="75.0" text="Uprice" />
-                  <TableColumn fx:id="columnUSP" prefWidth="75.0" text="USP" />
-                  <TableColumn fx:id="columnReOrLevel" prefWidth="75.0" text="ReOrLevel" />
-                  <TableColumn fx:id="columnHTU" prefWidth="75.0" text="HTU" />
-                  <TableColumn fx:id="columnDefaultInDose" prefWidth="75.0" text="DefaultInDose" />
-              </columns>
-            </TableView>
-         </center>
-      </BorderPane>
-   </children>
+<AnchorPane prefHeight="484.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.application.product.ViewCurrentProductController">
+    <children>
+        <BorderPane prefHeight="484.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <BorderPane prefHeight="66.0" prefWidth="720.0" BorderPane.alignment="CENTER" />
+            </top>
+            <bottom>
+                <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="608.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Delete" textAlignment="RIGHT" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateClick" prefHeight="33.0" prefWidth="120.0" text="Update" textAlignment="RIGHT" />
+                        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="33.0" prefWidth="120.0" text="Add" textAlignment="RIGHT" />
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <TableView fx:id="tableview" prefHeight="378.0" prefWidth="886.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="columnProductID" prefWidth="67.19998055696487" text="ProductID" />
+                        <TableColumn fx:id="columnPName" prefWidth="228.8000259399414" text="PName" />
+                        <TableColumn fx:id="columnCatName" minWidth="0.0" prefWidth="140.79998779296875" text="CatName" />
+                        <TableColumn fx:id="columnPDescr" minWidth="0.0" prefWidth="88.79995727539062" text="PDescr" />
+                        <TableColumn fx:id="columnPComposition" minWidth="0.0" prefWidth="123.20001220703125" text="PComposition" />
+                        <TableColumn fx:id="columnPManufacturer" minWidth="0.0" prefWidth="88.79998779296875" text="PManufacturer" />
+                        <TableColumn fx:id="columnUprice" minWidth="0.0" prefWidth="68.0" text="Uprice" />
+                        <TableColumn fx:id="columnUSP" prefWidth="75.99993896484375" text="USP" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </children>
 </AnchorPane>
